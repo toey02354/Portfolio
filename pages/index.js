@@ -5,11 +5,10 @@ import styles from "../styles/Home.module.css";
 import { Canvas } from "@react-three/fiber";
 import { MeshDistortMaterial, OrbitControls } from "@react-three/drei";
 // import justaGirl from "../components/Justagirl";
-import Iphone from "../components/Iphone";
-import Justagirl from "../components/Justagirl";
+import IphoneModel from "../components/Iphone";
+import JustagirlMoel from "../components/Justagirl";
 
 const Home = () => {
-  // const justagirl = useLoader(GLTFLoader, "/justagirl.gltf");
   const Earth = () => {
     return (
       <mesh position={[0, 0, 0]} scale={2}>
@@ -24,10 +23,18 @@ const Home = () => {
       </mesh>
     );
   };
-  const IPhone2 = () => {
+  const JustAGirl = () => {
     return (
       <mesh position={[0, -1, 0]} scale={0.03}>
-        <Justagirl />
+        <JustagirlMoel />
+        <OrbitControls enableZoom={false} />
+      </mesh>
+    );
+  };
+  const IPhone = () => {
+    return (
+      <mesh position={[0, 0, 0]} scale={2} rotation={[0, 5, 0]}>
+        <IphoneModel />
         <OrbitControls enableZoom={false} />
       </mesh>
     );
@@ -42,13 +49,29 @@ const Home = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1>Three Js</h1>
+        <h1>THREE JS</h1>
         <div className={styles.canvas}>
           <Canvas>
             <Suspense fallback={null}>
-              <IPhone2 />
-              {/* <justaGirl /> */}
-              {/* <Earth /> */}
+              <JustAGirl />
+            </Suspense>
+            <ambientLight />
+            <pointLight position={[1, 1, 5]} intensity={2} />
+          </Canvas>
+        </div>
+        <div className={styles.canvas}>
+          <Canvas>
+            <Suspense fallback={null}>
+              <IPhone />
+            </Suspense>
+            <ambientLight />
+            <pointLight position={[1, 1, 5]} intensity={2} />
+          </Canvas>
+        </div>
+        <div className={styles.canvas}>
+          <Canvas>
+            <Suspense fallback={null}>
+              <Earth />
             </Suspense>
             <ambientLight />
             <pointLight position={[1, 1, 5]} intensity={2} />

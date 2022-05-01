@@ -1,13 +1,10 @@
 .container {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  background-color: #cfd5c7;
-  opacity: 1;
-  background-image: radial-gradient(#8f8f8f 1.25px, transparent 1.25px),
-    radial-gradient(#8f8f8f 1.25px, #cfd5c7 1.25px);
-  background-size: 50px 50px;
-  background-position: 0 0, 25px 25px;
+  background: rgb(135, 250, 204);
+  background: linear-gradient(
+    90deg,
+    rgba(135, 250, 204, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
   overflow: hidden;
 }
 
