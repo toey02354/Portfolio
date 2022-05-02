@@ -9,6 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/icons-material": "^5.6.2",
+    "@mui/material": "^5.6.3",
     "@react-three/drei": "^9.6.2",
     "@react-three/fiber": "^8.0.12",
     "next": "12.1.5",
@@ -17,7 +21,10 @@
     "three": "^0.140.0"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.6",
     "eslint": "8.14.0",
-    "eslint-config-next": "12.1.5"
+    "eslint-config-next": "12.1.5",
+    "postcss": "^8.4.13",
+    "tailwindcss": "^3.0.24"
   }
 }
