@@ -95,7 +95,7 @@ const ExpSlideCards = () => {
           key={card.key}
         >
           <div className="py-[0.5rem] px-[2rem] bg-slate-800 text-white rounded-t-xl">
-            {card.name}
+            {card.title}
           </div>
           <div className="p-[2rem] rounded-xl">
             <div className="py-3">{card.content1}</div>
