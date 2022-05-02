@@ -29,8 +29,8 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="min-h-[8%] flex flex-row justify-center xl:justify-start items-center p-4 pl-5 bg-slate-800 text-xl text-white">
-      <div className="hidden xl:flex justify-center items-center p-3 lg:py-2 lg:px-20">
+    <div className="min-h-[8%] w-screen fixed top-0 z-[99] flex flex-row justify-center lg:justify-start items-center p-4 pl-5 bg-slate-800 text-xl text-white">
+      <div className="hidden lg:flex justify-center items-center p-3 lg:py-2 lg:px-20">
         <strong>TOEY</strong> Portfolio
       </div>
       <div className="flex flex-row">

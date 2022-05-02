@@ -28,10 +28,10 @@ const three = () => {
     );
   };
 
-  const canvasClass = "w-screen h-screen";
+  const canvasClass = "w-[80vw] h-[50vh] xl:w-[60vw] xl:h-screen";
 
   return (
-    <div>
+    <div className="flex flex-col justify-center items-center">
       <div className={canvasClass}>
         <Canvas>
           <Suspense fallback={null}>

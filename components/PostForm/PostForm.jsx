@@ -18,7 +18,7 @@ const PostForm = () => {
   };
 
   return (
-    <div className="mt-2 mb-10 mx-5 xl:mx-[30rem] px-10 py-5 bg-stone-600/10 drop-shadow-sm rounded-xl">
+    <div className="w-[80vw] xl:w-[30vw] mt-2 mb-10 mx-3 px-10 py-5 bg-stone-600/10 drop-shadow-sm rounded-xl">
       <div
         className="flex flex-col items-center justify-center py-3"
         onKeyPress={(event) => {
