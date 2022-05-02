@@ -21,7 +21,7 @@ const Column1 = () => {
     );
   };
 
-  const buttonClass = "m-1 p-2 bg-slate-700 text-white rounded-2xl";
+  const buttonClass = "m-1 p-3 bg-slate-600 text-white rounded-full";
 
   return (
     <>
@@ -41,13 +41,19 @@ const Column1 = () => {
           <LogoAnimation />
         </div>
         <div className="xl:w-1/2 z-50">
-          <div className="flex flex-row justify-center items-center mt-[2rem]">
-            <button className={buttonClass} onClick={() => setChoose(1)}>
-              1
-            </button>
-            <button className={buttonClass} onClick={() => setChoose(2)}>
-              2
-            </button>
+          <div className="flex flex-row justify-center items-center m-[1rem]">
+            <button
+              className={buttonClass.concat(
+                chooseOne == 1 ? " ring ring-amber-600" : ""
+              )}
+              onClick={() => setChoose(1)}
+            ></button>
+            <button
+              className={buttonClass.concat(
+                chooseOne == 2 ? " ring ring-amber-600" : ""
+              )}
+              onClick={() => setChoose(2)}
+            ></button>
           </div>
           {chooseOne == 1 ? (
             <div className="h-screen">
