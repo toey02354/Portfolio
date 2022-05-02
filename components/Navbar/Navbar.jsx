@@ -35,7 +35,7 @@ const Navbar = () => {
       </div>
       <div className="flex flex-row">
         {NavItems.map((item) => (
-          <Link href={item.path}>
+          <Link href={item.path} key={item.name}>
             <a
               target="_parent"
               className={navMenuClass.concat(

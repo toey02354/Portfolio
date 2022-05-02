@@ -9,18 +9,22 @@ const LogoFooter = () => {
   // Footer Items
   const FooterItems = [
     {
+      key: 1,
       icon: <GitHubIcon />,
       href: "https://github.com/toey02354",
     },
     {
+      key: 2,
       icon: <EmailOutlinedIcon />,
       href: "https://mail.google.com",
     },
     {
+      key: 3,
       icon: <InstagramIcon />,
       href: "https://www.instagram.com",
     },
     {
+      key: 4,
       icon: <FacebookOutlinedIcon />,
       href: "https://www.facebook.com",
     },
@@ -30,6 +34,7 @@ const LogoFooter = () => {
     <div className="flex flex-row items-center justify-center p-5">
       {FooterItems.map((item) => (
         <a
+          key={item.key}
           className={logoClass}
           href={item.href}
           target="_blank"

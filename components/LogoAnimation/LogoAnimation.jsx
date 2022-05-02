@@ -12,21 +12,21 @@ const LogoSkill = () => {
     <div className="my-[2rem] mx-[2rem] p-2 sm:p-10">
       <div className={logoClass}>
         {logo1Batch.map((logo) => (
-          <div className={logosClass}>
+          <div className={logosClass} key={logo}>
             <Image src={logo}></Image>
           </div>
         ))}
       </div>
       <div className={logoClass}>
         {logo3Batch.map((logo) => (
-          <div className={logosClass}>
+          <div className={logosClass} key={logo}>
             <Image src={logo}></Image>
           </div>
         ))}
       </div>
       <div className={logoClass}>
         {logo2Batch.map((logo) => (
-          <div className={logosClass}>
+          <div className={logosClass} key={logo}>
             <Image src={logo}></Image>
           </div>
         ))}

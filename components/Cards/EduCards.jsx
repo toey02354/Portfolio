@@ -7,6 +7,7 @@ const EduSlideCards = () => {
 
   const cards = [
     {
+      key: 1,
       title: <p className={headCardClass}>Internship</p>,
       content1: (
         <>
@@ -34,6 +35,7 @@ const EduSlideCards = () => {
       ),
     },
     {
+      key: 2,
       title: <p className={headCardClass}>Telecommunication Engineering</p>,
       content1: (
         <>
@@ -60,7 +62,10 @@ const EduSlideCards = () => {
   return (
     <>
       {cards.map((card) => (
-        <div className="min-w-[350px] my-[1rem] mx-[0.5rem] bg-white rounded-xl">
+        <div
+          className="min-w-[350px] my-[1rem] mx-[0.5rem] bg-white rounded-xl"
+          key={card.key}
+        >
           <div className="py-[0.5rem] px-[2rem] bg-slate-800 text-white rounded-t-xl">
             {card.title}
           </div>
