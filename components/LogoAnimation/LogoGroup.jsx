@@ -1,3 +1,4 @@
+import logoarduino from "../../public/Images/logo-arduino.png";
 import logodjango from "../../public/Images/logo-django.png";
 import logodocker from "../../public/Images/logo-docker.png";
 import logoexpressjs from "../../public/Images/logo-expressjs.png";
@@ -11,8 +12,8 @@ import logonodejs from "../../public/Images/logo-nodejs.png";
 import logopostgres from "../../public/Images/logo-postgres.png";
 import logopython from "../../public/Images/logo-python.png";
 import logoreactjs from "../../public/Images/logo-reactjs.png";
+import logoredux from "../../public/Images/logo-redux.png";
 import logoredis from "../../public/Images/logo-redis.png";
-import logorestful from "../../public/Images/logo-restful.png";
 import logothreejs from "../../public/Images/logo-threejs.png";
 import logots from "../../public/Images/logo-ts.png";
 
@@ -20,16 +21,17 @@ const logo1Batch = [
   logots,
   logojs,
   logoreactjs,
+  logoredux,
+  logonodejs,
   logothreejs,
-  logonestjs,
-  logoexpressjs,
 ];
 const logo2Batch = [
+  logonestjs,
+  logoexpressjs,
   logopython,
   logodjango,
-  logonodejs,
   logofastapi,
-  logorestful,
+  logoarduino,
 ];
 const logo3Batch = [
   logogitlab,

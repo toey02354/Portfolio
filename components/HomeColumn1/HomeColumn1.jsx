@@ -1,3 +1,4 @@
+import { useState, useEffect, useRef } from "react";
 import Image from "next/dist/client/image";
 import LogoAnimation from "../LogoAnimation";
 import profilepic from "../../public/Images/profile.jpeg";
@@ -5,10 +6,12 @@ import profilepic from "../../public/Images/profile.jpeg";
 import { Suspense } from "react";
 // three modules
 import { Canvas } from "@react-three/fiber";
-import { MeshDistortMaterial, OrbitControls } from "@react-three/drei";
+import { OrbitControls } from "@react-three/drei";
 import JustagirlMoel from "../../components/GLTFModel/Justagirl";
 
 const Column1 = () => {
+  const [chooseOne, setChoose] = useState(1);
+
   const JustAGirl = () => {
     return (
       <mesh position={[0, -1, 0]} scale={0.03}>
@@ -17,6 +20,8 @@ const Column1 = () => {
       </mesh>
     );
   };
+
+  const buttonClass = "m-1 p-2 bg-slate-700 text-white rounded-2xl";
 
   return (
     <>
@@ -35,17 +40,28 @@ const Column1 = () => {
           </div>
           <LogoAnimation />
         </div>
-        <div className="xl:w-1/2 z-50 hidden xl:block">
-          {/* <Image src={profilepic} className="xl:rounded-bl-full" /> */}
-          <div className="h-screen">
-            <Canvas>
-              <Suspense fallback={null}>
-                <JustAGirl />
-              </Suspense>
-              <ambientLight />
-              <pointLight position={[1, 1, 5]} intensity={2} />
-            </Canvas>
+        <div className="xl:w-1/2 z-50">
+          <div className="flex flex-row justify-center items-center mt-[2rem]">
+            <button className={buttonClass} onClick={() => setChoose(1)}>
+              1
+            </button>
+            <button className={buttonClass} onClick={() => setChoose(2)}>
+              2
+            </button>
           </div>
+          {chooseOne == 1 ? (
+            <div className="h-screen">
+              <Canvas>
+                <Suspense fallback={null}>
+                  <JustAGirl />
+                </Suspense>
+                <ambientLight />
+                <pointLight position={[1, 1, 5]} intensity={2} />
+              </Canvas>
+            </div>
+          ) : (
+            <Image src={profilepic} className="xl:rounded-bl-full" />
+          )}
         </div>
       </div>
     </>
