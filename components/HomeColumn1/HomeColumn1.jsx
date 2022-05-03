@@ -39,8 +39,8 @@ const Column1 = () => {
         </div>
         <LogoAnimation />
       </div>
-      <div className="xl:w-1/2 z-50 flex flex-col justify-center items-center">
-        <div className="flex flex-row justify-center items-center m-[1rem]">
+      <div className="xl:w-1/2 z-50 flex flex-col justify-start items-center">
+        <div className="flex flex-row justify-start items-center m-[1rem]">
           <button
             className={buttonClass.concat(
               chooseOne == 1 ? " ring ring-amber-600" : ""
