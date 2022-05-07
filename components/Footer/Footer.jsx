@@ -2,7 +2,7 @@ import LogoFooter from "./LogoFooter";
 
 const Footer = () => {
   return (
-    <div className="min-h-[8%] bg-slate-900">
+    <div className="min-h-[8%] dominant-bg">
       <LogoFooter />
     </div>
   );

@@ -2,13 +2,10 @@ import React from "react";
 import { Divider } from "@mui/material";
 
 const EduSlideCards = () => {
-  const headCardClass =
-    "w-[100%] flex justify-center items-center py-3 text-xl font-[500]";
-
   const cards = [
     {
       key: 1,
-      title: <p className={headCardClass}>Internship</p>,
+      title: <p className="card-title">Internship</p>,
       content1: (
         <>
           <strong>Kazanawa Institute of Technology</strong>
@@ -36,7 +33,7 @@ const EduSlideCards = () => {
     },
     {
       key: 2,
-      title: <p className={headCardClass}>Telecommunication Engineering</p>,
+      title: <p className="card-title">Telecommunication Engineering</p>,
       content1: (
         <>
           <p>Suranaree University of Technology</p>
@@ -66,7 +63,7 @@ const EduSlideCards = () => {
           className="min-w-[350px] my-[1rem] mx-[0.5rem] bg-white rounded-xl"
           key={card.key}
         >
-          <div className="py-[0.5rem] px-[2rem] bg-slate-800 text-white rounded-t-xl">
+          <div className="dominant-bg py-[0.5rem] px-[2rem] text-white rounded-t-xl">
             {card.title}
           </div>
           <div className="p-[2rem] rounded-xl">

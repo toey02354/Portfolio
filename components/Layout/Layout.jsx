@@ -5,7 +5,7 @@ import Footer from "../Footer/Footer";
 
 const Layout = ({ children }) => {
   return (
-    <div className="bg-gradient-to-tl from-cyan-300 to-green-300">
+    <div className="plain-bg">
       <Navbar />
       <Header />
       {children}

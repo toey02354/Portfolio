@@ -28,13 +28,13 @@ const Column1 = () => {
       <div className="w-screen xl:w-1/2 z-40">
         <div
           className="
-            pt-10 pb-5 px-10 sm:pt-20 sm:pb-10 sm:px-20 text-5xl sm:text-[5.2rem] font-bold drop-shadow-[0px_5px_5px_rgb(0,0,0,0.1)] bg-clip-text text-transparent bg-gradient-to-br from-amber-800 to-amber-600"
+            highlight-text-grad pt-10 pb-5 px-10 sm:pt-20 sm:pb-10 sm:px-20 text-5xl sm:text-[5.2rem] font-bold drop-shadow-[0px_5px_5px_rgb(0,0,0,0.1)]"
         >
           <text>NATTHAPHOL</text>
           <br />
           <text>UTHUMPHIRAT</text>
         </div>
-        <div className="px-10 sm:py-0 sm:px-20 text-[2.1rem] sm:text-[3.3rem] drop-shadow-[0px_5px_5px_rgb(0,0,0,0.1) bg-clip-text text-transparent bg-gradient-to-br from-amber-800 to-amber-600">
+        <div className="highlight-text-grad px-10 sm:py-0 sm:px-20 text-[2.1rem] sm:text-[3.3rem] drop-shadow-[0px_5px_5px_rgb(0,0,0,0.1)">
           A Software Developer
         </div>
         <LogoAnimation />
