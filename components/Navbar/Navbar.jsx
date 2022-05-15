@@ -9,7 +9,7 @@ const Navbar = () => {
   // CSS class
   const navMenuClass =
     "flex justify-between items-center py-2 px-4 hover:text-amber-500";
-  const clickedClass = " bg-slate-700 rounded-2xl text-amber-600";
+  const clickedClass = "bg-slate-700 rounded-2xl text-amber-600";
   const NavItems = [
     {
       name: "Home",
@@ -39,7 +39,7 @@ const Navbar = () => {
             <a
               target="_parent"
               className={navMenuClass.concat(
-                router.pathname == item.path ? clickedClass : ""
+                router.pathname == item.path ? clickedClass : null
               )}
             >
               {item.icon} {item.name}

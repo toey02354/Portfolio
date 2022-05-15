@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import Image from "next/dist/client/image";
 import LogoAnimation from "../LogoAnimation";
 import profilepic from "../../public/Images/profile.jpeg";
