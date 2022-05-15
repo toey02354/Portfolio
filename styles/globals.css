@@ -12,8 +12,13 @@ body {
   overflow-x: hidden;
 }
 
-h1 {
-}
+/* #sticker {
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -o-sticky;
+  position: sticky;
+  top: 0;
+} */
 
 a {
   color: inherit;

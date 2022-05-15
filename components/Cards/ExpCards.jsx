@@ -28,15 +28,34 @@ const ExpSlideCards = () => {
     },
     {
       key: 2,
+      title: <p className={headCardClass}>Sompo</p>,
+      content1: (
+        <p>
+          Created and Developed pages for admin such as Login and Sign up.
+          <br />
+          Call API to fetch data via Axios.
+        </p>
+      ),
+      content2: (
+        <p>
+          Tech stack: Typescript, React, Redux, Axios, Vite, Ant Ddesign,
+          TailwindCSS, JWT
+        </p>
+      ),
+    },
+    {
+      key: 3,
       title: <p className={headCardClass}>ONESHOT, merchant platform</p>,
       content1: (
         <>
           <strong>Frontend</strong>
           <p>
             Created and Developed pages for users such as Login, Sign up, and
-            Merchant detail
+            Merchant detail.
           </p>
-          <p>Tech stack: Typescript, React, Vite, Material UI, TailwindCSS</p>
+          <p>
+            Tech stack: Typescript, React, Axios, Vite, Material UI, TailwindCSS
+          </p>
         </>
       ),
       content2: (
@@ -48,7 +67,7 @@ const ExpSlideCards = () => {
       ),
     },
     {
-      key: 3,
+      key: 4,
       title: <p className={headCardClass}>Payment Gateway Integration</p>,
       content1: <p>Integrated and created API for payments and transactions</p>,
       content2: (
@@ -59,7 +78,7 @@ const ExpSlideCards = () => {
       ),
     },
     {
-      key: 4,
+      key: 5,
       title: <p className={headCardClass}>Card Game API</p>,
       content1: (
         <p>
@@ -75,7 +94,7 @@ const ExpSlideCards = () => {
       ),
     },
     {
-      key: 5,
+      key: 6,
       title: <p className={headCardClass}>Bridgestone SD campaign</p>,
       content1: (
         <p>
