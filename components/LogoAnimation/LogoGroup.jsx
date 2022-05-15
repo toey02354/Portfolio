@@ -23,16 +23,16 @@ const logo1Batch = [
   logojs,
   logonextjs,
   logoreactjs,
-  logonodejs,
+  logoredux,
   logothreejs,
 ];
 const logo2Batch = [
+  logonodejs,
   logonestjs,
   logoexpressjs,
   logopython,
   logodjango,
   logofastapi,
-  logoarduino,
 ];
 const logo3Batch = [
   logogitlab,

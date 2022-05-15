@@ -2,13 +2,10 @@ import React from "react";
 import { Divider } from "@mui/material";
 
 const ExpSlideCards = () => {
-  const headCardClass =
-    "w-[100%] flex justify-center items-center py-3 text-xl font-[500]";
-
   const cards = [
     {
       key: 1,
-      title: <p className={headCardClass}>Skill {"&"} Experience</p>,
+      title: <p className="card-title">Skill {"&"} Experience</p>,
       content1: (
         <div className="text-[1.25rem]">
           <strong>Typescript, Javascript</strong>
@@ -28,7 +25,7 @@ const ExpSlideCards = () => {
     },
     {
       key: 2,
-      title: <p className={headCardClass}>Sompo</p>,
+      title: <p className="card-title">Sompo</p>,
       content1: (
         <p>
           Created and Developed pages for admin such as Login and Sign up.
@@ -45,7 +42,7 @@ const ExpSlideCards = () => {
     },
     {
       key: 3,
-      title: <p className={headCardClass}>ONESHOT, merchant platform</p>,
+      title: <p className="card-title">ONESHOT, merchant platform</p>,
       content1: (
         <>
           <strong>Frontend</strong>
@@ -67,8 +64,8 @@ const ExpSlideCards = () => {
       ),
     },
     {
-      key: 4,
-      title: <p className={headCardClass}>Payment Gateway Integration</p>,
+      key: 3,
+      title: <p className="card-title">Payment Gateway Integration</p>,
       content1: <p>Integrated and created API for payments and transactions</p>,
       content2: (
         <p>
@@ -78,8 +75,8 @@ const ExpSlideCards = () => {
       ),
     },
     {
-      key: 5,
-      title: <p className={headCardClass}>Card Game API</p>,
+      key: 4,
+      title: <p className="card-title">Card Game API</p>,
       content1: (
         <p>
           Created a callback API for game service to call and created an API to
@@ -94,8 +91,8 @@ const ExpSlideCards = () => {
       ),
     },
     {
-      key: 6,
-      title: <p className={headCardClass}>Bridgestone SD campaign</p>,
+      key: 5,
+      title: <p className="card-title">Bridgestone SD campaign</p>,
       content1: (
         <p>
           Extract text to find an amount and detail and validate sub-dealer by
@@ -113,7 +110,7 @@ const ExpSlideCards = () => {
           className="min-w-[350px] my-[1rem] mx-[0.5rem] bg-white rounded-xl"
           key={card.key}
         >
-          <div className="py-[0.5rem] px-[2rem] bg-slate-800 text-white rounded-t-xl">
+          <div className="dominant-bg py-[0.5rem] px-[2rem] text-white rounded-t-xl">
             {card.title}
           </div>
           <div className="p-[2rem] rounded-xl">

@@ -28,11 +28,9 @@ const three = () => {
     );
   };
 
-  const canvasClass = "w-[80vw] h-[50vh] xl:w-[60vw] xl:h-screen";
-
   return (
     <div className="flex flex-col justify-center items-center">
-      <div className={canvasClass}>
+      <div className="canvas">
         <Canvas>
           <Suspense fallback={null}>
             <IPhone />
@@ -41,7 +39,7 @@ const three = () => {
           <pointLight position={[1, 1, 5]} intensity={2} />
         </Canvas>
       </div>
-      <div className={canvasClass}>
+      <div className="canvas">
         <Canvas>
           <Suspense fallback={null}>
             <Earth />

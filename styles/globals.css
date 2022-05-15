@@ -12,13 +12,35 @@ body {
   overflow-x: hidden;
 }
 
-/* #sticker {
-  position: -webkit-sticky;
-  position: -moz-sticky;
-  position: -o-sticky;
-  position: sticky;
-  top: 0;
-} */
+@layer components {
+  .plain-bg-grad {
+    @apply bg-gradient-to-tl from-cyan-300 to-green-300;
+  }
+  .pain-text {
+    @apply text-cyan-300;
+  }
+  .dominant-bg {
+    @apply bg-slate-800;
+  }
+  .dominant-text {
+    @apply text-slate-800;
+  }
+  .highlight-text-grad {
+    @apply bg-clip-text text-transparent bg-gradient-to-br from-amber-800 to-amber-600;
+  }
+  .highlight-bg {
+    @apply bg-amber-600;
+  }
+  .highlight-text {
+    @apply text-amber-600;
+  }
+  .card-title {
+    @apply w-[100%] flex justify-center items-center py-3 text-xl font-[500];
+  }
+  .canvas {
+    @apply w-[80vw] h-[50vh] xl:w-[60vw] xl:h-screen;
+  }
+}
 
 a {
   color: inherit;
