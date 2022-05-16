@@ -16,7 +16,7 @@ const Home = () => {
           property="og:description"
           content="Natthaphol Uthumphirat, web portfolio that contains my experiences"
         />
-        <meta property="og:image" content="/images/profile.jpeg" />
+        <meta property="og:image" content="/Images/profile.jpeg" />
         <meta property="og:type" content="portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
