@@ -10,6 +10,16 @@ const Home = () => {
       <Head>
         <title>Toey Portfolio</title>
         <meta name="description" content="Toey Portfolio" />
+        <meta
+          property="og:url"
+          content="https://toey-portfolio.vercel.app/"
+        ></meta>
+        <meta property="og:title" content="Toey Web Portfolio"></meta>
+        <meta
+          property="og:description"
+          content="Natthaphol Uthumphirat, web portfolio that contains my experiences"
+        ></meta>
+        <meta property="og:image" content="/images/profile.jpeg"></meta>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
