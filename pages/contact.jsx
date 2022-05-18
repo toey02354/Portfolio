@@ -3,7 +3,7 @@ import PostForm from "../components/PostForm";
 
 const contact = () => {
   return (
-    <div className="min-h-[84vh] flex flex-col justify-center items-center">
+    <div className="min-h-[85vh] flex flex-col justify-center items-center">
       <div className="text-3xl font-semibold tracking-[0.07rem] uppercase">
         Feedback
       </div>
