@@ -40,7 +40,7 @@ const Column1 = () => {
           options={{ loop: true }}
           onInit={(typewriter) => {
             typewriter
-              .typeString("A Software Developer")
+              .typeString("A Web Application Developer")
               .pauseFor(1000)
               .deleteAll()
               .typeString("Thank you for visiting...")
