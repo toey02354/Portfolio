@@ -1,0 +1,36 @@
+#typing {
+  border-right: solid 3px rgba(0, 255, 0, 0.75);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Animation */
+#typing {
+  animation: animated-text 10s ease-in-out infinite,
+    animated-cursor 600ms ease-in-out infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text {
+  0% {
+    width: 0px;
+  }
+  50% {
+    width: 590px;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor {
+  from {
+    border-right-color: rgba(187, 90, 0, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}

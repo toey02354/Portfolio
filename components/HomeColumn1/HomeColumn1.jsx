@@ -4,10 +4,12 @@ import LogoAnimation from "../LogoAnimation";
 import profilepic from "../../public/Images/profile.jpeg";
 
 import { Suspense } from "react";
+import Typewriter from "typewriter-effect";
 // three modules
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import JustagirlMoel from "../../components/GLTFModel/Justagirl";
+// custom components
 
 const Column1 = () => {
   const [chooseOne, setChoose] = useState(1);
@@ -34,7 +36,19 @@ const Column1 = () => {
         UTHUMPHIRAT
       </div>
       <div className="highlight-text-grad px-10 sm:py-0 sm:px-20 text-[2.1rem] sm:text-[3.3rem] drop-shadow-[0px_5px_5px_rgb(0,0,0,0.1)">
-        A Software Developer
+        <Typewriter
+          options={{ loop: true }}
+          onInit={(typewriter) => {
+            typewriter
+              .typeString("A Software Developer")
+              .pauseFor(1000)
+              .deleteAll()
+              .typeString("Thank you for visiting...")
+              .pauseFor(1000)
+              .deleteAll()
+              .start();
+          }}
+        />
       </div>
       <LogoAnimation />
       {/*  */}
