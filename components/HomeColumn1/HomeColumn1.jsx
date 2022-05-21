@@ -24,21 +24,20 @@ const Column1 = () => {
   const buttonClass = "m-1 p-3 bg-slate-600 text-white rounded-full";
 
   return (
-    <div className="flex flex-col xl:flex-row">
-      <div className="w-screen xl:w-1/2 z-40">
-        <div
-          className="
-            highlight-text-grad pt-10 pb-5 px-10 sm:pt-20 sm:pb-10 sm:px-20 text-5xl sm:text-[5.2rem] font-bold drop-shadow-[0px_5px_5px_rgb(0,0,0,0.1)]"
-        >
-          <text>NATTHAPHOL</text>
-          <br />
-          <text>UTHUMPHIRAT</text>
-        </div>
-        <div className="highlight-text-grad px-10 sm:py-0 sm:px-20 text-[2.1rem] sm:text-[3.3rem] drop-shadow-[0px_5px_5px_rgb(0,0,0,0.1)">
-          A Software Developer
-        </div>
-        <LogoAnimation />
+    <div className="flex flex-col justify-center items-center z-40">
+      <div
+        className="
+        highlight-text-grad pt-10 pb-5 px-10 sm:pt-20 sm:pb-10 sm:px-20 text-5xl sm:text-[5.2rem] font-bold drop-shadow-[0px_5px_5px_rgb(0,0,0,0.1)]"
+      >
+        NATTHAPHOL
+        <br />
+        UTHUMPHIRAT
       </div>
+      <div className="highlight-text-grad px-10 sm:py-0 sm:px-20 text-[2.1rem] sm:text-[3.3rem] drop-shadow-[0px_5px_5px_rgb(0,0,0,0.1)">
+        A Software Developer
+      </div>
+      <LogoAnimation />
+      {/*  */}
       <div className="xl:w-1/2 z-50 flex flex-col justify-start items-center">
         <div className="flex flex-row justify-start items-center m-[1rem]">
           <button
@@ -54,8 +53,11 @@ const Column1 = () => {
             onClick={() => setChoose(2)}
           ></button>
         </div>
-        {chooseOne == 1 ? (
-          <div className="h-[60vh] w-[80vw] xl:h-full xl:w-full">
+        {chooseOne === 1 && (
+          <Image src={profilepic} className="xl:rounded-full" />
+        )}
+        {chooseOne === 2 && (
+          <div className="w-[80vw] h-[500px]">
             <Canvas>
               <Suspense fallback={null}>
                 <JustAGirl />
@@ -64,8 +66,6 @@ const Column1 = () => {
               <pointLight position={[1, 1, 5]} intensity={2} />
             </Canvas>
           </div>
-        ) : (
-          <Image src={profilepic} className="xl:rounded-bl-full" />
         )}
       </div>
     </div>

@@ -3,9 +3,9 @@ import { logo1Batch, logo2Batch, logo3Batch } from "./LogoGroup";
 
 const LogoSkill = () => {
   const logoClass =
-    "grid grid-cols-3 sm:flex sm:flex-row sm:justify-between drop-shadow-[0px_5px_5px_rgb(0,0,0,0.1)]";
+    "grid grid-cols-3 sm:flex sm:flex-row sm:justify-between gap-[2.5rem] drop-shadow-[0px_5px_5px_rgb(0,0,0,0.1)]";
 
-  const logosClass = "h-[100px] sm:tracking m-[0.5rem] contrast-[0.8]";
+  const logosClass = "h-[100px] sm:tracking contrast-[0.8]";
 
   return (
     <div className="my-[2rem] mx-[2rem] p-2 sm:p-10">
