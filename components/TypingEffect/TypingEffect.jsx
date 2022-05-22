@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 const TypingEffect = (props) => {
   const letters = props.sentence.slice("");
   const typeQueues = [];
+  const pauseQueues = [];
   const deleteQueues = [];
   const [text, setText] = useState("");
 
@@ -30,9 +31,9 @@ const TypingEffect = (props) => {
       return new Promise((resolve) => {
         let i = 0;
         const interval = setInterval(() => {
-          setText(text.slice(0, letters.length - i));
+          setText(text.slice(0, text.length - i));
           i++;
-          if (i > letters.length) {
+          if (i > text.length) {
             resolve();
             clearInterval(interval);
           }
@@ -44,8 +45,18 @@ const TypingEffect = (props) => {
     }
   };
 
+  const pauseFor = async () => {
+    pauseQueues.push(() => {
+      return new Promise((resolve) => setTimeout(resolve, 100));
+    });
+    for (let pauseCB of pauseQueues) {
+      await pauseCB();
+    }
+  };
+
   const starto = async () => {
     await handleStart();
+    await pauseFor();
     await handleDelete();
   };
 
