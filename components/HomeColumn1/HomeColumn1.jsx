@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Image from "next/dist/client/image";
-import LogoAnimation from "../LogoAnimation";
 import profilepic from "../../public/Images/profile.jpeg";
 
 import { Suspense } from "react";
@@ -50,8 +49,6 @@ const Column1 = () => {
           }}
         />
       </div>
-      <LogoAnimation />
-      {/*  */}
       <div className="xl:w-1/2 z-50 flex flex-col justify-start items-center">
         <div className="flex flex-row justify-start items-center m-[1rem]">
           <button
@@ -68,7 +65,12 @@ const Column1 = () => {
           ></button>
         </div>
         {chooseOne === 1 && (
-          <Image src={profilepic} className="xl:rounded-full" />
+          <Image
+            src={profilepic}
+            className="xl:rounded-full"
+            height="500px"
+            width="500px"
+          />
         )}
         {chooseOne === 2 && (
           <div className="w-[80vw] h-[500px]">

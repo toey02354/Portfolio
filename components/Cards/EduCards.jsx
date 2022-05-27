@@ -12,7 +12,7 @@ const EduSlideCards = () => {
           <br />
           <strong> Sep 2019-Feb2020 | Japan</strong>
           <p>
-            Research Assistant of Internet of Things, Fed4Iot Project, a
+            Research Assistant of Internet of Things Project, Fed4Iot Project, a
             research and innovation project jointly funded by the European
             Commission and Japan’s Ministry of Internal Affairs and
             Communication.
@@ -33,7 +33,7 @@ const EduSlideCards = () => {
     },
     {
       key: 2,
-      title: <p className="card-title">Telecommunication Engineering</p>,
+      title: <p className="card-title">Engineering</p>,
       content1: (
         <>
           <p>Suranaree University of Technology</p>
@@ -60,7 +60,7 @@ const EduSlideCards = () => {
     <>
       {cards.map((card) => (
         <div
-          className="min-w-[350px] my-[1rem] mx-[0.5rem] bg-white rounded-xl"
+          className="min-w-[400px] xl:w-[400px] my-[1rem] mx-[0.5rem] bg-white rounded-xl"
           key={card.key}
         >
           <div className="dominant-bg py-[0.5rem] px-[2rem] text-white rounded-t-xl">
