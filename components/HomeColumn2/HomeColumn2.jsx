@@ -1,9 +1,25 @@
 import ExpSlideCards from "../Cards/ExpCards";
 import LogoAnimation from "../LogoAnimation";
+import Typewriter from "typewriter-effect";
 
 const Column2 = () => {
   return (
-    <>
+    <div className="flex flex-col justify-center items-center py-[2rem]">
+      <div className="highlight-text-grad px-10 sm:py-0 sm:px-20 text-[2.1rem] sm:text-[3.3rem]">
+        <Typewriter
+          options={{ loop: true }}
+          onInit={(typewriter) => {
+            typewriter
+              .typeString("A WebApp Developer")
+              .pauseFor(1000)
+              .deleteAll()
+              .typeString("Thank you for visiting")
+              .pauseFor(1000)
+              .deleteAll()
+              .start();
+          }}
+        />
+      </div>
       <div className="flex justify-center items-center">
         <LogoAnimation />
       </div>
@@ -15,7 +31,7 @@ const Column2 = () => {
           <ExpSlideCards />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

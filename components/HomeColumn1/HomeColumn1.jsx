@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Image from "next/dist/client/image";
 import profilepic from "../../public/Images/profile.jpeg";
+import HOMEBG from "../../public/Images/home-bg.JPG";
 
 import { Suspense } from "react";
 import Typewriter from "typewriter-effect";
@@ -25,31 +26,16 @@ const Column1 = () => {
   const buttonClass = "m-1 p-3 bg-slate-600 text-white rounded-full";
 
   return (
-    <div className="flex flex-col justify-center items-center z-40">
+    <div className="IMG-BG h-[100vh] flex flex-col justify-center items-center">
       <div
         className="
-        highlight-text-grad pt-10 pb-5 px-10 sm:pt-20 sm:pb-10 sm:px-20 text-5xl sm:text-[5.2rem] font-bold drop-shadow-[0px_5px_5px_rgb(0,0,0,0.1)]"
+        text-white pt-10 pb-5 px-10 sm:pt-20 sm:pb-10 sm:px-20 text-5xl sm:text-[5.2rem] font-bold drop-shadow-[0px_5px_5px_rgb(0,0,0,1)]"
       >
         NATTHAPHOL
         <br />
         UTHUMPHIRAT
       </div>
-      <div className="highlight-text-grad px-10 sm:py-0 sm:px-20 text-[2.1rem] sm:text-[3.3rem] drop-shadow-[0px_5px_5px_rgb(0,0,0,0.1)">
-        <Typewriter
-          options={{ loop: true }}
-          onInit={(typewriter) => {
-            typewriter
-              .typeString("A WebApp Developer")
-              .pauseFor(1000)
-              .deleteAll()
-              .typeString("Thank you for visiting")
-              .pauseFor(1000)
-              .deleteAll()
-              .start();
-          }}
-        />
-      </div>
-      <div className="xl:w-1/2 z-50 flex flex-col justify-start items-center">
+      {/* <div className="xl:w-1/2 z-50 flex flex-col justify-start items-center">
         <div className="flex flex-row justify-start items-center m-[1rem]">
           <button
             className={buttonClass.concat(
@@ -83,7 +69,7 @@ const Column1 = () => {
             </Canvas>
           </div>
         )}
-      </div>
+      </div> */}
     </div>
   );
 };
