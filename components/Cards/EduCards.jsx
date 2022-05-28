@@ -5,7 +5,7 @@ const EduSlideCards = () => {
   const cards = [
     {
       key: 1,
-      title: <p className="card-title">Internship</p>,
+      title: <p className="TW-CARD-TITLE">Internship</p>,
       content1: (
         <>
           <strong>Kazanawa Institute of Technology</strong>
@@ -33,7 +33,7 @@ const EduSlideCards = () => {
     },
     {
       key: 2,
-      title: <p className="card-title">Engineering</p>,
+      title: <p className="TW-CARD-TITLE">Engineering</p>,
       content1: (
         <>
           <p>Suranaree University of Technology</p>
@@ -63,7 +63,7 @@ const EduSlideCards = () => {
           className="min-w-[400px] xl:w-[400px] my-[1rem] mx-[0.5rem] bg-white rounded-xl"
           key={card.key}
         >
-          <div className="dominant-bg py-[0.5rem] px-[2rem] text-white rounded-t-xl">
+          <div className="TW-DOMINANT-BG py-[0.5rem] px-[2rem] text-white rounded-t-xl">
             {card.title}
           </div>
           <div className="p-[2rem] rounded-xl">

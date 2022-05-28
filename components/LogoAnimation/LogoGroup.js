@@ -18,7 +18,7 @@ import logoredis from "../../public/Images/logo-redis.png";
 import logothreejs from "../../public/Images/logo-threejs.png";
 import logots from "../../public/Images/logo-ts.png";
 
-const logo1Batch = [
+export const logoGroup1 = [
   logots,
   logojs,
   logonextjs,
@@ -26,7 +26,7 @@ const logo1Batch = [
   logoredux,
   logothreejs,
 ];
-const logo2Batch = [
+export const logoGroup2 = [
   logonodejs,
   logonestjs,
   logoexpressjs,
@@ -34,7 +34,7 @@ const logo2Batch = [
   logodjango,
   logofastapi,
 ];
-const logo3Batch = [
+export const logoGroup3 = [
   logogitlab,
   logodocker,
   logopostgres,
@@ -42,5 +42,3 @@ const logo3Batch = [
   logomongodb,
   logoredis,
 ];
-
-export { logo1Batch, logo2Batch, logo3Batch };

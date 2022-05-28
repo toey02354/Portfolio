@@ -25,7 +25,7 @@ const test = () => {
       <div className="bg-red-500 h-[100px] w-[100px]" /> */}
       {/* <TypingEffect sentence="This is my typing effect" delay={100} /> */}
       <button
-        className="h-[50px] flex justify-center items-center dominant-bg p-[1rem] text-white uppercase rounded-xl"
+        className="h-[50px] flex justify-center items-center TW-DOMINANT-BG p-[1rem] text-white uppercase rounded-xl"
         onClick={handleClick}
       >
         Click to start typing-effect

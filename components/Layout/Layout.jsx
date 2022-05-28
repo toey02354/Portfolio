@@ -4,7 +4,7 @@ import Footer from "../Footer/Footer";
 
 const Layout = ({ children }) => {
   return (
-    <div className="plain-bg-grad">
+    <div className="TW-PLAIN-BG-GRAD">
       <Navbar />
       {children}
       <Footer />

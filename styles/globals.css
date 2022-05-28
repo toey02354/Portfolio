@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 html,
 body {
   padding: 0;
@@ -10,36 +6,6 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   overflow-x: hidden;
-}
-
-@layer components {
-  .plain-bg-grad {
-    @apply bg-gradient-to-tl from-cyan-300 to-green-300;
-  }
-  .pain-text {
-    @apply text-cyan-300;
-  }
-  .dominant-bg {
-    @apply bg-slate-800;
-  }
-  .dominant-text {
-    @apply text-slate-800;
-  }
-  .highlight-text-grad {
-    @apply bg-clip-text text-transparent bg-gradient-to-br from-amber-800 to-amber-600;
-  }
-  .highlight-bg {
-    @apply bg-amber-600;
-  }
-  .highlight-text {
-    @apply text-amber-600;
-  }
-  .card-title {
-    @apply w-[100%] flex justify-center items-center py-3 text-xl font-[500];
-  }
-  .canvas {
-    @apply w-[80vw] h-[50vh] xl:w-[60vw] xl:h-screen;
-  }
 }
 
 a {

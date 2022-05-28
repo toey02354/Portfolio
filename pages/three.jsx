@@ -30,7 +30,7 @@ const three = () => {
 
   return (
     <div className="flex flex-col justify-center items-center">
-      <div className="canvas">
+      <div className="TW-CANVAS">
         <Canvas>
           <Suspense fallback={null}>
             <IPhone />
@@ -39,7 +39,7 @@ const three = () => {
           <pointLight position={[1, 1, 5]} intensity={2} />
         </Canvas>
       </div>
-      <div className="canvas">
+      <div className="TW-CANVAS">
         <Canvas>
           <Suspense fallback={null}>
             <Earth />

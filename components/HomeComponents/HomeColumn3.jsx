@@ -3,7 +3,7 @@ import EduSlideCards from "../Cards/EduCards";
 const Column3 = () => {
   return (
     <>
-      <div className="highlight-text w-screen flex justify-center items-center pt-[2rem] text-3xl uppercase font-bold drop-shadow-[0px_5px_5px_rgb(0,0,0,0.1)]">
+      <div className="TW-HIGHLIGHT-TEXT w-screen flex justify-center items-center pt-[2rem] text-3xl uppercase font-bold drop-shadow-[0px_5px_5px_rgb(0,0,0,0.1)]">
         <p>Educations</p>
       </div>
       <div className="w-screen flex flex-row justify-start xl:justify-center items-center mb-[2rem]">

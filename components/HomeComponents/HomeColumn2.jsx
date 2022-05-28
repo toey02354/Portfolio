@@ -5,7 +5,7 @@ import Typewriter from "typewriter-effect";
 const Column2 = () => {
   return (
     <div className="flex flex-col justify-center items-center py-[2rem]">
-      <div className="highlight-text-grad px-10 sm:py-0 sm:px-20 text-[2.1rem] sm:text-[3.3rem]">
+      <div className="TW-HIGHLIGHT-TEXT-GRAD px-10 sm:py-0 sm:px-20 text-[2.1rem] sm:text-[3.3rem]">
         <Typewriter
           options={{ loop: true }}
           onInit={(typewriter) => {
@@ -23,7 +23,7 @@ const Column2 = () => {
       <div className="flex justify-center items-center">
         <LogoAnimation />
       </div>
-      <div className="highlight-text w-screen flex justify-center items-center pt-[2rem] text-3xl uppercase font-bold drop-shadow-[0px_5px_5px_rgb(0,0,0,0.1)]">
+      <div className="TW-HIGHLIGHT-TEXT w-screen flex justify-center items-center pt-[2rem] text-3xl uppercase font-bold drop-shadow-[0px_5px_5px_rgb(0,0,0,0.1)]">
         Skill {"&"} Experience
       </div>
       <div className="w-screen flex flex-row justify-start xl:justify-center items-center mb-[2rem]">
