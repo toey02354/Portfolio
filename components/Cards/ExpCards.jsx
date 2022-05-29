@@ -30,7 +30,7 @@ const ExpSlideCards = () => {
         <p>
           Created and Developed pages for admin such as Login and Sign up.
           <br />
-          Call API to fetch data via Axios.
+          Fetch data from a RESTful API via Axios.
         </p>
       ),
       content2: (
