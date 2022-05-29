@@ -3,7 +3,7 @@ const Column1 = () => {
     <div className="IMG-BG h-[100vh] flex flex-col justify-center items-center">
       <div
         className="
-        TW-HIGHLIGHT-TEXT-GRAD pt-10 pb-5 px-10 sm:pt-20 sm:pb-10 sm:px-20 text-5xl sm:text-[5.2rem] font-bold"
+        TW-HIGHLIGHT-TEXT-GRAD p-10 px-20 text-5xl tracking-widest sm:text-[5.2rem] font-bold"
       >
         NATTHAPHOL
         <br />
