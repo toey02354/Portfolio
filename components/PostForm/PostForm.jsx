@@ -14,7 +14,7 @@ const PostForm = () => {
       return;
     }
     setValues(initialValues);
-    window.location.assign("#/thankyou");
+    window.location.assign("/thankyou");
   };
 
   return (
