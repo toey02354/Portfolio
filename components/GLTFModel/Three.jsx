@@ -1,5 +1,4 @@
 import { Suspense } from "react";
-import threeStyles from "../../styles/Three.module.css";
 // three modules
 import { Canvas } from "@react-three/fiber";
 import { MeshDistortMaterial, OrbitControls } from "@react-three/drei";
@@ -41,7 +40,7 @@ const Three = () => {
   return (
     <>
       <h1>THREE JS</h1>
-      <div id={threeStyles.canvas}>
+      <DriveEtaTwoTon>
         <Canvas>
           <Suspense fallback={null}>
             <JustAGirl />
@@ -49,8 +48,8 @@ const Three = () => {
           <ambientLight />
           <pointLight position={[1, 1, 5]} intensity={2} />
         </Canvas>
-      </div>
-      <div id={threeStyles.canvas}>
+      </DriveEtaTwoTon>
+      <div>
         <Canvas>
           <Suspense fallback={null}>
             <IPhone />
@@ -59,7 +58,7 @@ const Three = () => {
           <pointLight position={[1, 1, 5]} intensity={2} />
         </Canvas>
       </div>
-      <div id={threeStyles.canvas}>
+      <div>
         <Canvas>
           <Suspense fallback={null}>
             <Earth />

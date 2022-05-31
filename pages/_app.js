@@ -1,8 +1,5 @@
 import Layout from "../components/Layout";
 import "../styles/globals.css";
-import "../styles/tailwind.styles.css";
-import "../styles/home.styles.css";
-import "../styles/typing.styles.css";
 
 function MyApp({ Component, pageProps }) {
   return (

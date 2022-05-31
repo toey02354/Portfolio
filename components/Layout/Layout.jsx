@@ -4,14 +4,20 @@ import Footer from "../Footer";
 import ArrowCircleUpOutlinedIcon from "@mui/icons-material/ArrowCircleUpOutlined";
 
 const Layout = ({ children }) => {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [show, setShow] = useState(false);
   const handleTop = () => {
     window.scrollTo({ behavior: "smooth", top: 0 });
   };
 
   useEffect(() => {
-    setPosition({ x: pageXOffset, y: pageYOffset });
-  }, [position]);
+    window.addEventListener("scroll", () => {
+      if (scrollY > 300) {
+        setShow(true);
+      } else {
+        setShow(false);
+      }
+    });
+  }, []);
 
   return (
     <div className="">
@@ -20,7 +26,7 @@ const Layout = ({ children }) => {
       <Footer />
       <button
         className={`TW-DOMINANT-BG fixed bottom-0 right-0 m-4 p-2 rounded-full text-white ${
-          position.y <= 300 ? "hidden" : null
+          show ? null : "hidden"
         }`}
         onClick={handleTop}
       >

@@ -1,15 +1,19 @@
+import { Grow } from "@mui/material";
+
 const Column1 = () => {
   return (
-    <div className="IMG-BG h-[100vh] flex flex-col justify-center items-center">
-      <div
-        className="
+    <Grow in>
+      <div className="IMG-BG h-[100vh] flex flex-col justify-center items-center">
+        <div
+          className="
         TW-HIGHLIGHT-TEXT-GRAD p-10 px-20 text-5xl tracking-widest sm:text-[5.2rem] font-bold"
-      >
-        NATTHAPHOL
-        <br />
-        UTHUMPHIRAT
+        >
+          NATTHAPHOL
+          <br />
+          UTHUMPHIRAT
+        </div>
       </div>
-    </div>
+    </Grow>
   );
 };
 

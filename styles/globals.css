@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
@@ -44,4 +48,40 @@ a {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #005772;
+}
+
+@layer components {
+  .TW-PLAIN-BG-GRAD {
+    @apply bg-gradient-to-tl from-cyan-300 to-green-300;
+  }
+  .TW-PLAIN-TEXT {
+    @apply text-cyan-300;
+  }
+  .TW-DOMINANT-BG {
+    @apply bg-slate-800;
+  }
+  .TW-DOMINANT-TEXT {
+    @apply text-slate-800;
+  }
+  .TW-HIGHLIGHT-TEXT-GRAD {
+    @apply bg-clip-text text-transparent bg-gradient-to-br from-amber-800 to-amber-600;
+  }
+  .TW-HIGHLIGHT-BG {
+    @apply bg-amber-600;
+  }
+  .TW-HIGHLIGHT-TEXT {
+    @apply text-amber-600;
+  }
+  .TW-CARD-TITLE {
+    @apply w-[100%] flex justify-center items-center py-3 text-xl font-[500];
+  }
+  .TW-CANVAS {
+    @apply w-[80vw] h-[50vh] xl:w-[60vw] xl:h-screen;
+  }
+  .TW-LOGO-SKILL-GROUP {
+    @apply grid grid-cols-3 sm:flex sm:flex-row sm:justify-between gap-[2.5rem] drop-shadow-[0px_5px_5px_rgb(0,0,0,0.1)];
+  }
+  .TW-LOGO-SKILL {
+    @apply h-[100px] contrast-[0.8];
+  }
 }
