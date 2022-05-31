@@ -5,10 +5,10 @@ import { Grow } from "@mui/material";
 const Column3 = () => {
   const [show, setShow] = useState(false);
 
-  const col3Ref = useRef();
+  const educationRef = useRef();
 
   const controlShow = () => {
-    if (scrollY > col3Ref.current?.offsetTop - 500) {
+    if (scrollY > educationRef.current?.offsetTop - 500) {
       setShow(true);
     }
   };
@@ -21,7 +21,7 @@ const Column3 = () => {
     <>
       <div
         className="TW-HIGHLIGHT-TEXT w-screen flex justify-center items-center pt-[2rem] text-3xl uppercase font-bold drop-shadow-[0px_5px_5px_rgb(0,0,0,0.1)]"
-        ref={col3Ref}
+        ref={educationRef}
       >
         <p>Educations</p>
       </div>
