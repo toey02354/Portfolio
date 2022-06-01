@@ -8,7 +8,7 @@ const Column3 = () => {
   const educationRef = useRef();
 
   const controlShow = () => {
-    if (scrollY > educationRef.current?.offsetTop - 500) {
+    if (scrollY > educationRef.current?.offsetTop - 800) {
       setShow(true);
     }
   };

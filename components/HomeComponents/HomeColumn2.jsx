@@ -12,10 +12,12 @@ const Column2 = () => {
   const [showCard, setShowCard] = useState(false);
 
   const controlShow = () => {
-    if (scrollY > logoSkillceRef.current?.offsetTop - 500) {
+    if (scrollY > logoSkillceRef.current?.offsetTop - 800) {
       setShowLogo(true);
     }
-    if (scrollY > experienceRef.current?.offsetTop - 500) {
+    if (scrollY > experienceRef.current?.offsetTop - 800) {
+      // console.log(experienceRef.current.offsetTop);
+      // console.log(window.innerHeight);
       setShowCard(true);
     }
   };
