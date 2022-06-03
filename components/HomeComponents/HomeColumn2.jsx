@@ -12,10 +12,10 @@ const Column2 = () => {
   const [showCard, setShowCard] = useState(false);
 
   const controlShow = () => {
-    if (scrollY > logoSkillceRef.current?.offsetTop - 800) {
+    if (logoSkillceRef.current?.offsetTop - scrollY < 300) {
       setShowLogo(true);
     }
-    if (scrollY > experienceRef.current?.offsetTop - 800) {
+    if (experienceRef.current?.offsetTop - scrollY < 300) {
       // console.log(experienceRef.current.offsetTop);
       // console.log(window.innerHeight);
       setShowCard(true);
@@ -49,16 +49,14 @@ const Column2 = () => {
         </div>
       </Grow>
       <div
-        className="TW-HIGHLIGHT-TEXT w-screen flex justify-center items-center pt-[2rem] text-3xl uppercase font-bold drop-shadow-[0px_5px_5px_rgb(0,0,0,0.1)]"
+        className="TW-HIGHLIGHT-TEXT flex justify-center items-center p-[2rem] text-4xl uppercase font-bold drop-shadow-[0px_5px_5px_rgb(0,0,0,0.1)]"
         ref={experienceRef}
       >
         Skill {"&"} Experience
       </div>
       <Grow in={showCard}>
-        <div className="w-screen flex flex-row justify-start xl:justify-center items-center mb-[2rem]">
-          <div className="xl:w-[50vw] flex flex-row overflow-x-scroll scroll-smooth my-[1rem] xl:mx-[15rem] p-3">
-            <ExpSlideCards />
-          </div>
+        <div className="w-screen xl:w-[70vw]">
+          <ExpSlideCards />
         </div>
       </Grow>
     </div>
