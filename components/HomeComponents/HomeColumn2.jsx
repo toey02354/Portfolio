@@ -52,7 +52,7 @@ const Column2 = () => {
         className="TW-HIGHLIGHT-TEXT flex justify-center items-center p-[2rem] text-4xl uppercase font-bold drop-shadow-[0px_5px_5px_rgb(0,0,0,0.1)]"
         ref={experienceRef}
       >
-        Skill {"&"} Experience
+        <p>Skill {"&"} Experience</p>
       </div>
       <Grow in={showCard}>
         <div className="w-screen xl:w-[70vw]">
