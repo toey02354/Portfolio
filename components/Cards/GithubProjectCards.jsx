@@ -55,6 +55,7 @@ const GithubProjectCards = () => {
                 className="py-4 hover:text-blue-500"
                 href={card.link}
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 &rarr; Click
               </a>
