@@ -4,17 +4,17 @@ import GithubProjectCards from "../Cards/GithubProjectCards";
 import { Grow } from "@mui/material";
 
 const Column3 = () => {
-  const [show, setShow] = useState(false);
+  const [showEdu, setShowEdu] = useState(false);
   const [showGH, setShowGH] = useState(false);
 
   const educationRef = useRef();
   const githubRef = useRef();
 
   const controlShow = () => {
-    if (scrollY > educationRef.current?.offsetTop - 800) {
-      setShow(true);
+    if (educationRef.current?.offsetTop - scrollY < 300) {
+      setShowEdu(true);
     }
-    if (scrollY > githubRef.current?.offsetTop - 800) {
+    if (githubRef.current?.offsetTop - scrollY < 300) {
       setShowGH(true);
     }
   };
@@ -42,7 +42,7 @@ const Column3 = () => {
       >
         <p>Educations</p>
       </div>
-      <Grow in={show}>
+      <Grow in={showEdu}>
         <div className="w-screen xl:w-[70vw]">
           <EduSlideCards />
         </div>
