@@ -1,5 +1,6 @@
 import React from "react";
 import { Divider } from "@mui/material";
+import styles from "./Cards.module.css";
 
 const cards = [
   {
@@ -35,7 +36,7 @@ const GithubProjectCards = () => {
           className="min-w-full xl:h-[400px] flex flex-row bg-white rounded-xl"
           key={index}
         >
-          <div className="TW-DOMINANT-BG text-white px-4 rounded-l-xl">
+          <div className="text-white px-4 rounded-l-xl" id={styles.cardTitle}>
             <p className="TW-CARD-TITLE">{card.title}</p>
           </div>
           <div className="px-6 py-4 w-full">

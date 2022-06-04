@@ -1,5 +1,6 @@
 import React from "react";
 import { Divider } from "@mui/material";
+import styles from "./Cards.module.css";
 
 const cards = [
   {
@@ -88,7 +89,7 @@ const ExpSlideCards = () => {
         className="min-w-full xl:h-[300px] flex flex-row bg-white rounded-xl"
         key={99}
       >
-        <div className="TW-DOMINANT-BG px-4 text-white rounded-l-xl">
+        <div className="px-4 text-white rounded-l-xl" id={styles.cardTitle}>
           <p className="TW-CARD-TITLE">Skill</p>
         </div>
         <div className="px-6 w-full">
@@ -118,7 +119,10 @@ const ExpSlideCards = () => {
           className="min-w-full xl:h-[300px] flex flex-row bg-white rounded-xl"
           key={index}
         >
-          <div className="TW-DOMINANT-BG px-4 text-white rounded-l-xl">
+          <div
+            className="TW-DOMINANT-BG px-4 text-white rounded-l-xl"
+            id={styles.cardTitle}
+          >
             {card.title}
           </div>
           <div className="px-6 w-full">

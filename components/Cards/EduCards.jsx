@@ -1,5 +1,6 @@
 import React from "react";
 import { Divider } from "@mui/material";
+import styles from "./Cards.module.css";
 
 const cards = [
   {
@@ -60,7 +61,10 @@ const EduSlideCards = () => {
           className="min-w-[400px] xl:w-[400px] bg-white rounded-xl"
           key={index}
         >
-          <div className="TW-DOMINANT-BG flex justify-center py-2 px-4 text-white rounded-t-xl">
+          <div
+            className="flex justify-center py-2 px-4 text-white rounded-t-xl"
+            id={styles.cardTitleHorizontal}
+          >
             {card.title}
           </div>
           <div className="p-[2rem] rounded-xl">
