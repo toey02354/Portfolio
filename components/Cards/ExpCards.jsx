@@ -85,7 +85,7 @@ const ExpSlideCards = () => {
   return (
     <div className="flex flex-row overflow-x-scroll xl:grid xl:grid-cols-2 gap-2 m-3">
       <div
-        className="min-w-full h-[300px] flex flex-row bg-white rounded-xl"
+        className="min-w-full xl:h-[300px] flex flex-row bg-white rounded-xl"
         key={99}
       >
         <div className="TW-DOMINANT-BG px-4 text-white rounded-l-xl">
@@ -115,7 +115,7 @@ const ExpSlideCards = () => {
       </div>
       {cards.map((card, index) => (
         <div
-          className="min-w-full h-[300px] flex flex-row bg-white rounded-xl"
+          className="min-w-full xl:h-[300px] flex flex-row bg-white rounded-xl"
           key={index}
         >
           <div className="TW-DOMINANT-BG px-4 text-white rounded-l-xl">

@@ -32,7 +32,7 @@ const GithubProjectCards = () => {
     <div className="flex flex-row overflow-x-scroll xl:grid xl:grid-cols-2 gap-2 m-3">
       {cards.map((card, index) => (
         <div
-          className="min-w-full h-[400px] flex flex-row bg-white rounded-xl"
+          className="min-w-full xl:h-[400px] flex flex-row bg-white rounded-xl"
           key={index}
         >
           <div className="TW-DOMINANT-BG text-white px-4 rounded-l-xl">
@@ -44,7 +44,7 @@ const GithubProjectCards = () => {
               {card.content1}
             </div>
             <Divider />
-            <div className="py-4">
+            <div className="py-4 w-full">
               <div className="font-bold text-xl pb-2 uppercase">Detail</div>
               {card.content2}
             </div>
@@ -56,7 +56,7 @@ const GithubProjectCards = () => {
                 href={card.link}
                 target="_blank"
               >
-                {card.link}
+                &rarr; Click
               </a>
             </div>
           </div>
