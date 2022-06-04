@@ -3,28 +3,20 @@ import { Divider } from "@mui/material";
 
 const cards = [
   {
-    title: <p className="TW-CARD-TITLE">Skill</p>,
+    title: <p className="TW-CARD-TITLE">Sompo</p>,
     content1: (
       <div>
-        <strong>Typescript, Javascript</strong>
-        <p>React, NextJS, Redux</p>
-        <p>NodeJS, ThreeJS</p>
-        <p>ExpressJS, NestJS</p>
+        Created and Developed pages for admin <br />
+        such as Login, Search, Update, Delete, Add <br />
+        Fetch data from a RESTful API via Axios.
       </div>
     ),
     content2: (
       <div>
-        <strong>Python</strong>
-        <p>Django, FastAPI</p>
-        <p>PostgreSQL, MySQL</p>
-        <p>MongoDB, Redis</p>
+        Typescript, React, Redux, Axios, <br />
+        Vite, Ant Ddesign, TailwindCSS, JWT
       </div>
     ),
-  },
-  {
-    title: <p className="TW-CARD-TITLE">Sompo</p>,
-    content1: `Created and Developed pages for admin such as Login and Sign up. Fetch data from a RESTful API via Axios.`,
-    content2: `Tech stack: Typescript, React, Redux, Axios, Vite, Ant Ddesign, TailwindCSS, JWT`,
   },
   {
     title: (
@@ -36,8 +28,17 @@ const cards = [
         Integration
       </p>
     ),
-    content1: `Integrated and created API for payments and transactions`,
-    content2: `Tech stack: Python, Django, REST framework and Salt (cryptography), Redis`,
+    content1: (
+      <div>
+        Integrated the new payment method to the system
+        <br /> Created a RESTful API to handle transactions
+      </div>
+    ),
+    content2: (
+      <div>
+        Python, Django, REST framework, <br /> Salt (cryptography), Redis
+      </div>
+    ),
   },
   {
     title: (
@@ -47,27 +48,71 @@ const cards = [
         <br /> API
       </p>
     ),
-    content1: `Created a callback API for game service to call and created an API tocall game service`,
-    content2: `Tech stack: in early using FastAPI and mongoDB, present using Django and PostgreSQL`,
+    content1: (
+      <div>
+        Created a callback RESTful API for game service <br />
+        Calculate point, redeem, refund from data <br />
+        that the game sends to my API and send Response back
+      </div>
+    ),
+    content2: (
+      <div>
+        Early: FastAPI and mongoDB, <br />
+        Current: Django and PostgreSQL
+      </div>
+    ),
   },
   {
     title: (
       <p className="TW-CARD-TITLE">
-        Bridgestone
-        <br />
-        SubDealer
-        <br />
+        Bridgestone <br />
+        SubDealer <br />
         campaign
       </p>
     ),
-    content1: `Extract text to find an amount and detail and validate sub-dealer by AI from invoices that upload by sub-dealers`,
-    content2: `Tech stack: Python, Google Vision, YOLOv5`,
+    content1: (
+      <div>
+        Extract text to find an amount and detail <br />
+        Validate sub-dealer by AI from invoices <br />
+        that upload by sub-dealers
+      </div>
+    ),
+    content2: <div>Python, Google Vision, YOLOv5</div>,
   },
 ];
 
 const ExpSlideCards = () => {
   return (
     <div className="flex flex-row overflow-x-scroll xl:grid xl:grid-cols-2 gap-2 m-3">
+      <div
+        className="min-w-full h-[300px] flex flex-row bg-white rounded-xl"
+        key={99}
+      >
+        <div className="TW-DOMINANT-BG px-4 text-white rounded-l-xl">
+          <p className="TW-CARD-TITLE">Skill</p>
+        </div>
+        <div className="px-6 w-full">
+          <div className="py-4">
+            <div>
+              <strong className="font-bold text-xl">
+                Typescript, Javascript
+              </strong>
+              <p>React, NextJS, Redux</p>
+              <p>NodeJS,ExpressJS, NestJS</p>
+              <p>ThreeJS, ChartJS</p>
+            </div>
+          </div>
+          <Divider />
+          <div className="py-4">
+            <div>
+              <strong className="font-bold text-xl">Python</strong>
+              <p>Django, FastAPI</p>
+              <p>PostgreSQL, MySQL</p>
+              <p>MongoDB, Redis</p>
+            </div>
+          </div>
+        </div>
+      </div>
       {cards.map((card, index) => (
         <div
           className="min-w-full h-[300px] flex flex-row bg-white rounded-xl"
@@ -76,10 +121,16 @@ const ExpSlideCards = () => {
           <div className="TW-DOMINANT-BG px-4 text-white rounded-l-xl">
             {card.title}
           </div>
-          <div className="px-6 w-full ">
-            <div className="py-4">{card.content1}</div>
+          <div className="px-6 w-full">
+            <div className="py-4">
+              <div className="font-bold text-xl pb-2 uppercase">Detail</div>
+              {card.content1}
+            </div>
             <Divider />
-            <div className="py-4">{card.content2}</div>
+            <div className="py-4">
+              <div className="font-bold text-xl pb-2 uppercase">Tech Stack</div>
+              {card.content2}
+            </div>
           </div>
         </div>
       ))}
