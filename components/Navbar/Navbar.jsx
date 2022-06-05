@@ -1,51 +1,62 @@
+import { useContext } from "react";
+import { ThemeContext } from "../Layout/Layout";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import HomeIcon from "@mui/icons-material/Home";
-import CallIcon from "@mui/icons-material/Call";
-import ViewInArRoundedIcon from "@mui/icons-material/ViewInArRounded";
+import { Switch } from "@mui/material";
+import {
+  Home,
+  Call,
+  ViewInArRounded,
+  LightMode,
+  DarkMode,
+} from "@mui/icons-material";
+
+const NavItems = [
+  {
+    name: "Home",
+    path: "/",
+    icon: <Home />,
+  },
+  {
+    name: "Contact",
+    path: "/contact",
+    icon: <Call />,
+  },
+  {
+    name: "Three",
+    path: "/three",
+    icon: <ViewInArRounded />,
+  },
+];
 
 const Navbar = () => {
   const router = useRouter();
-  // CSS class
-  const navMenuClass =
-    "flex justify-between items-center py-2 px-4 hover:text-amber-500";
-  const clickedClass = "bg-slate-700 rounded-2xl text-amber-600";
-  const NavItems = [
-    {
-      name: "Home",
-      path: "/",
-      icon: <HomeIcon />,
-    },
-    {
-      name: "Contact",
-      path: "/contact",
-      icon: <CallIcon />,
-    },
-    {
-      name: "Three",
-      path: "/three",
-      icon: <ViewInArRoundedIcon />,
-    },
-  ];
+  const [dark, setDark] = useContext(ThemeContext);
 
   return (
-    <div className="TW-DOMINANT-BG min-h-[8%] w-screen flex flex-row justify-center lg:justify-start items-center p-4 pl-5 text-xl text-white">
-      <div className="hidden lg:flex justify-center items-center p-3 lg:py-2 lg:px-20">
-        <strong>TOEY</strong> Portfolio
+    <div className="TW-DOMINANT-BG min-h-[8%] w-screen flex flex-row justify-between items-center py-4 px-6 text-xl text-white">
+      <div className="flex flex-row items-center gap-8">
+        <div className="hidden lg:flex justify-center items-center p-3 lg:py-2">
+          <strong>TOEY</strong> Portfolio
+        </div>
+        <div className="flex flex-row gap-4">
+          {NavItems.map((item) => (
+            <Link href={item.path} key={item.name}>
+              <a
+                className={"flex flex-row items-center gap-1 hover:text-amber-500 ".concat(
+                  router.pathname == item.path ? "text-amber-600" : null
+                )}
+              >
+                {item.icon} <div className="hidden xl:block">{item.name}</div>
+              </a>
+            </Link>
+          ))}
+        </div>
       </div>
-      <div className="flex flex-row">
-        {NavItems.map((item) => (
-          <Link href={item.path} key={item.name}>
-            <a
-              target="_parent"
-              className={navMenuClass.concat(
-                router.pathname == item.path ? clickedClass : null
-              )}
-            >
-              {item.icon} {item.name}
-            </a>
-          </Link>
-        ))}
+      <div>
+        <LightMode className={!dark ? "TW-HIGHLIGHT-TEXT" : null} />
+        <Switch value={dark} onChange={() => setDark((prev) => !prev)} />{" "}
+        <DarkMode className={dark ? "TW-HIGHLIGHT-TEXT" : null} />
       </div>
     </div>
   );

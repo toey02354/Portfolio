@@ -4,30 +4,30 @@ import { Canvas } from "@react-three/fiber";
 import { MeshDistortMaterial, OrbitControls } from "@react-three/drei";
 import IphoneModel from "../components/GLTFModel/Iphone";
 
-const three = () => {
-  const Earth = () => {
-    return (
-      <mesh position={[0, 0, 0]} scale={2}>
-        <sphereGeometry attach="geometry" args={[1, 30, 30]} />
-        <MeshDistortMaterial
-          attach="material"
-          color="#000354"
-          speed={2}
-          distort={0.5}
-        />
-        <OrbitControls enableZoom={false} />
-      </mesh>
-    );
-  };
-  const IPhone = () => {
-    return (
-      <mesh position={[0, 0, 0]} scale={2} rotation={[0, 5, 0]}>
-        <IphoneModel />
-        <OrbitControls enableZoom={false} />
-      </mesh>
-    );
-  };
+const Earth = () => {
+  return (
+    <mesh position={[0, 0, 0]} scale={2}>
+      <sphereGeometry attach="geometry" args={[1, 30, 30]} />
+      <MeshDistortMaterial
+        attach="material"
+        color="#000354"
+        speed={2}
+        distort={0.5}
+      />
+      <OrbitControls enableZoom={false} />
+    </mesh>
+  );
+};
+const IPhone = () => {
+  return (
+    <mesh position={[0, 0, 0]} scale={2} rotation={[0, 5, 0]}>
+      <IphoneModel />
+      <OrbitControls enableZoom={false} />
+    </mesh>
+  );
+};
 
+const three = () => {
   return (
     <div className="flex flex-col justify-center items-center">
       <div className="TW-CANVAS">

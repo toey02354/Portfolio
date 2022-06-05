@@ -16,8 +16,6 @@ const Column2 = () => {
       setShowLogo(true);
     }
     if (experienceRef.current?.offsetTop - scrollY < 300) {
-      // console.log(experienceRef.current.offsetTop);
-      // console.log(window.innerHeight);
       setShowCard(true);
     }
   };
