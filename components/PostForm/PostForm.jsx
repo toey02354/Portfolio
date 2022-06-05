@@ -1,11 +1,18 @@
-import React, { useState } from "react";
-import TextField from "@mui/material/TextField";
-import { Container } from "@mui/material";
+import React, { useState, useContext } from "react";
+import { ThemeContext } from "../Layout/Layout";
+import { useRouter } from "next/router";
 import SendRoundedIcon from "@mui/icons-material/SendRounded";
 
+const initialValues = { title: "", content: "" };
+
 const PostForm = () => {
-  const initialValues = { title: "", content: "" };
+  const [dark] = useContext(ThemeContext);
+  const router = useRouter();
   const [values, setValues] = useState(initialValues);
+
+  const formTheme = dark
+    ? "bg-gray-200 focus:outline-blue-200"
+    : "bg-slate-700 focus:outline-none text-white";
 
   const handleSend = (event) => {
     event.preventDefault();
@@ -14,51 +21,53 @@ const PostForm = () => {
       return;
     }
     setValues(initialValues);
-    window.location.assign("/thankyou");
+    router.replace("/thankyou");
   };
 
   return (
-    <div className="w-[80vw] xl:w-[30vw] mt-2 mb-10 mx-3 px-10 py-5 bg-white/60 drop-shadow-sm rounded-xl">
+    <div
+      className={"w-[80vw] xl:w-[30vw] rounded-lg ".concat(
+        dark ? "bg-white" : "TW-DOMINANT-BG"
+      )}
+    >
       <form
-        className="flex flex-col items-center justify-center py-5"
+        autoComplete="off"
+        className="flex flex-col items-center justify-center gap-4 px-8 py-8"
         onKeyPress={(event) => {
           if (event.key == "Enter") {
             handleSend(event);
           }
         }}
       >
-        <TextField
-          fullWidth
-          id="standard-basic"
-          label="Title"
+        <input
+          className={"w-full p-2 rounded-lg ".concat(formTheme)}
           placeholder="Enter Title Here"
-          variant="outlined"
-          required
+          type="text"
           value={values.title}
           onChange={(event) =>
             setValues({ ...values, title: event.target.value })
           }
+          name="Title"
         />
-        <br />
-        <TextField
-          fullWidth
-          id="outlined-multiline-static"
-          label="Content"
-          placeholder="Enter Content Here"
-          variant="outlined"
-          multiline
+        <textarea
+          className={"w-full p-2 rounded-lg resize-none ".concat(formTheme)}
           rows={10}
-          required
+          placeholder="Enter Content Here"
           value={values.content}
           onChange={(event) =>
             setValues({ ...values, content: event.target.value })
           }
+          name="Title"
         />
         <button
-          className="flex flex-row items-center justify-center my-2 py-2 px-8 bg-sky-500 hover:bg-sky-600 drop-shadow-sm text-white rounded-xl"
+          className={"flex flex-row items-center justify-center py-2 px-8 drop-shadow-sm rounded-xl ".concat(
+            dark
+              ? "bg-gray-200 hover:bg-gray-400"
+              : "bg-slate-700 text-white hover:bg-slate-500"
+          )}
           onClick={(event) => handleSend(event)}
         >
-          Send <SendRoundedIcon sx={{ height: "1rem" }} />
+          <p>Send</p> <SendRoundedIcon sx={{ height: "1rem" }} />
         </button>
       </form>
     </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import TypeWriter from "../components/TypingEffect/TypeWriter";
 
-const test = () => {
+const Test = () => {
   const typeWriter = new TypeWriter();
 
   const handleClick = () => {
@@ -27,4 +27,4 @@ const test = () => {
   );
 };
 
-export default test;
+export default Test;
