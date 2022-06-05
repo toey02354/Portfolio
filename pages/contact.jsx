@@ -4,9 +4,8 @@ import PostForm from "../components/PostForm";
 import { Grow } from "@mui/material";
 import { ThemeContext } from "../components/Layout/Layout";
 
-const contact = () => {
+const Contact = () => {
   const [dark] = useContext(ThemeContext);
-
   return (
     <>
       <Head>
@@ -37,4 +36,4 @@ const contact = () => {
   );
 };
 
-export default contact;
+export default Contact;

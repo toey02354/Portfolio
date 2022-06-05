@@ -27,7 +27,7 @@ const IPhone = () => {
   );
 };
 
-const three = () => {
+const Three = () => {
   return (
     <div className="flex flex-col justify-center items-center">
       <div className="TW-CANVAS">
@@ -52,4 +52,4 @@ const three = () => {
   );
 };
 
-export default three;
+export default Three;
