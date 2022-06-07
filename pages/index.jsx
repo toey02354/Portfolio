@@ -21,7 +21,7 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex flex-col">
+      <main className="flex flex-col pb-[8rem]">
         <Column1 />
         <Column2 />
         <Column3 />

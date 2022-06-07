@@ -11,7 +11,7 @@ const Column3 = () => {
   const githubRef = useRef();
 
   const controlShow = () => {
-    if (educationRef.current?.offsetTop - scrollY < 600) {
+    if (educationRef.current?.offsetTop - scrollY < 500) {
       setShowEdu(true);
     }
     if (githubRef.current?.offsetTop - scrollY < 300) {
