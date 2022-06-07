@@ -2,13 +2,13 @@ import { useContext } from "react";
 import { ThemeContext } from "../Layout/Layout";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { Switch } from "@mui/material";
 import {
   Home,
   Call,
   ViewInArRounded,
   LightMode,
   DarkMode,
+  Lock,
 } from "@mui/icons-material";
 
 const NavItems = [
@@ -26,6 +26,11 @@ const NavItems = [
     name: "Three",
     path: "/three",
     icon: <ViewInArRounded />,
+  },
+  {
+    name: "Secret",
+    path: "/test",
+    icon: <Lock />,
   },
 ];
 

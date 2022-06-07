@@ -21,14 +21,19 @@ const Contact = () => {
           >
             Feedback
           </div>
-          <h4
-            className={"flex flex-wrap items-center justify-center py-4 gap-4 ".concat(
-              dark ? "text-white" : null
-            )}
-          >
-            Or you can send me an email
-            <div className="text-red-600">natthaphol.uth@gmail.com</div>
-          </h4>
+          <div className="flex flex-col items-center p-4">
+            <h4
+              className={"flex flex-wrap items-center justify-center gap-2 ".concat(
+                dark ? "text-white" : null
+              )}
+            >
+              Or you can send me an email
+              <div className={"text-red-600"}>natthaphol.uth@gmail.com</div>
+            </h4>
+            <div className={dark ? "text-white" : null}>
+              *** This form won&apos;t send to me ***
+            </div>
+          </div>
           <PostForm />
         </div>
       </Grow>
