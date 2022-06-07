@@ -53,10 +53,21 @@ const Navbar = () => {
           ))}
         </div>
       </div>
-      <div>
-        <LightMode className={!dark ? "TW-HIGHLIGHT-TEXT" : null} />
-        <Switch value={dark} onChange={() => setDark((prev) => !prev)} />{" "}
-        <DarkMode className={dark ? "TW-HIGHLIGHT-TEXT" : null} />
+      <div className="flex bg-slate-600 rounded-xl">
+        <div
+          className={`p-2 `.concat(
+            !dark ? "TW-HIGHLIGHT-TEXT bg-slate-700 rounded-xl" : null
+          )}
+        >
+          <LightMode onClick={() => setDark(false)} />
+        </div>
+        <div
+          className={`p-2 `.concat(
+            dark ? "TW-HIGHLIGHT-TEXT bg-slate-700 rounded-xl" : null
+          )}
+        >
+          <DarkMode onClick={() => setDark(true)} />
+        </div>
       </div>
     </div>
   );
