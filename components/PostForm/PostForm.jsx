@@ -25,11 +25,7 @@ const PostForm = () => {
   };
 
   return (
-    <div
-      className={"w-[80vw] xl:w-[30vw] rounded-lg ".concat(
-        dark ? "bg-white" : "TW-DOMINANT-BG"
-      )}
-    >
+    <div className={"w-[80vw] xl:w-[30vw] rounded-lg TW-DOMINANT-BG"}>
       <form
         autoComplete="off"
         className="flex flex-col items-center justify-center gap-4 px-8 py-8"
@@ -40,7 +36,9 @@ const PostForm = () => {
         }}
       >
         <input
-          className={"w-full p-2 rounded-lg ".concat(formTheme)}
+          className={
+            "w-full p-2 rounded-lg bg-slate-700 focus:outline-none text-white"
+          }
           placeholder="Enter Title Here"
           type="text"
           value={values.title}
@@ -50,7 +48,9 @@ const PostForm = () => {
           name="Title"
         />
         <textarea
-          className={"w-full p-2 rounded-lg resize-none ".concat(formTheme)}
+          className={
+            "w-full p-2 rounded-lg resize-none bg-slate-700 focus:outline-none text-white"
+          }
           rows={10}
           placeholder="Enter Content Here"
           value={values.content}
@@ -60,11 +60,9 @@ const PostForm = () => {
           name="Title"
         />
         <button
-          className={"flex flex-row items-center justify-center py-2 px-8 drop-shadow-sm rounded-xl ".concat(
-            dark
-              ? "bg-gray-200 hover:bg-gray-400"
-              : "bg-slate-700 text-white hover:bg-slate-500"
-          )}
+          className={
+            "flex flex-row items-center justify-center py-2 px-8 drop-shadow-sm rounded-xl bg-slate-700 text-white hover:bg-slate-500"
+          }
           onClick={(event) => handleSend(event)}
         >
           <p>Send</p> <SendRoundedIcon sx={{ height: "1rem" }} />
