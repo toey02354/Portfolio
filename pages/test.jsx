@@ -17,7 +17,6 @@ const Test = () => {
   };
 
   const handleEnter = (value) => {
-    console.log("Enter pressed");
     if (value === "kaiser") {
       setAccess(true);
     }

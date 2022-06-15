@@ -16,7 +16,6 @@ const TypeWriter = function () {
           setText((this.text += letters[i]));
           i++;
           if (i >= string.length) {
-            console.log(this.text);
             clearInterval(interval);
             resolve();
           }
@@ -29,7 +28,6 @@ const TypeWriter = function () {
   this.deleteChar = (numberToDelete) => {
     queues.push(() => {
       return new Promise((resolve) => {
-        console.log(numberToDelete);
         resolve();
       });
     });
@@ -43,7 +41,6 @@ const TypeWriter = function () {
           setText(this.text.slice(0, this.text.length - i));
           i++;
           if (i > this.text.length) {
-            console.log("Deleted All");
             this.text = "";
             resolve();
             clearInterval(interval);
@@ -67,8 +64,6 @@ const TypeWriter = function () {
       await cb();
       if (false) queues.push(cb);
     }
-    console.log("that: ", text);
-    console.log("this: ", this.text);
   };
 };
 

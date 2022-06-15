@@ -16,12 +16,9 @@ const Layout = ({ children }) => {
 
   useEffect(() => {
     const darkThemeLS = localStorage.getItem("toey-portfolio-theme");
-    console.log("useEffect init: ", darkThemeLS);
     if (darkThemeLS === null) {
-      console.log("if");
       localStorage.setItem("toey-portfolio-theme", "light");
     } else {
-      console.log("else");
       darkThemeLS === "dark" ? setTheme(true) : setTheme(false);
     }
 
@@ -36,17 +33,13 @@ const Layout = ({ children }) => {
 
   useEffect(() => {
     const darkThemeLS = localStorage.getItem("toey-portfolio-theme");
-    console.log("useEffect darkTheme: ", darkTheme ? "dark" : "light");
     if (darkTheme === true && darkTheme !== null) {
-      console.log("set dark");
       setTheme(true);
       localStorage.setItem("toey-portfolio-theme", "dark");
     } else if (darkTheme === false && darkTheme !== null) {
-      console.log("set light");
       setTheme(false);
       localStorage.setItem("toey-portfolio-theme", "light");
     } else {
-      console.log(`something is wrong with the theme`);
     }
   }, [darkTheme]);
 
