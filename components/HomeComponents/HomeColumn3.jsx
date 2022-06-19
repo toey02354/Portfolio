@@ -32,7 +32,7 @@ const Column3 = () => {
         <p>Github Project</p>
       </div>
       <Grow in={showGH}>
-        <div className="w-screen xl:w-[70vw]">
+        <div className="w-screen xl:w-[50vw]">
           <GithubProjectCards />
         </div>
       </Grow>
@@ -43,7 +43,7 @@ const Column3 = () => {
         <p>Educations</p>
       </div>
       <Grow in={showEdu}>
-        <div className="w-screen xl:w-[70vw]">
+        <div className="w-screen xl:w-[60vw]">
           <EduSlideCards />
         </div>
       </Grow>

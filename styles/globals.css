@@ -69,7 +69,7 @@ a {
     @apply text-amber-600;
   }
   .TW-CARD-TITLE {
-    @apply w-[130px] py-4 text-2xl font-[700];
+    @apply p-4 text-white rounded-t-xl text-center text-xl;
   }
   .TW-CANVAS {
     @apply w-[80vw] h-[50vh] xl:w-[60vw] xl:h-screen;

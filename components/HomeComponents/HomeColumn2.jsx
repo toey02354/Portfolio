@@ -53,7 +53,7 @@ const Column2 = () => {
         <p>Skill {"&"} Experience</p>
       </div>
       <Grow in={showCard}>
-        <div className="w-screen xl:w-[70vw]">
+        <div className="w-screen xl:w-[50vw]">
           <ExpSlideCards />
         </div>
       </Grow>
