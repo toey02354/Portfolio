@@ -29,7 +29,7 @@ const Column3 = () => {
         className="TW-HIGHLIGHT-TEXT flex justify-center items-center p-[2rem] text-4xl uppercase font-bold drop-shadow-[0px_5px_5px_rgb(0,0,0,0.1)]"
         ref={githubRef}
       >
-        <p>Github Project</p>
+        <p className="skew-y-[-5deg]">Github Project</p>
       </div>
       <Grow in={showGH}>
         <div className="w-screen xl:w-[50vw]">
@@ -40,10 +40,10 @@ const Column3 = () => {
         className="TW-HIGHLIGHT-TEXT flex justify-center items-center p-[2rem] text-4xl uppercase font-bold drop-shadow-[0px_5px_5px_rgb(0,0,0,0.1)]"
         ref={educationRef}
       >
-        <p>Educations</p>
+        <p className="skew-y-[-5deg]">Educations</p>
       </div>
       <Grow in={showEdu}>
-        <div className="w-screen xl:w-[60vw]">
+        <div className="w-screen xl:w-[50vw]">
           <EduSlideCards />
         </div>
       </Grow>

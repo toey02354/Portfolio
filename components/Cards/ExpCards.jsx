@@ -3,14 +3,18 @@ import { ExpCards } from "./CardItems";
 
 const ExpSlideCards = () => {
   return (
-    <div className="flex flex-row overflow-x-scroll md:grid md:grid-cols-2 gap-2 m-3">
+    <div className="flex flex-col gap-4">
       {ExpCards.map((card, index) => (
         <div
-          className="min-w-full flex flex-col bg-white rounded-xl"
+          className={`h-full w-full flex flex-col justify-center skew-y-[-5deg] p-8 gap-4 ${
+            index % 2 == 0 ? "TW-DOMINANT-BG text-white" : "bg-white"
+          }`}
           key={`expcard-${index}`}
         >
-          <div className="TW-DOMINANT-BG TW-CARD-TITLE">{card[0]}</div>
-          <ul key="detail" className="flex flex-col p-[2rem] gap-4 list-disc">
+          <div className="text-2xl font-bold skew-y-[5deg] text-center">
+            <text className="border-b-2">{card[0]}</text>
+          </div>
+          <ul key="detail" className="skew-y-[5deg] list-disc">
             {card[1].map((detail, index) => (
               <>
                 {index === card[1].length - 1 && (

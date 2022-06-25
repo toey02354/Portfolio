@@ -50,10 +50,10 @@ const Column2 = () => {
         className="TW-HIGHLIGHT-TEXT flex justify-center items-center p-[2rem] text-4xl uppercase font-bold drop-shadow-[0px_5px_5px_rgb(0,0,0,0.1)]"
         ref={experienceRef}
       >
-        <p>Skill {"&"} Experience</p>
+        <p className="skew-y-[-5deg]">Skill {"&"} Experience</p>
       </div>
       <Grow in={showCard}>
-        <div className="w-screen xl:w-[50vw]">
+        <div className="w-full xl:w-[50vw]">
           <ExpSlideCards />
         </div>
       </Grow>

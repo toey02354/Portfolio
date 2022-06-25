@@ -4,14 +4,18 @@ import { GithubCards } from "./CardItems";
 
 const GithubProjectCards = () => {
   return (
-    <div className="flex flex-row overflow-x-scroll md:grid md:grid-cols-2 gap-2 m-3">
+    <div className="flex flex-col gap-4">
       {GithubCards.map((card, index) => (
         <div
-          className="min-w-full flex flex-col bg-white rounded-xl"
+          className={`h-full w-full flex flex-col justify-center skew-y-[-5deg] p-8 gap-4 ${
+            index % 2 == 0 ? "TW-DOMINANT-BG text-white" : "bg-white"
+          }`}
           key={`githubcard-${index}`}
         >
-          <div className="TW-DOMINANT-BG TW-CARD-TITLE">{card.title}</div>
-          <div className="px-6 py-4 w-full">
+          <div className="text-2xl font-bold skew-y-[5deg] text-center">
+            <text className="border-b-2">{card.title}</text>
+          </div>
+          <div className="skew-y-[5deg]">
             <div className="py-4">
               <strong>Tech Stack</strong>: {card.content1}
             </div>
