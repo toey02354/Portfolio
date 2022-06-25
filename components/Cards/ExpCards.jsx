@@ -14,7 +14,7 @@ const ExpSlideCards = () => {
           <div className="text-2xl font-bold skew-y-[3deg] text-center">
             <text className="border-b-2">{card[0]}</text>
           </div>
-          <ul key="detail" className="skew-y-[3deg] list-disc">
+          <ul key="detail" className="skew-y-[3deg] list-disc px-8">
             {card[1].map((detail, index) => (
               <React.Fragment key={`detail-${index}`}>
                 {index === card[1].length - 1 && (
