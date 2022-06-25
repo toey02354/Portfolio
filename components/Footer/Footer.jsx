@@ -1,9 +1,21 @@
-import LogoFooter from "./LogoFooter";
+import FooterItems from "./LogoFooter";
 
 const Footer = () => {
   return (
-    <div className="min-h-[8%] TW-DOMINANT-BG">
-      <LogoFooter />
+    <div className="TW-DOMINANT-BG flex flex-col justify-center items-center gap-2 p-4">
+      <div className="flex items-center justify-center gap-6 p-4">
+        {FooterItems.map((item, index) => (
+          <a key={`footer-${index}`} href={item.href} target="_blank" rel="noopender noreferrer"
+            className="text-white hover:text-stone-500"
+          >
+            {item.icon}
+          </a>
+        ))}
+      </div>
+      <hr className="w-[25%] h-[2px] flex border-dashed" />
+      <div className="text-[1.25rem] p-4 text-white">
+        Created by Natthaphol Uthumphirat
+      </div>
     </div>
   );
 };

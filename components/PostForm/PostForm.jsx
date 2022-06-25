@@ -10,10 +10,6 @@ const PostForm = () => {
   const router = useRouter();
   const [values, setValues] = useState(initialValues);
 
-  const formTheme = dark
-    ? "bg-gray-200 focus:outline-blue-200"
-    : "bg-slate-700 focus:outline-none text-white";
-
   const handleSend = (event) => {
     event.preventDefault();
     if (values.title.trim() === "" || values.content.trim() === "") {
@@ -61,7 +57,7 @@ const PostForm = () => {
         />
         <button
           className={
-            "flex flex-row items-center justify-center py-2 px-8 drop-shadow-sm rounded-xl bg-slate-700 text-white hover:bg-slate-500"
+            "flex items-center justify-center py-2 px-8 drop-shadow-sm rounded-xl bg-slate-700 text-white hover:bg-slate-500"
           }
           onClick={(event) => handleSend(event)}
         >

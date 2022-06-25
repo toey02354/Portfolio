@@ -6,11 +6,8 @@ const GithubProjectCards = () => {
   return (
     <div className="flex flex-col gap-4">
       {GithubCards.map((card, index) => (
-        <div
-          className={`h-full w-full flex flex-col justify-center skew-y-[-3deg] p-8 gap-4 ${
-            index % 2 == 0 ? "TW-DOMINANT-BG text-white" : "bg-white"
-          }`}
-          key={`githubcard-${index}`}
+        <div key={`githubcard-${index}`}
+          className={`h-full w-full flex flex-col justify-center skew-y-[-3deg] p-8 gap-4 ${index % 2 == 0 ? "TW-DOMINANT-BG text-white" : "bg-white"}`}
         >
           <div className="text-2xl font-bold skew-y-[3deg] text-center">
             <text className="border-b-2">{card.title}</text>
@@ -26,12 +23,7 @@ const GithubProjectCards = () => {
             <Divider />
             <div className="py-4">
               <strong>Link</strong>
-              <a
-                className=" p-4 hover:text-blue-500"
-                href={card.link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a className=" p-4 hover:text-blue-500" href={card.link} target="_blank" rel="noopener noreferrer">
                 &rarr; Click
               </a>
             </div>

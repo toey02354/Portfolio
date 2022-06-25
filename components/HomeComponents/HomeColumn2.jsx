@@ -21,15 +21,13 @@ const Column2 = () => {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", controlShow);
+    addEventListener("scroll", controlShow);
   }, []);
 
   return (
     <div className="flex flex-col justify-center items-center py-[2rem]">
-      <div className="TW-HIGHLIGHT-TEXT-GRAD px-10 sm:py-0 sm:px-20 text-[2.1rem] sm:text-[3.3rem]">
-        <Typewriter
-          options={{ loop: true }}
-          onInit={(typewriter) => {
+      <div className="TW-HIGHLIGHT-TEXT-GRAD sm:py-0 sm:px-20 text-[2.1rem] sm:text-[3.3rem]">
+        <Typewriter options={{ loop: true }} onInit={(typewriter) => {
             typewriter
               .typeString("A WebApp Developer")
               .pauseFor(1000)
@@ -46,9 +44,8 @@ const Column2 = () => {
           <LogoAnimation />
         </div>
       </Grow>
-      <div
+      <div ref={experienceRef}
         className="TW-HIGHLIGHT-TEXT flex justify-center items-center p-[2rem] text-4xl uppercase font-bold drop-shadow-[0px_5px_5px_rgb(0,0,0,0.1)]"
-        ref={experienceRef}
       >
         <p className="skew-y-[-3deg]">Skill {"&"} Experience</p>
       </div>

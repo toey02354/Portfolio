@@ -68,14 +68,8 @@ a {
   .TW-HIGHLIGHT-TEXT {
     @apply text-amber-600;
   }
-  .TW-CARD-TITLE {
-    @apply p-4 text-white rounded-t-xl text-center text-xl;
-  }
   .TW-CANVAS {
     @apply w-[80vw] h-[50vh] xl:w-[60vw] xl:h-screen;
-  }
-  .TW-LOGO-SKILL-GROUP {
-    @apply grid grid-cols-3 sm:flex sm:flex-row sm:justify-between gap-[2.5rem] drop-shadow-[0px_5px_5px_rgb(0,0,0,0.1)];
   }
   .TW-LOGO-SKILL {
     @apply h-[100px] contrast-[0.8];

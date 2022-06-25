@@ -4,24 +4,20 @@ import { logoGroup1, logoGroup2, logoGroup3 } from "./LogoGroup";
 const LogoSkill = () => {
   return (
     <div className="my-[2rem] mx-[2rem] p-2 sm:p-10">
-      <div className="TW-LOGO-SKILL-GROUP">
+      <div className="grid grid-cols-3 sm:grid sm:grid-cols-6 gap-[2rem] drop-shadow-[0px_5px_5px_rgb(0,0,0,0.1)]">
         {logoGroup1.map((logo) => (
           <div className="TW-LOGO-SKILL" key={logo}>
-            <Image src={logo} height="70" width="70"></Image>
+            <Image src={logo} height="70" width="70" layout="fixed"/>
           </div>
         ))}
-      </div>
-      <div className="TW-LOGO-SKILL-GROUP">
         {logoGroup2.map((logo) => (
           <div className="TW-LOGO-SKILL" key={logo}>
-            <Image src={logo} height="70" width="70"></Image>
+            <Image src={logo} height="70" width="70" layout="fixed"/>
           </div>
         ))}
-      </div>
-      <div className="TW-LOGO-SKILL-GROUP">
         {logoGroup3.map((logo) => (
           <div className="TW-LOGO-SKILL" key={logo}>
-            <Image src={logo} height="70" width="70"></Image>
+            <Image src={logo} height="70" width="70" layout="fixed"/>
           </div>
         ))}
       </div>

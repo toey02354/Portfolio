@@ -4,7 +4,7 @@ import TypeWriter from "../components/TypingEffect/TypeWriter";
 const Test = () => {
   const typeWriter = new TypeWriter();
   const [access, setAccess] = useState(false);
-  const [data, setData] = useState(null);
+  const [data, setData] = useState("");
 
   const handleClick = () => {
     typeWriter

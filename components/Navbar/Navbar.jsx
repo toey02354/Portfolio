@@ -3,75 +3,38 @@ import { ThemeContext } from "../Layout/Layout";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import {
-  Home,
-  Call,
-  ViewInArRounded,
   LightMode,
   DarkMode,
-  Lock,
 } from "@mui/icons-material";
-
-const NavItems = [
-  {
-    name: "Home",
-    path: "/",
-    icon: <Home />,
-  },
-  {
-    name: "Contact",
-    path: "/contact",
-    icon: <Call />,
-  },
-  {
-    name: "Three",
-    path: "/three",
-    icon: <ViewInArRounded />,
-  },
-  {
-    name: "Secret",
-    path: "/test",
-    icon: <Lock />,
-  },
-];
+import NavItems from "./NavItems";
 
 const Navbar = () => {
   const router = useRouter();
   const [dark, setDark] = useContext(ThemeContext);
 
   return (
-    <div className="TW-DOMINANT-BG min-h-[8%] w-screen flex flex-row justify-between items-center py-4 px-6 text-xl text-white">
-      <div className="flex flex-row items-center gap-8">
-        <div className="hidden lg:flex justify-center items-center p-3 lg:py-2">
-          <strong>TOEY</strong> Portfolio
+    <div className="TW-DOMINANT-BG flex justify-between items-center py-4 px-6 text-xl text-white">
+      <div className="flex items-center gap-8">
+        <div className="hidden lg:flex lg:justify-center lg:items-center p-3">
+          <strong>TOEY</strong> <text>Portfolio</text>
         </div>
-        <div className="flex flex-row gap-4">
+        <div className="flex gap-4">
           {NavItems.map((item) => (
             <Link href={item.path} key={item.name}>
-              <a
-                className={"flex flex-row items-center gap-1 hover:text-amber-500 ".concat(
-                  router.pathname == item.path ? "text-amber-600" : null
-                )}
-              >
+              <button className={`flex items-center gap-1 hover:text-amber-500 ${router.pathname == item.path ? "text-amber-600" : null}`}>
                 {item.icon} <div className="hidden xl:block">{item.name}</div>
-              </a>
+              </button>
             </Link>
           ))}
         </div>
       </div>
       <div className="flex bg-slate-600 rounded-xl">
-        <div
-          className={`p-2 cursor-pointer `.concat(
-            !dark ? "TW-HIGHLIGHT-TEXT bg-slate-700 rounded-xl" : null
-          )}
-        >
+        <div className={`relative p-2 cursor-pointer ${!dark ? "TW-HIGHLIGHT-TEXT bg-slate-700 rounded-xl" : null}`}>
           <LightMode onClick={() => setDark(false)} />
         </div>
-        <div
-          className={`p-2 cursor-pointer `.concat(
-            dark ? "TW-HIGHLIGHT-TEXT bg-slate-700 rounded-xl" : null
-          )}
-        >
+        <div className={`p-2 cursor-pointer ${dark ? "TW-HIGHLIGHT-TEXT bg-slate-700 rounded-xl" : null}`}>
           <DarkMode onClick={() => setDark(true)} />
+          {/* <div className={`absolute top-0 left-0 z-[-1] h-[50px] w-[50px] bg-slate-900/50`} /> */}
         </div>
       </div>
     </div>
