@@ -20,7 +20,7 @@ const Column3 = () => {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", controlShow);
+    addEventListener("scroll", controlShow);
   }, []);
 
   return (
@@ -29,7 +29,7 @@ const Column3 = () => {
         className="TW-HIGHLIGHT-TEXT flex justify-center items-center p-[2rem] text-4xl uppercase font-bold drop-shadow-[0px_5px_5px_rgb(0,0,0,0.1)]"
         ref={githubRef}
       >
-        <p className="skew-y-[-5deg]">Github Project</p>
+        <p className="skew-y-[-3deg]">Github Project</p>
       </div>
       <Grow in={showGH}>
         <div className="w-screen xl:w-[50vw]">
@@ -40,7 +40,7 @@ const Column3 = () => {
         className="TW-HIGHLIGHT-TEXT flex justify-center items-center p-[2rem] text-4xl uppercase font-bold drop-shadow-[0px_5px_5px_rgb(0,0,0,0.1)]"
         ref={educationRef}
       >
-        <p className="skew-y-[-5deg]">Educations</p>
+        <p className="skew-y-[-3deg]">Educations</p>
       </div>
       <Grow in={showEdu}>
         <div className="w-screen xl:w-[50vw]">
