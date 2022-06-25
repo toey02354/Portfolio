@@ -2,7 +2,7 @@ export const ExpCards = [
   [
     "Kerry SLM",
     [
-      "Created a project, designed the project structure and developed services for the website with a dashboard to present data in charts and tables in real-time 24/7.",
+      "Created a project, designed the project structure and developed services for the website with a dashboard to present data in charts and tables",
       "Created forms to submit data to Google Sheets via GoogleAPI.",
       "Created the API endpoints to manipulate the data on Google sheets.",
       "Typescript, NextJS, ChartJS, Axios, Ant-Design, TailwindCSS, Google API",

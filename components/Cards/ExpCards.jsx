@@ -1,6 +1,5 @@
 import React from "react";
 import { ExpCards } from "./CardItems";
-import { Divider } from "@mui/material";
 
 const ExpSlideCards = () => {
   return (
@@ -8,11 +7,9 @@ const ExpSlideCards = () => {
       {ExpCards.map((card, index) => (
         <div
           className="min-w-full flex flex-col bg-white rounded-xl"
-          key={index}
+          key={`expcard-${index}`}
         >
-          <div key="title" className="TW-DOMINANT-BG TW-CARD-TITLE">
-            {card[0]}
-          </div>
+          <div className="TW-DOMINANT-BG TW-CARD-TITLE">{card[0]}</div>
           <ul key="detail" className="flex flex-col p-[2rem] gap-4 list-disc">
             {card[1].map((detail, index) => (
               <>

@@ -8,7 +8,7 @@ const GithubProjectCards = () => {
       {GithubCards.map((card, index) => (
         <div
           className="min-w-full flex flex-col bg-white rounded-xl"
-          key={index}
+          key={`githubcard-${index}`}
         >
           <div className="TW-DOMINANT-BG TW-CARD-TITLE">{card.title}</div>
           <div className="px-6 py-4 w-full">

@@ -8,11 +8,9 @@ const EduSlideCards = () => {
       {EduCards.map((card, index) => (
         <div
           className="min-w-[400px] xl:w-[400px] bg-white rounded-xl"
-          key={index}
+          key={`educard-${index}`}
         >
-          <div key="title" className="TW-DOMINANT-BG TW-CARD-TITLE">
-            {card.title}
-          </div>
+          <div className="TW-DOMINANT-BG TW-CARD-TITLE">{card.title}</div>
           <div className="p-[2rem] rounded-xl">
             <div className="py-4">{card.content1}</div>
             <Divider />
