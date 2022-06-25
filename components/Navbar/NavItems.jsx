@@ -1,10 +1,4 @@
-import React from 'react'
-import {
-    Home,
-    Call,
-    ViewInArRounded,
-    Lock,
-  } from "@mui/icons-material";
+import {Home, Call, ViewInArRounded, Lock} from "@mui/icons-material";
 
 const NavItems = [
     {

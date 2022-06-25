@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { Typography } from "@mui/material";
@@ -12,11 +12,7 @@ const Thankyou = () => {
       <Head>
         <title>Thank You!</title>
       </Head>
-      <div
-        className={"min-h-[88vh] flex flex-col justify-center items-center ".concat(
-          dark ? "text-white" : "text-black"
-        )}
-      >
+      <div className={`min-h-[88vh] flex flex-col justify-center items-center ${dark ? "text-white" : "text-black"}`}>
         <Typography className="uppercase" variant="h3">
           Thank you for your kind feedback
         </Typography>

@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { Grow } from "@mui/material";
 // components
 import Column1 from "../components/HomeComponents/HomeColumn1";
 import Column2 from "../components/HomeComponents/HomeColumn2";

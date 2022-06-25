@@ -1,5 +1,5 @@
 import Head from "next/head";
-import React, { useContext } from "react";
+import { useContext } from "react";
 import PostForm from "../components/PostForm";
 import { Grow } from "@mui/material";
 import { ThemeContext } from "../components/Layout/Layout";

@@ -1,4 +1,3 @@
-import logoarduino from "../../public/Images/logo-arduino.png";
 import logodjango from "../../public/Images/logo-django.png";
 import logodocker from "../../public/Images/logo-docker.png";
 import logoexpressjs from "../../public/Images/logo-expressjs.png";

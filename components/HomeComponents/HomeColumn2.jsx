@@ -26,7 +26,7 @@ const Column2 = () => {
 
   return (
     <div className="flex flex-col justify-center items-center py-[2rem]">
-      <div className="TW-HIGHLIGHT-TEXT-GRAD sm:py-0 sm:px-20 text-[2.1rem] sm:text-[3.3rem]">
+      <div className="TW10P-BG-GRAD sm:py-0 sm:px-20 text-[2.1rem] sm:text-[3.3rem]">
         <Typewriter options={{ loop: true }} onInit={(typewriter) => {
             typewriter
               .typeString("A WebApp Developer")
@@ -45,7 +45,7 @@ const Column2 = () => {
         </div>
       </Grow>
       <div ref={experienceRef}
-        className="TW-HIGHLIGHT-TEXT flex justify-center items-center p-[2rem] text-4xl uppercase font-bold drop-shadow-[0px_5px_5px_rgb(0,0,0,0.1)]"
+        className="TW10P-TEXT flex justify-center items-center p-[2rem] text-4xl uppercase font-bold drop-shadow-[0px_5px_5px_rgb(0,0,0,0.1)]"
       >
         <p className="skew-y-[-3deg]">Skill {"&"} Experience</p>
       </div>

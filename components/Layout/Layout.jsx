@@ -50,7 +50,7 @@ const Layout = ({ children }) => {
         {children}
         <Footer />
         <button
-          className={`TW-DOMINANT-BG fixed bottom-0 right-0 m-4 p-2 rounded-full text-white ${
+          className={`TW60P-BG fixed bottom-0 right-0 m-4 p-2 rounded-full text-white ${
             show ? null : "hidden"
           }`}
           onClick={handleTop}

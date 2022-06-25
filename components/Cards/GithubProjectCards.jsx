@@ -1,4 +1,3 @@
-import React from "react";
 import { Divider } from "@mui/material";
 import { GithubCards } from "./CardItems";
 
@@ -7,7 +6,7 @@ const GithubProjectCards = () => {
     <div className="flex flex-col gap-4">
       {GithubCards.map((card, index) => (
         <div key={`githubcard-${index}`}
-          className={`h-full w-full flex flex-col justify-center skew-y-[-3deg] p-8 gap-4 ${index % 2 == 0 ? "TW-DOMINANT-BG text-white" : "bg-white"}`}
+          className={`h-full w-full flex flex-col justify-center skew-y-[-3deg] p-8 gap-4 ${index % 2 == 0 ? "TW60P-BG text-white" : "bg-white"}`}
         >
           <div className="text-2xl font-bold skew-y-[3deg] text-center">
             <text className="border-b-2">{card.title}</text>

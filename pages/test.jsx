@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Head from "next/head";
 import TypeWriter from "../components/TypingEffect/TypeWriter";
 
@@ -30,12 +30,8 @@ const Test = () => {
       </Head>
       {!access ? (
         <div className="h-[90vh] flex justify-center items-center">
-          <input
-            autoComplete="off"
-            type="password"
-            key="accessKey"
+          <input autoComplete="off" type="password" key="accessKey" placeholder="&rarr; Enter Password to access"
             className="w-[50vw] p-4 rounded-xl bg-slate-800 text-white uppercase outline-none placeholder:text-white/50 placeholder:tracking-wider shadow-lg"
-            placeholder="&rarr; Enter Password to access"
             value={data}
             onChange={(event) => setData(event.target.value)}
             onKeyPress={() => handleEnter(data)}
@@ -45,7 +41,7 @@ const Test = () => {
         <div className="h-screen flex flex-col items-center mt-[2rem] gap-8">
           <div>
             <button
-              className="h-[50px] flex justify-center items-center TW-DOMINANT-BG p-[1rem] text-white uppercase rounded-xl"
+              className="h-[50px] flex justify-center items-center TW60P-BG p-[1rem] text-white uppercase rounded-xl"
               onClick={handleClick}
             >
               Click to start typing-effect

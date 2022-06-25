@@ -26,7 +26,7 @@ const Column3 = () => {
   return (
     <div className="flex flex-col justify-center items-center">
       <div
-        className="TW-HIGHLIGHT-TEXT flex justify-center items-center p-[2rem] text-4xl uppercase font-bold drop-shadow-[0px_5px_5px_rgb(0,0,0,0.1)]"
+        className="TW10P-TEXT flex justify-center items-center p-[2rem] text-4xl uppercase font-bold drop-shadow-[0px_5px_5px_rgb(0,0,0,0.1)]"
         ref={githubRef}
       >
         <p className="skew-y-[-3deg]">Github Project</p>
@@ -37,7 +37,7 @@ const Column3 = () => {
         </div>
       </Grow>
       <div
-        className="TW-HIGHLIGHT-TEXT flex justify-center items-center p-[2rem] text-4xl uppercase font-bold drop-shadow-[0px_5px_5px_rgb(0,0,0,0.1)]"
+        className="TW10P-TEXT flex justify-center items-center p-[2rem] text-4xl uppercase font-bold drop-shadow-[0px_5px_5px_rgb(0,0,0,0.1)]"
         ref={educationRef}
       >
         <p className="skew-y-[-3deg]">Educations</p>

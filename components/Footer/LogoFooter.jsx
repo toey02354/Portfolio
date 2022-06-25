@@ -1,9 +1,4 @@
-import {
-  GitHub,
-  FacebookOutlined,
-  Instagram,
-  LinkedIn,
-} from "@mui/icons-material";
+import {GitHub, FacebookOutlined, Instagram, LinkedIn} from "@mui/icons-material";
 
 const FooterItems = [
   {
