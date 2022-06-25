@@ -60,18 +60,18 @@ const Navbar = () => {
       </div>
       <div className="flex bg-slate-600 rounded-xl">
         <div
-          className={`p-2 cursor-pointer `.concat(
-            !dark ? "TW-HIGHLIGHT-TEXT bg-slate-700 rounded-xl" : null
+          className={`p-2 cursor-pointer rounded-xl transition-colors `.concat(
+            !dark ? "TW-HIGHLIGHT-TEXT bg-slate-700" : null
           )}
         >
-          <LightMode onClick={() => setDark(false)} />
+          <LightMode onClick={() => setDark((currVal) => !currVal)} />
         </div>
         <div
-          className={`p-2 cursor-pointer `.concat(
-            dark ? "TW-HIGHLIGHT-TEXT bg-slate-700 rounded-xl" : null
+          className={`p-2 cursor-pointer rounded-xl transition-colors `.concat(
+            dark ? "TW-HIGHLIGHT-TEXT bg-slate-700" : null
           )}
         >
-          <DarkMode onClick={() => setDark(true)} />
+          <DarkMode onClick={() => setDark((currVal) => !currVal)} />
         </div>
       </div>
     </div>

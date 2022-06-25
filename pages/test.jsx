@@ -38,14 +38,21 @@ const Test = () => {
           />
         </div>
       ) : (
-        <div className="h-screen flex flex-col items-center mt-[2rem]">
-          <button
-            className="h-[50px] flex justify-center items-center TW-DOMINANT-BG p-[1rem] text-white uppercase rounded-xl"
-            onClick={handleClick}
-          >
-            Click to start typing-effect
-          </button>
-          <pre>{typeWriter.text}</pre>
+        <div className="h-screen flex flex-col items-center mt-[2rem] gap-8">
+          <div>
+            <button
+              className="h-[50px] flex justify-center items-center TW-DOMINANT-BG p-[1rem] text-white uppercase rounded-xl"
+              onClick={handleClick}
+            >
+              Click to start typing-effect
+            </button>
+            <pre>{typeWriter.text}</pre>
+          </div>
+          <div className="flex flex-col gap-2 group">
+            <hr className="h-[4px] w-[50px] bg-red-800 transition-transform group-hover:rotate-45 group-hover:translate-y-[25px]" />
+            <hr className="h-[4px] w-[50px] bg-red-800 transition-transform group-hover:translate-x-[200%]" />
+            <hr className="h-[4px] w-[50px] bg-red-800 transition-transform group-hover:-rotate-45 roup-hover:translate-y-[25px]" />
+          </div>
         </div>
       )}
     </>
