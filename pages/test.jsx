@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Head from "next/head";
 import TypeWriter from "../components/TypingEffect/TypeWriter";
 
 const Test = () => {
@@ -24,6 +25,9 @@ const Test = () => {
 
   return (
     <>
+      <Head>
+        <title>Experiement - Toey Portfolio</title>
+      </Head>
       {!access ? (
         <div className="h-[90vh] flex justify-center items-center">
           <input
