@@ -3,8 +3,8 @@ import { logoGroup1, logoGroup2, logoGroup3 } from "./LogoGroup";
 
 const LogoSkill = () => {
   return (
-    <div className="TW-WHITE-CARDS my-[2rem] mx-[2rem] p-4 sm:p-10 rounded-xl shadow-lg">
-      <div className="grid grid-cols-3 sm:grid sm:grid-cols-6 gap-[2rem] drop-shadow-[0px_5px_5px_rgb(0,0,0,0.1)]">
+    <div className="TW-WHITE-CARDS -skew-y-2 w-screen xl:w-[50vw] p-4 sm:p-10 rounded-xl shadow-lg">
+      <div className="w-full grid grid-cols-3 sm:grid sm:grid-cols-6 gap-[2rem]">
         {logoGroup1.map((logo) => (
           <div className="TW-LOGO-SKILL" key={logo}>
             <Image src={logo} height="70" width="70" layout="fixed"/>

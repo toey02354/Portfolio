@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect, useContext } from "react";
 import { ThemeContext } from "../Layout/Layout";
 import ExpSlideCards from "../Cards/ExpCards";
-import LogoAnimation from "../LogoAnimation";
+import LogoSkill from "../LogoSkill";
 import Typewriter from "typewriter-effect";
 import { Grow } from "@mui/material";
 
@@ -42,8 +42,8 @@ const Column2 = () => {
         />
       </div>
       <Grow in={showLogo}>
-        <div className="flex justify-center items-center" ref={logoSkillceRef}>
-          <LogoAnimation />
+        <div className="h-screen flex justify-center items-center" ref={logoSkillceRef}>
+          <LogoSkill />
         </div>
       </Grow>
       <div ref={experienceRef}
