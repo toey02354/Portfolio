@@ -1,4 +1,5 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
+import { ThemeContext } from "../Layout/Layout";
 import EduSlideCards from "../Cards/EduCards";
 import GithubProjectCards from "../Cards/GithubProjectCards";
 import { Grow } from "@mui/material";
@@ -6,6 +7,7 @@ import { Grow } from "@mui/material";
 const Column3 = () => {
   const [showEdu, setShowEdu] = useState(false);
   const [showGH, setShowGH] = useState(false);
+  const [dark] = useContext(ThemeContext)
 
   const educationRef = useRef();
   const githubRef = useRef();
@@ -26,7 +28,7 @@ const Column3 = () => {
   return (
     <div className="flex flex-col justify-center items-center">
       <div
-        className="TW10P-TEXT flex justify-center items-center p-[2rem] text-4xl uppercase font-bold drop-shadow-[0px_5px_5px_rgb(0,0,0,0.1)]"
+        className={`flex justify-center items-center p-[2rem] text-4xl uppercase font-bold ${dark? "text-white": "TW10P-TEXT"}`}
         ref={githubRef}
       >
         <p className="skew-y-[-3deg]">Github Project</p>
@@ -37,7 +39,7 @@ const Column3 = () => {
         </div>
       </Grow>
       <div
-        className="TW10P-TEXT flex justify-center items-center p-[2rem] text-4xl uppercase font-bold drop-shadow-[0px_5px_5px_rgb(0,0,0,0.1)]"
+        className={`flex justify-center items-center p-[2rem] text-4xl uppercase font-bold ${dark? "text-white": "TW10P-TEXT"}`}
         ref={educationRef}
       >
         <p className="skew-y-[-3deg]">Educations</p>

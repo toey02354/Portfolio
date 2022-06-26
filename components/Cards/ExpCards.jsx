@@ -5,7 +5,7 @@ const ExpSlideCards = () => {
     <div className="flex flex-col gap-4">
       {ExpCards.map((card, index) => (
         <div key={`expcard-${index}`}
-          className={`h-full w-full flex flex-col justify-center skew-y-[-3deg] py-[4rem] px-8 gap-4 ${index % 2 == 0 ? "TW60P-BG text-white" : "bg-white"}`}
+          className={`TW-CARDS py-[4rem] px-8 ${index % 2 == 0 ? "TW60P-BG text-white" : "TW-WHITE-CARDS"}`}
         >
           <div className="text-2xl font-bold skew-y-[3deg] text-center">
             <text className="border-b-2">{card[0]}</text>

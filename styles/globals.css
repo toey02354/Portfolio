@@ -54,13 +54,13 @@ a {
     @apply text-slate-800;
   }
   .TW30p-BG{
-    @apply bg-cyan-400;
+    @apply bg-cyan-700;
   }
   .TW30p-TEXT{
-    @apply text-cyan-400;
+    @apply text-cyan-700;
   }
   .TW10P-BG-GRAD {
-    @apply bg-clip-text text-transparent bg-gradient-to-br from-amber-800 to-amber-600;
+    @apply bg-clip-text text-transparent bg-gradient-to-br from-amber-700 to-amber-600;
   }
   .TW10P-BG {
     @apply bg-amber-600;
@@ -68,10 +68,16 @@ a {
   .TW10P-TEXT {
     @apply text-amber-600;
   }
+  .TW-CARDS{
+    @apply h-full w-full flex flex-col justify-center gap-4 skew-y-[-3deg] shadow-xl rounded-xl;
+  }
+  .TW-WHITE-CARDS{
+    @apply bg-gray-100 border-gray-500 border-4;
+  }
   .TW-CANVAS {
     @apply w-[80vw] h-[50vh] xl:w-[60vw] xl:h-screen;
   }
   .TW-LOGO-SKILL {
-    @apply h-[100px] contrast-[0.8];
+    @apply p-2 contrast-[0.8];
   }
 }

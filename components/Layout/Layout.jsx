@@ -1,9 +1,8 @@
-import React, { useState, useEffect, createContext } from "react";
+import { useState, useEffect, createContext } from "react";
 import styles from "./Theme.module.css";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 import ArrowCircleUpOutlinedIcon from "@mui/icons-material/ArrowCircleUpOutlined";
-import { style } from "@mui/system";
 
 const ThemeContext = createContext(false);
 
@@ -32,7 +31,6 @@ const Layout = ({ children }) => {
   }, []);
 
   useEffect(() => {
-    const darkThemeLS = localStorage.getItem("toey-portfolio-theme");
     if (darkTheme === true && darkTheme !== null) {
       setTheme(true);
       localStorage.setItem("toey-portfolio-theme", "dark");
@@ -50,9 +48,7 @@ const Layout = ({ children }) => {
         {children}
         <Footer />
         <button
-          className={`TW60P-BG fixed bottom-0 right-0 m-4 p-2 rounded-full text-white ${
-            show ? null : "hidden"
-          }`}
+          className={`TW60P-BG fixed bottom-0 right-0 m-4 p-2 rounded-full text-white ${show ? null : "hidden"}`}
           onClick={handleTop}
         >
           <ArrowCircleUpOutlinedIcon />
