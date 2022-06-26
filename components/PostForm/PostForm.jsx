@@ -5,9 +5,9 @@ const PostForm = () => {
   const {values, setValues, handleSend} = usePostForm()
 
   return (
-    <div className={"w-[80vw] xl:w-[30vw] rounded-lg TW60P-BG"}>
+    <div className={"w-screen xl:w-[50vw] border-slate-700 border-4 rounded-2xl TW60P-BG shadow-lg"}>
       <form autoComplete="off"
-        className="flex flex-col items-center justify-center gap-4 px-8 py-8"
+        className="flex flex-col items-center justify-center gap-4 p-8"
         onKeyPress={(event) => {
           if (event.key == "Enter") handleSend(event)
         }}

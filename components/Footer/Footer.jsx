@@ -12,7 +12,7 @@ const Footer = () => {
           </a>
         ))}
       </div>
-      <hr className="w-[50%] h-[2px] flex border-dashed" />
+      <hr className="w-[100%] lg:w-[70%] h-[2px]" />
       <div className="text-[1.25rem] p-4 text-white">
         Created by Natthaphol Uthumphirat
       </div>

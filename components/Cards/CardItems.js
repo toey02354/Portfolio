@@ -1,5 +1,16 @@
 export const ExpCards = [
   [
+    "E-Commerce Project",
+    [
+      "With in process...",
+      "An E-Commerce Platform for seller",
+      "A website for admins to manage their store, products, orders, and theme",
+      "Dashboard page with Charts",
+      "Authentication, Roles, Protected routes",
+      "Typescript, NextJS, Redux, ChartJS, TailwindCSS, Axios, Ant-Design"
+    ],
+  ],
+  [
     "Kerry SLM",
     [
       "Created a project, designed the project structure and developed services for the website with a dashboard to present data in charts and tables",
@@ -36,6 +47,13 @@ export const ExpCards = [
 ];
 
 export const GithubCards = [
+  {
+    title: "Pokemon Cards",
+    content1: "TypeScript, React, Tailwind",
+    content2:
+      "An application that fetch pokemons data from PokeAPI, display 12 cards a page, sort features by ID or name",
+    link: "https://github.com/toey02354/Pokemons-Cards",
+  },
   {
     title: "Facebook Clone",
     content1: "NEXTJS, Tailwind, MUI",
