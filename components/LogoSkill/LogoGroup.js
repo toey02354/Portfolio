@@ -2,6 +2,7 @@ import logodjango from "../../public/Images/logo-django.png";
 import logodocker from "../../public/Images/logo-docker.png";
 import logoexpressjs from "../../public/Images/logo-expressjs.png";
 import logofastapi from "../../public/Images/logo-fastapi.png";
+import logofirebase from "../../public/Images/logo-firebase.png";
 import logogitlab from "../../public/Images/logo-gitlab.png";
 import logojs from "../../public/Images/logo-js.png";
 import logomongodb from "../../public/Images/logo-mongodb.png";
@@ -26,8 +27,8 @@ export const logoGroup1 = [
   logothreejs,
 ];
 export const logoGroup2 = [
+  logofirebase,
   logonodejs,
-  logonestjs,
   logoexpressjs,
   logopython,
   logodjango,
