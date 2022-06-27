@@ -71,6 +71,9 @@ a {
   .TW-CARDS{
     @apply h-full w-full flex flex-col justify-center gap-4 skew-y-[-3deg] shadow-xl rounded-xl;
   }
+  .TW-DARK-CARDS{
+    @apply bg-slate-800 border-slate-600 border-4 text-white;
+  }
   .TW-WHITE-CARDS{
     @apply bg-gray-100 border-gray-500 border-4;
   }
