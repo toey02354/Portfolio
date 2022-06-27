@@ -7,7 +7,6 @@ import logogitlab from "../../public/Images/logo-gitlab.png";
 import logojs from "../../public/Images/logo-js.png";
 import logomongodb from "../../public/Images/logo-mongodb.png";
 import logomysql from "../../public/Images/logo-mysql.png";
-import logonestjs from "../../public/Images/logo-nestjs.png";
 import logonextjs from "../../public/Images/logo-nextjs.png";
 import logonodejs from "../../public/Images/logo-nodejs.png";
 import logopostgres from "../../public/Images/logo-postgres.png";
