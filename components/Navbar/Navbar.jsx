@@ -20,7 +20,7 @@ const Navbar = () => {
             <Link href={item.path} key={item.name}>
               <button
                 className={`flex items-center gap-1 hover:text-amber-500 ${
-                  router.pathname == item.path ? "text-amber-600" : null
+                  router.pathname == item.path ? "text-highlight" : null
                 }`}
               >
                 {item.icon} <div className="hidden xl:block">{item.name}</div>
@@ -30,7 +30,7 @@ const Navbar = () => {
         </div>
       </div>
       <div
-        className="flex p-2 bg-slate-600 rounded-xl cursor-pointer text-amber-600"
+        className="flex p-2 bg-slate-600 rounded-xl cursor-pointer text-highlight"
         onClick={() => setDark((currVal) => !currVal)}
       >
         {dark ? <DarkMode /> : <LightMode />}

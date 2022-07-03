@@ -48,7 +48,7 @@ a {
 
 @layer components {
   .HIGHLIGHT-TEXT {
-    @apply bg-clip-text text-transparent bg-gradient-to-br from-amber-700 to-amber-600;
+    @apply bg-clip-text text-transparent bg-gradient-to-br from-amber-700 to-highlight;
   }
   .TW-CARDS {
     @apply h-full w-full flex flex-col justify-center gap-4 skew-y-[-3deg] shadow-xl rounded-xl;
