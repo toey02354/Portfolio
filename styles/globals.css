@@ -47,34 +47,16 @@ a {
 }
 
 @layer components {
-  .TW60P-BG {
-    @apply bg-slate-800;
-  }
-  .TW60P-TEXT {
-    @apply text-slate-800;
-  }
-  .TW30p-BG{
-    @apply bg-cyan-700;
-  }
-  .TW30p-TEXT{
-    @apply text-cyan-700;
-  }
-  .TW10P-BG-GRAD {
+  .HIGHLIGHT-TEXT {
     @apply bg-clip-text text-transparent bg-gradient-to-br from-amber-700 to-amber-600;
   }
-  .TW10P-BG {
-    @apply bg-amber-600;
-  }
-  .TW10P-TEXT {
-    @apply text-amber-600;
-  }
-  .TW-CARDS{
+  .TW-CARDS {
     @apply h-full w-full flex flex-col justify-center gap-4 skew-y-[-3deg] shadow-xl rounded-xl;
   }
-  .TW-DARK-CARDS{
-    @apply bg-slate-800 border-slate-600 border-4 text-white;
+  .TW-DARK-CARDS {
+    @apply bg-main border-slate-600 border-4 text-white;
   }
-  .TW-WHITE-CARDS{
+  .TW-WHITE-CARDS {
     @apply bg-gray-100 border-gray-500 border-4;
   }
   .TW-CANVAS {

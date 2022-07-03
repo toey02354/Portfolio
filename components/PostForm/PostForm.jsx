@@ -2,26 +2,40 @@ import usePostForm from "./usePostForm";
 import SendRoundedIcon from "@mui/icons-material/SendRounded";
 
 const PostForm = () => {
-  const {values, setValues, handleSend} = usePostForm()
+  const { values, setValues, handleSend } = usePostForm();
 
   return (
-    <div className={"w-screen xl:w-[50vw] border-slate-700 border-4 rounded-2xl TW60P-BG shadow-lg"}>
-      <form autoComplete="off"
+    <div
+      className={
+        "w-screen xl:w-[50vw] border-slate-700 border-4 rounded-2xl bg-main shadow-lg"
+      }
+    >
+      <form
+        autoComplete="off"
         className="flex flex-col items-center justify-center gap-4 p-8"
         onKeyPress={(event) => {
-          if (event.key == "Enter") handleSend(event)
+          if (event.key == "Enter") handleSend(event);
         }}
       >
-        <input placeholder="Enter Title Here" type="text" name="Title"
+        <input
+          placeholder="Enter Title Here"
+          type="text"
+          name="Title"
           className="w-full p-2 rounded-lg bg-slate-700 focus:outline-none text-white"
           value={values.title}
-          onChange={(event) => setValues({ ...values, title: event.target.value })}
+          onChange={(event) =>
+            setValues({ ...values, title: event.target.value })
+          }
         />
-        <textarea rows={10} placeholder="Enter Content Here" name="Title"
+        <textarea
+          rows={10}
+          placeholder="Enter Content Here"
+          name="Title"
           className="w-full p-2 rounded-lg resize-none bg-slate-700 focus:outline-none text-white"
           value={values.content}
-          onChange={(event) => setValues({ ...values, content: event.target.value })}
-          
+          onChange={(event) =>
+            setValues({ ...values, content: event.target.value })
+          }
         />
         <button
           onClick={(event) => handleSend(event)}

@@ -7,8 +7,10 @@ const Column1 = () => {
   return (
     <Grow in>
       <div className="IMG-BG h-[100vh] flex flex-col justify-center items-center">
-        <div className={`text-5xl tracking-widest sm:text-[5.2rem] font-bold 
-                        ${dark ? "text-white" : "TW10P-BG-GRAD"}`}>
+        <div
+          className={`text-5xl tracking-widest sm:text-[5.2rem] font-bold 
+                        ${dark ? "text-white" : "HIGHLIGHT-TEXT"}`}
+        >
           NATTHAPHOL
           <br />
           UTHUMPHIRAT

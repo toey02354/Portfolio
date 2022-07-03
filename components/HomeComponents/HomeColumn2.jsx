@@ -11,7 +11,7 @@ const Column2 = () => {
 
   const [showLogo, setShowLogo] = useState(false);
   const [showCard, setShowCard] = useState(false);
-  const [dark] = useContext(ThemeContext)
+  const [dark] = useContext(ThemeContext);
 
   const controlShow = () => {
     if (logoSkillceRef.current?.offsetTop - scrollY < 300) {
@@ -28,8 +28,15 @@ const Column2 = () => {
 
   return (
     <div className="flex flex-col justify-center items-center py-[2rem]">
-      <div className={`sm:py-0 sm:px-20 text-[2.1rem] sm:text-[3.3rem] ${dark? "text-white": "TW10P-BG-GRAD "}`}>
-        <Typewriter style={{textShadow: "5rem"}} options={{ loop: true }} onInit={(typewriter) => {
+      <div
+        className={`sm:py-0 sm:px-20 text-[2.1rem] sm:text-[3.3rem] ${
+          dark ? "text-white" : "HIGHLIGHT-TEXT "
+        }`}
+      >
+        <Typewriter
+          style={{ textShadow: "5rem" }}
+          options={{ loop: true }}
+          onInit={(typewriter) => {
             typewriter
               .typeString("A WebApp Developer")
               .pauseFor(1000)
@@ -42,13 +49,17 @@ const Column2 = () => {
         />
       </div>
       <Grow in={showLogo}>
-        <div className="h-screen flex justify-center items-center" ref={logoSkillceRef}>
+        <div
+          className="h-screen flex justify-center items-center"
+          ref={logoSkillceRef}
+        >
           <LogoSkill />
         </div>
       </Grow>
-      <div ref={experienceRef}
+      <div
+        ref={experienceRef}
         className={`flex justify-center items-center p-[2rem] text-4xl uppercase font-bold 
-                  ${dark ? "text-white" : "TW10P-TEXT"}`}
+                  ${dark ? "text-white" : "text-highlight"}`}
       >
         <p className="skew-y-[-3deg]">Skill {"&"} Experience</p>
       </div>

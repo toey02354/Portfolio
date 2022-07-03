@@ -7,7 +7,7 @@ import { Grow } from "@mui/material";
 const Column3 = () => {
   const [showEdu, setShowEdu] = useState(false);
   const [showGH, setShowGH] = useState(false);
-  const [dark] = useContext(ThemeContext)
+  const [dark] = useContext(ThemeContext);
 
   const educationRef = useRef();
   const githubRef = useRef();
@@ -28,7 +28,9 @@ const Column3 = () => {
   return (
     <div className="flex flex-col justify-center items-center">
       <div
-        className={`flex justify-center items-center p-[2rem] text-4xl uppercase font-bold ${dark? "text-white": "TW10P-TEXT"}`}
+        className={`flex justify-center items-center p-[2rem] text-4xl uppercase font-bold ${
+          dark ? "text-white" : "text-highlight"
+        }`}
         ref={githubRef}
       >
         <p className="skew-y-[-3deg]">Github Project</p>
@@ -39,7 +41,9 @@ const Column3 = () => {
         </div>
       </Grow>
       <div
-        className={`flex justify-center items-center p-[2rem] text-4xl uppercase font-bold ${dark? "text-white": "TW10P-TEXT"}`}
+        className={`flex justify-center items-center p-[2rem] text-4xl uppercase font-bold ${
+          dark ? "text-white" : "text-highlight"
+        }`}
         ref={educationRef}
       >
         <p className="skew-y-[-3deg]">Educations</p>
