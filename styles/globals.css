@@ -54,7 +54,7 @@ a {
     @apply h-full w-full flex flex-col justify-center gap-4 skew-y-[-3deg] shadow-xl rounded-xl;
   }
   .TW-DARK-CARDS {
-    @apply bg-main/70  text-white;
+    @apply bg-main/70 text-white backdrop-blur-xl;
   }
   .TW-WHITE-CARDS {
     @apply bg-white/20 backdrop-blur-3xl;
