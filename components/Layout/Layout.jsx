@@ -4,7 +4,6 @@ import Navbar from "../Navbar";
 import Footer from "../Footer";
 import ArrowCircleUpOutlinedIcon from "@mui/icons-material/ArrowCircleUpOutlined";
 import { useTheme } from "../../context/ThemeProvider";
-// const ThemeContext = createContext(false);
 
 const Layout = ({ children }) => {
   const { dark, setDark } = useTheme();

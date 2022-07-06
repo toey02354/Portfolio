@@ -1,11 +1,10 @@
 import Head from "next/head";
-import { useContext } from "react";
 import PostForm from "../components/PostForm";
 import { Grow } from "@mui/material";
-import { ThemeContext } from "../components/Layout/Layout";
+import { useTheme } from "../context/ThemeProvider";
 
 const Contact = () => {
-  const [dark] = useContext(ThemeContext);
+  const { dark } = useTheme();
   return (
     <>
       <Head>

@@ -1,22 +1,25 @@
-import { useContext } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { Typography } from "@mui/material";
-import { ThemeContext } from "../components/Layout/Layout";
+import { useTheme } from "../context/ThemeProvider";
 
 const Thankyou = () => {
-  const [dark] = useContext(ThemeContext);
+  const { dark } = useTheme();
 
   return (
     <>
       <Head>
         <title>Thank You!</title>
       </Head>
-      <div className={`min-h-[88vh] flex flex-col justify-center items-center ${dark ? "text-white" : "text-black"}`}>
+      <div
+        className={`min-h-[88vh] flex flex-col justify-center items-center ${
+          dark ? "text-white" : "text-black"
+        }`}
+      >
         <Typography className="uppercase" variant="h3">
           Thank you for your kind feedback
         </Typography>
-        <Link href="/">
+        <Link href="/" passHref>
           <Typography
             className="uppercase cursor-pointer hover:text-blue-500 hover:underline"
             variant="h3"

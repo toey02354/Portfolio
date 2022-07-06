@@ -16,7 +16,7 @@ const Navbar = () => {
         </div>
         <div className="flex gap-4">
           {NavItems.map((item) => (
-            <Link href={item.path} key={item.name}>
+            <Link href={item.path} key={item.name} passHref>
               <button
                 className={`flex items-center gap-1 hover:text-amber-500 ${
                   router.pathname == item.path ? "text-highlight" : null

@@ -4,7 +4,7 @@ import { useTheme } from "../../context/ThemeProvider";
 const Column1 = () => {
   const { dark } = useTheme();
   return (
-    <div className="IMG-BG h-[100vh] flex flex-col justify-center items-center gap-8">
+    <div className="h-[100vh] flex flex-col justify-center items-center gap-8">
       <Grow in>
         <div
           className={`text-[3rem] leading-none tracking-normal sm:tracking-widest sm:text-[5.2rem] font-bold 
