@@ -1,13 +1,13 @@
-import { useState, useEffect, useRef, useContext } from "react";
-import { ThemeContext } from "../Layout/Layout";
+import { useState, useEffect, useRef } from "react";
 import EduSlideCards from "../Cards/EduCards";
 import GithubProjectCards from "../Cards/GithubProjectCards";
 import { Grow } from "@mui/material";
+import { useTheme } from "../../context/ThemeProvider";
 
 const Column3 = () => {
   const [showEdu, setShowEdu] = useState(false);
   const [showGH, setShowGH] = useState(false);
-  const [dark] = useContext(ThemeContext);
+  const { dark } = useTheme();
 
   const educationRef = useRef();
   const githubRef = useRef();

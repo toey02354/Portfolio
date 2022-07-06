@@ -54,10 +54,10 @@ a {
     @apply h-full w-full flex flex-col justify-center gap-4 skew-y-[-3deg] shadow-xl rounded-xl;
   }
   .TW-DARK-CARDS {
-    @apply bg-main border-slate-600 border-4 text-white;
+    @apply bg-main/70  text-white;
   }
   .TW-WHITE-CARDS {
-    @apply bg-gray-100 border-gray-500 border-4;
+    @apply backdrop-blur-3xl border-gray-500;
   }
   .TW-CANVAS {
     @apply w-[80vw] h-[50vh] xl:w-[60vw] xl:h-screen;

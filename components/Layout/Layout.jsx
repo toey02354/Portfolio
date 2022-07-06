@@ -3,11 +3,11 @@ import styles from "./Theme.module.css";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 import ArrowCircleUpOutlinedIcon from "@mui/icons-material/ArrowCircleUpOutlined";
-
-const ThemeContext = createContext(false);
+import { useTheme } from "../../context/ThemeProvider";
+// const ThemeContext = createContext(false);
 
 const Layout = ({ children }) => {
-  const [darkTheme, setTheme] = useState();
+  const { dark, setDark } = useTheme();
   const [show, setShow] = useState(false);
   const handleTop = () => {
     window.scrollTo({ behavior: "smooth", top: 0 });
@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
     if (darkThemeLS === null) {
       localStorage.setItem("toey-portfolio-theme", "light");
     } else {
-      darkThemeLS === "dark" ? setTheme(true) : setTheme(false);
+      darkThemeLS === "dark" ? setDark(true) : setDark(false);
     }
 
     window.addEventListener("scroll", () => {
@@ -31,34 +31,31 @@ const Layout = ({ children }) => {
   }, []);
 
   useEffect(() => {
-    if (darkTheme === true && darkTheme !== null) {
-      setTheme(true);
+    if (dark === true && dark !== null) {
+      setDark(true);
       localStorage.setItem("toey-portfolio-theme", "dark");
-    } else if (darkTheme === false && darkTheme !== null) {
-      setTheme(false);
+    } else if (dark === false && dark !== null) {
+      setDark(false);
       localStorage.setItem("toey-portfolio-theme", "light");
     } else {
     }
-  }, [darkTheme]);
+  }, [dark]);
 
   return (
-    <ThemeContext.Provider value={[darkTheme, setTheme]}>
-      <div className={darkTheme ? styles.DarkTheme : styles.LightTheme}>
-        <Navbar />
-        {children}
-        <Footer />
-        <button
-          className={`bg-main fixed bottom-0 right-0 m-4 p-2 rounded-full text-white ${
-            show ? null : "hidden"
-          }`}
-          onClick={handleTop}
-        >
-          <ArrowCircleUpOutlinedIcon />
-        </button>
-      </div>
-    </ThemeContext.Provider>
+    <div className={dark ? styles.DarkTheme : styles.LightTheme}>
+      <Navbar />
+      {children}
+      <Footer />
+      <button
+        className={`bg-main fixed bottom-0 right-0 m-4 p-2 rounded-full text-white ${
+          show ? null : "hidden"
+        }`}
+        onClick={handleTop}
+      >
+        <ArrowCircleUpOutlinedIcon />
+      </button>
+    </div>
   );
 };
 
 export default Layout;
-export { ThemeContext };

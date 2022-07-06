@@ -1,9 +1,9 @@
-import { useRef, useState, useEffect, useContext } from "react";
-import { ThemeContext } from "../Layout/Layout";
+import { useRef, useState, useEffect } from "react";
 import ExpSlideCards from "../Cards/ExpCards";
 import LogoSkill from "../LogoSkill";
 import Typewriter from "typewriter-effect";
 import { Grow } from "@mui/material";
+import { useTheme } from "../../context/ThemeProvider";
 
 const Column2 = () => {
   const experienceRef = useRef();
@@ -11,7 +11,7 @@ const Column2 = () => {
 
   const [showLogo, setShowLogo] = useState(false);
   const [showCard, setShowCard] = useState(false);
-  const [dark] = useContext(ThemeContext);
+  const { dark } = useTheme();
 
   const controlShow = () => {
     if (logoSkillceRef.current?.offsetTop - scrollY < 300) {
@@ -30,7 +30,7 @@ const Column2 = () => {
     <div className="flex flex-col justify-center items-center py-[2rem]">
       <div
         className={`sm:py-0 sm:px-20 text-[2.1rem] sm:text-[3.3rem] ${
-          dark ? "text-white" : "HIGHLIGHT-TEXT "
+          dark ? "text-white" : "HIGHLIGHT-TEXT"
         }`}
       >
         <Typewriter
@@ -50,7 +50,7 @@ const Column2 = () => {
       </div>
       <Grow in={showLogo}>
         <div
-          className="h-screen flex justify-center items-center"
+          className="min-h-screen flex justify-center items-center"
           ref={logoSkillceRef}
         >
           <LogoSkill />

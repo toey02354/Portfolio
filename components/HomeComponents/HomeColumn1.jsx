@@ -1,22 +1,30 @@
 import { Grow } from "@mui/material";
-import { useContext } from "react";
-import { ThemeContext } from "../Layout/Layout";
+import { useTheme } from "../../context/ThemeProvider";
 
 const Column1 = () => {
-  const [dark] = useContext(ThemeContext);
+  const { dark } = useTheme();
   return (
-    <Grow in>
-      <div className="IMG-BG h-[100vh] flex flex-col justify-center items-center">
+    <div className="IMG-BG h-[100vh] flex flex-col justify-center items-center gap-8">
+      <Grow in>
         <div
-          className={`text-5xl tracking-widest sm:text-[5.2rem] font-bold 
+          className={`text-[3rem] leading-none tracking-normal sm:tracking-widest sm:text-[5.2rem] font-bold 
                         ${dark ? "text-white" : "HIGHLIGHT-TEXT"}`}
         >
           NATTHAPHOL
           <br />
           UTHUMPHIRAT
         </div>
+      </Grow>
+      <div
+        className={`text-2xl backdrop-blur-2xl py-4 px-[2em] rounded-xl border-2 ${
+          dark
+            ? "text-white border-slate-500"
+            : " border-highlight text-highlight font-[500]"
+        }`}
+      >
+        A fullstack developer
       </div>
-    </Grow>
+    </div>
   );
 };
 

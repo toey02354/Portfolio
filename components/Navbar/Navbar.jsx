@@ -1,13 +1,12 @@
-import { useContext } from "react";
-import { ThemeContext } from "../Layout/Layout";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { LightMode, DarkMode } from "@mui/icons-material";
 import NavItems from "./NavItems";
+import { useTheme } from "../../context/ThemeProvider";
 
 const Navbar = () => {
   const router = useRouter();
-  const [dark, setDark] = useContext(ThemeContext);
+  const { dark, setDark } = useTheme();
 
   return (
     <div className="bg-main flex justify-between items-center py-4 px-6 text-xl text-white">
