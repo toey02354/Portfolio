@@ -16,7 +16,7 @@ const Column1 = () => {
         </div>
       </Grow>
       <div
-        className={`text-2xl backdrop-blur-2xl py-4 px-[2em] rounded-xl border-2 ${
+        className={`text-2xl bg-white/20 backdrop-blur-2xl py-4 px-[2em] rounded-xl border-2 ${
           dark
             ? "text-white border-slate-500"
             : " border-highlight text-highlight font-[500]"

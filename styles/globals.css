@@ -57,7 +57,7 @@ a {
     @apply bg-main/70  text-white;
   }
   .TW-WHITE-CARDS {
-    @apply backdrop-blur-3xl border-gray-500;
+    @apply bg-white/20 backdrop-blur-3xl;
   }
   .TW-CANVAS {
     @apply w-[80vw] h-[50vh] xl:w-[60vw] xl:h-screen;
