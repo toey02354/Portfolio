@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { LightMode, DarkMode } from "@mui/icons-material";
+import { LightMode, DarkMode } from "../Icons";
 import NavItems from "./NavItems";
 import { useTheme } from "../../context/ThemeProvider";
 

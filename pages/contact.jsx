@@ -1,6 +1,5 @@
 import Head from "next/head";
 import PostForm from "../components/PostForm";
-// import { Grow } from "@mui/material";
 import { useTheme } from "../context/ThemeProvider";
 
 const Contact = () => {
@@ -11,7 +10,6 @@ const Contact = () => {
         <title>Contact Toey</title>
       </Head>
 
-      {/* <Grow in> */}
       <div className="min-h-[90vh] flex flex-col justify-center items-center">
         <div
           className={"text-[3rem] font-bold tracking-[0.1rem] uppercase ".concat(
@@ -35,7 +33,6 @@ const Contact = () => {
         </div>
         <PostForm />
       </div>
-      {/* </Grow> */}
     </>
   );
 };

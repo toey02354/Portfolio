@@ -1,20 +1,17 @@
-import { Grow } from "@mui/material";
 import { useTheme } from "../../context/ThemeProvider";
 
 const Column1 = () => {
   const { dark } = useTheme();
   return (
     <div className="h-[100vh] flex flex-col justify-center items-center gap-8">
-      <Grow in>
-        <div
-          className={`text-[3rem] leading-none tracking-normal sm:tracking-widest sm:text-[5.2rem] font-bold 
+      <div
+        className={`text-[3rem] leading-none tracking-normal sm:tracking-widest sm:text-[5.2rem] font-bold 
                         ${dark ? "text-white" : "HIGHLIGHT-TEXT"}`}
-        >
-          NATTHAPHOL
-          <br />
-          UTHUMPHIRAT
-        </div>
-      </Grow>
+      >
+        NATTHAPHOL
+        <br />
+        UTHUMPHIRAT
+      </div>
       <div
         className={`text-2xl bg-white/20 backdrop-blur-2xl py-4 px-[2em] rounded-xl border-2 ${
           dark

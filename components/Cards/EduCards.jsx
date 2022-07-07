@@ -1,4 +1,3 @@
-import { Divider } from "@mui/material";
 import { EduCards } from "./CardItems";
 import { useTheme } from "../../context/ThemeProvider";
 
@@ -18,7 +17,7 @@ const EduSlideCards = () => {
           </div>
           <div className="skew-y-[3deg]">
             <div className="py-4">{card.content1}</div>
-            <Divider />
+            <hr className={index % 2 == 1 && "border-black"} />
             <div className="py-4">{card.content2}</div>
           </div>
         </div>

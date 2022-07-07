@@ -1,20 +1,20 @@
-import { Home, Call, Lock } from "@mui/icons-material";
+import { HomeIcon, PhoneIcon, LockIcon } from "../Icons";
 
 const NavItems = [
   {
     name: "Home",
     path: "/",
-    icon: <Home />,
+    icon: <HomeIcon />,
   },
   {
     name: "Contact",
     path: "/contact",
-    icon: <Call />,
+    icon: <PhoneIcon />,
   },
   {
     name: "Secret",
     path: "/test",
-    icon: <Lock />,
+    icon: <LockIcon />,
   },
 ];
 

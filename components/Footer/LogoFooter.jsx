@@ -1,20 +1,18 @@
-import {GitHub, FacebookOutlined, Instagram, LinkedIn} from "@mui/icons-material";
-
 const FooterItems = [
   {
-    icon: <GitHub className="text-[2rem]" />,
+    icon: <div className="bg-slate-700 p-2 rounded-xl">Github</div>,
     href: "https://github.com/toey02354",
   },
   {
-    icon: <LinkedIn className="text-[2rem]" />,
+    icon: <div className="bg-slate-700 p-2 rounded-xl">LinkedIn</div>,
     href: "https://www.linkedin.com/in/natthaphol-uthumphirat",
   },
   {
-    icon: <Instagram className="text-[2rem]" />,
+    icon: <div className="bg-slate-700 p-2 rounded-xl">Instagram</div>,
     href: "https://www.instagram.com",
   },
   {
-    icon: <FacebookOutlined className="text-[2rem]" />,
+    icon: <div className="bg-slate-700 p-2 rounded-xl">Facebook</div>,
     href: "https://www.facebook.com",
   },
 ];

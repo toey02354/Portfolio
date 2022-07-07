@@ -1,8 +1,8 @@
-import { useState, useEffect, createContext } from "react";
+import { useState, useEffect } from "react";
 import styles from "./Theme.module.css";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
-import ArrowCircleUpOutlinedIcon from "@mui/icons-material/ArrowCircleUpOutlined";
+import { ArrowCircleUp } from "../Icons";
 import { useTheme } from "../../context/ThemeProvider";
 
 const Layout = ({ children }) => {
@@ -51,7 +51,7 @@ const Layout = ({ children }) => {
         }`}
         onClick={handleTop}
       >
-        <ArrowCircleUpOutlinedIcon />
+        <ArrowCircleUp />
       </button>
     </div>
   );

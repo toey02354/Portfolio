@@ -1,5 +1,5 @@
 import usePostForm from "./usePostForm";
-import SendRoundedIcon from "@mui/icons-material/SendRounded";
+import { PaperAirplane } from "../Icons";
 
 const PostForm = () => {
   const { values, setValues, handleSend } = usePostForm();
@@ -41,7 +41,7 @@ const PostForm = () => {
           onClick={(event) => handleSend(event)}
           className="flex items-center justify-center py-2 px-8 drop-shadow-sm rounded-xl bg-slate-700/40 text-white hover:bg-slate-700"
         >
-          <p>Send</p> <SendRoundedIcon sx={{ height: "1rem" }} />
+          <p>Send</p> <PaperAirplane styling="rotate-90 h-[1rem]" />
         </button>
       </form>
     </div>

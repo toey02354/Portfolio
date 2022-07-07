@@ -1,4 +1,3 @@
-import { Divider } from "@mui/material";
 import { GithubCards } from "./CardItems";
 import { useTheme } from "../../context/ThemeProvider";
 
@@ -20,11 +19,11 @@ const GithubProjectCards = () => {
             <div className="py-4">
               <strong>Tech Stack</strong>: {card.content1}
             </div>
-            <Divider />
+            <hr className={index % 2 == 1 && "border-black"} />
             <div className="py-4 w-full">
               <strong>Detail</strong>: {card.content2}
             </div>
-            <Divider />
+            <hr className={index % 2 == 1 && "border-black"} />
             <div className="py-4">
               <strong>Link</strong>
               <a
