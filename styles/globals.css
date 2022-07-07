@@ -50,19 +50,25 @@ a {
   .HIGHLIGHT-TEXT {
     @apply bg-clip-text text-transparent bg-gradient-to-br from-amber-700 to-highlight;
   }
-  .TW-CARDS {
-    @apply h-full w-full flex flex-col justify-center gap-4 skew-y-[-3deg] shadow-xl rounded-xl;
+  .GroupCards {
+    @apply flex flex-col gap-4;
   }
-  .TW-DARK-CARDS {
-    @apply bg-main/70 text-white backdrop-blur-xl;
+  /* .Card {
+    @apply h-full w-full max-w-[400px] md:max-w-[700px] flex flex-col justify-center gap-4 skew-y-[-3deg] shadow-xl rounded-xl;
+  } */
+  .BlackCard {
+    @apply h-full w-full max-w-[400px] md:max-w-[700px] flex flex-col justify-center gap-4 skew-y-[-3deg] shadow-xl rounded-xl bg-main/70 text-white backdrop-blur-xl;
   }
-  .TW-WHITE-CARDS {
-    @apply bg-white/20 backdrop-blur-3xl;
+  .WhiteCard {
+    @apply h-full w-full max-w-[400px] md:max-w-[700px] flex flex-col justify-center gap-4 skew-y-[-3deg] shadow-xl rounded-xl bg-white/20 backdrop-blur-3xl;
   }
   .TW-CANVAS {
     @apply w-[80vw] h-[50vh] xl:w-[60vw] xl:h-screen;
   }
   .TW-LOGO-SKILL {
     @apply p-2 contrast-[0.8];
+  }
+  .Title {
+    @apply flex justify-center items-center mt-[2rem] p-[2rem] text-4xl uppercase font-bold;
   }
 }

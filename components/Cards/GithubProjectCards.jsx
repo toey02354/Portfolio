@@ -5,12 +5,12 @@ import { useTheme } from "../../context/ThemeProvider";
 const GithubProjectCards = () => {
   const { dark } = useTheme();
   return (
-    <div className="flex flex-col gap-4">
+    <div className="GroupCards">
       {GithubCards.map((card, index) => (
         <div
           key={`githubcard-${index}`}
-          className={`TW-CARDS p-8 ${
-            index % 2 == 0 ? "TW-DARK-CARDS" : "TW-WHITE-CARDS"
+          className={`Card px-[2em] py-[2em] ${
+            index % 2 == 0 ? "BlackCard" : "WhiteCard"
           } ${dark && "text-white"}`}
         >
           <div className="text-2xl font-bold skew-y-[3deg] text-center">

@@ -35,7 +35,7 @@ const Test = () => {
             type="password"
             key="accessKey"
             placeholder="&rarr; Enter Password to access"
-            className="w-[50vw] p-4 rounded-xl bg-main text-white uppercase outline-none placeholder:text-white/50 placeholder:tracking-wider shadow-lg"
+            className="w-full max-w-[400px] md:max-w-[600px] p-4 rounded-xl bg-main text-white uppercase outline-none placeholder:text-white/50 placeholder:tracking-wider shadow-lg"
             value={data}
             onChange={(event) => setData(event.target.value)}
             onKeyPress={() => handleEnter(data)}

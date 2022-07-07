@@ -4,12 +4,12 @@ import { useTheme } from "../../context/ThemeProvider";
 const ExpSlideCards = () => {
   const { dark } = useTheme();
   return (
-    <div className="flex flex-col gap-4">
+    <div className="GroupCards">
       {ExpCards.map((card, index) => (
         <div
           key={`expcard-${index}`}
-          className={`TW-CARDS py-[4rem] px-8 ${
-            index % 2 == 0 ? "TW-DARK-CARDS" : "TW-WHITE-CARDS"
+          className={`Card py-[3em] px-8 ${
+            index % 2 == 0 ? "BlackCard" : "WhiteCard"
           } ${dark && "text-white"}`}
         >
           <div className="text-2xl font-bold skew-y-[3deg] text-center">

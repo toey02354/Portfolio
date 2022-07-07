@@ -28,30 +28,22 @@ const Column3 = () => {
   return (
     <div className="flex flex-col justify-center items-center">
       <div
-        className={`flex justify-center items-center p-[2rem] text-4xl uppercase font-bold ${
-          dark ? "text-white" : "text-highlight"
-        }`}
+        className={`Title ${dark ? "text-white" : "text-highlight"}`}
         ref={githubRef}
       >
         <p className="skew-y-[-3deg]">Github Project</p>
       </div>
       <Grow in={showGH}>
-        <div className="w-screen xl:w-[50vw]">
-          <GithubProjectCards />
-        </div>
+        <GithubProjectCards />
       </Grow>
       <div
-        className={`flex justify-center items-center p-[2rem] text-4xl uppercase font-bold ${
-          dark ? "text-white" : "text-highlight"
-        }`}
+        className={`Title ${dark ? "text-white" : "text-highlight"}`}
         ref={educationRef}
       >
         <p className="skew-y-[-3deg]">Educations</p>
       </div>
       <Grow in={showEdu}>
-        <div className="w-screen xl:w-[50vw]">
-          <EduSlideCards />
-        </div>
+        <EduSlideCards />
       </Grow>
     </div>
   );

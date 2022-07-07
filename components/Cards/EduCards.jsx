@@ -5,12 +5,12 @@ import { useTheme } from "../../context/ThemeProvider";
 const EduSlideCards = () => {
   const { dark } = useTheme();
   return (
-    <div className="flex flex-col gap-4">
+    <div className="GroupCards">
       {EduCards.map((card, index) => (
         <div
           key={`educard-${index}`}
-          className={`TW-CARDS py-[4rem] px-8 ${
-            index % 2 == 0 ? "TW-DARK-CARDS" : "TW-WHITE-CARDS"
+          className={`Card py-[2em] px-8 ${
+            index % 2 == 0 ? "BlackCard" : "WhiteCard"
           } ${dark && "text-white"}`}
         >
           <div className="text-2xl font-bold skew-y-[3deg] text-center">

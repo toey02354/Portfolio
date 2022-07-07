@@ -58,15 +58,12 @@ const Column2 = () => {
       </Grow>
       <div
         ref={experienceRef}
-        className={`flex justify-center items-center p-[2rem] text-4xl uppercase font-bold 
-                  ${dark ? "text-white" : "text-highlight"}`}
+        className={`Title ${dark ? "text-white" : "text-highlight"}`}
       >
         <p className="skew-y-[-3deg]">Skill {"&"} Experience</p>
       </div>
       <Grow in={showCard}>
-        <div className="w-full xl:w-[50vw]">
-          <ExpSlideCards />
-        </div>
+        <ExpSlideCards />
       </Grow>
     </div>
   );

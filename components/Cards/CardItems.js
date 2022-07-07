@@ -2,12 +2,11 @@ export const ExpCards = [
   [
     "E-Commerce Project",
     [
-      "With in process...",
       "An E-Commerce Platform for seller",
       "A website for admins to manage their store, products, orders, and theme",
       "Dashboard page with Charts",
       "Authentication, Roles, Protected routes",
-      "Typescript, NextJS, Redux, ChartJS, TailwindCSS, Axios, Ant-Design"
+      "Typescript, NextJS, Redux, ChartJS, TailwindCSS, Axios, Ant-Design",
     ],
   ],
   [
