@@ -1,6 +1,6 @@
 import Head from "next/head";
 import PostForm from "../components/PostForm";
-import { Grow } from "@mui/material";
+// import { Grow } from "@mui/material";
 import { useTheme } from "../context/ThemeProvider";
 
 const Contact = () => {
@@ -11,31 +11,31 @@ const Contact = () => {
         <title>Contact Toey</title>
       </Head>
 
-      <Grow in>
-        <div className="min-h-[90vh] flex flex-col justify-center items-center">
-          <div
-            className={"text-[3rem] font-bold tracking-[0.1rem] uppercase ".concat(
+      {/* <Grow in> */}
+      <div className="min-h-[90vh] flex flex-col justify-center items-center">
+        <div
+          className={"text-[3rem] font-bold tracking-[0.1rem] uppercase ".concat(
+            dark ? "text-white" : null
+          )}
+        >
+          Feedback
+        </div>
+        <div className="flex flex-col items-center p-4">
+          <h4
+            className={"flex flex-wrap items-center justify-center gap-2 ".concat(
               dark ? "text-white" : null
             )}
           >
-            Feedback
+            Or you can send me an email
+            <div className={"text-red-600"}>natthaphol.uth@gmail.com</div>
+          </h4>
+          <div className={dark ? "text-white" : null}>
+            *** This form won&apos;t send to me ***
           </div>
-          <div className="flex flex-col items-center p-4">
-            <h4
-              className={"flex flex-wrap items-center justify-center gap-2 ".concat(
-                dark ? "text-white" : null
-              )}
-            >
-              Or you can send me an email
-              <div className={"text-red-600"}>natthaphol.uth@gmail.com</div>
-            </h4>
-            <div className={dark ? "text-white" : null}>
-              *** This form won&apos;t send to me ***
-            </div>
-          </div>
-          <PostForm />
         </div>
-      </Grow>
+        <PostForm />
+      </div>
+      {/* </Grow> */}
     </>
   );
 };

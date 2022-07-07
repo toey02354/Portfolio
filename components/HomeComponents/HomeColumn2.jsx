@@ -1,30 +1,10 @@
-import { useRef, useState, useEffect } from "react";
 import ExpSlideCards from "../Cards/ExpCards";
 import LogoSkill from "../LogoSkill";
 import Typewriter from "typewriter-effect";
-import { Grow } from "@mui/material";
 import { useTheme } from "../../context/ThemeProvider";
 
 const Column2 = () => {
-  const experienceRef = useRef();
-  const logoSkillceRef = useRef();
-
-  const [showLogo, setShowLogo] = useState(false);
-  const [showCard, setShowCard] = useState(false);
   const { dark } = useTheme();
-
-  const controlShow = () => {
-    if (logoSkillceRef.current?.offsetTop - scrollY < 300) {
-      setShowLogo(true);
-    }
-    if (experienceRef.current?.offsetTop - scrollY < 300) {
-      setShowCard(true);
-    }
-  };
-
-  useEffect(() => {
-    addEventListener("scroll", controlShow);
-  }, []);
 
   return (
     <div className="flex flex-col justify-center items-center py-[2rem]">
@@ -48,23 +28,13 @@ const Column2 = () => {
           }}
         />
       </div>
-      <Grow in={showLogo}>
-        <div
-          className="min-h-screen flex justify-center items-center"
-          ref={logoSkillceRef}
-        >
-          <LogoSkill />
-        </div>
-      </Grow>
-      <div
-        ref={experienceRef}
-        className={`Title ${dark ? "text-white" : "text-highlight"}`}
-      >
+      <div className="min-h-screen flex justify-center items-center">
+        <LogoSkill />
+      </div>
+      <div className={`Title ${dark ? "text-white" : "text-highlight"}`}>
         <p className="skew-y-[-3deg]">Skill {"&"} Experience</p>
       </div>
-      <Grow in={showCard}>
-        <ExpSlideCards />
-      </Grow>
+      <ExpSlideCards />
     </div>
   );
 };

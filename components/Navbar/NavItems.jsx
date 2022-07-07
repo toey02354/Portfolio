@@ -1,4 +1,4 @@
-import { Home, Call, ViewInArRounded, Lock } from "@mui/icons-material";
+import { Home, Call, Lock } from "@mui/icons-material";
 
 const NavItems = [
   {
