@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
   const { dark, setDark } = useTheme();
   const [show, setShow] = useState(false);
   const handleTop = () => {
-    window.scrollTo({ behavior: "smooth", top: 0 });
+    scrollTo({ behavior: "smooth", top: 0 });
   };
 
   useEffect(() => {
@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
       darkThemeLS === "dark" ? setDark(true) : setDark(false);
     }
 
-    window.addEventListener("scroll", () => {
+    addEventListener("scroll", () => {
       if (scrollY > 300) {
         setShow(true);
       } else {
@@ -46,8 +46,9 @@ const Layout = ({ children }) => {
       {children}
       <Footer />
       <button
-        className={`bg-main fixed bottom-0 right-0 m-4 p-2 rounded-full text-white ${
-          show ? null : "hidden"
+        className={`fixed bottom-0 right-0 m-4 p-2 rounded-full shadow-lg 
+        ${show ? "block" : "hidden"} ${
+          dark ? "bg-white" : "bg-main text-white"
         }`}
         onClick={handleTop}
       >

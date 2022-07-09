@@ -10,14 +10,14 @@ const EduSlideCards = () => {
           key={`educard-${index}`}
           className={`Card py-[2em] px-8 ${
             index % 2 == 0 ? "BlackCard" : "WhiteCard"
-          } ${dark && "text-white"}`}
+          } ${dark ? "text-white" : undefined}`}
         >
           <div className="text-2xl font-bold skew-y-[3deg] text-center">
             <text>{card.title}</text>
           </div>
           <div className="skew-y-[3deg]">
             <div className="py-4">{card.content1}</div>
-            <hr className={index % 2 == 1 && "border-black"} />
+            <hr className={index % 2 == 1 ? "border-black" : undefined} />
             <div className="py-4">{card.content2}</div>
           </div>
         </div>

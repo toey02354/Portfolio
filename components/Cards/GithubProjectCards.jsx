@@ -10,7 +10,7 @@ const GithubProjectCards = () => {
           key={`githubcard-${index}`}
           className={`Card px-[2em] py-[2em] ${
             index % 2 == 0 ? "BlackCard" : "WhiteCard"
-          } ${dark && "text-white"}`}
+          } ${dark ? "text-white" : undefined}`}
         >
           <div className="text-2xl font-bold skew-y-[3deg] text-center">
             <text>{card.title}</text>
@@ -19,11 +19,11 @@ const GithubProjectCards = () => {
             <div className="py-4">
               <strong>Tech Stack</strong>: {card.content1}
             </div>
-            <hr className={index % 2 == 1 && "border-black"} />
+            <hr className={index % 2 == 1 ? "border-black" : undefined} />
             <div className="py-4 w-full">
               <strong>Detail</strong>: {card.content2}
             </div>
-            <hr className={index % 2 == 1 && "border-black"} />
+            <hr className={index % 2 == 1 ? "border-black" : undefined} />
             <div className="py-4">
               <strong>Link</strong>
               <a

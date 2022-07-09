@@ -10,7 +10,7 @@ const ExpSlideCards = () => {
           key={`expcard-${index}`}
           className={`Card py-[3em] px-8 ${
             index % 2 == 0 ? "BlackCard" : "WhiteCard"
-          } ${dark && "text-white"}`}
+          } ${dark ? "text-white" : undefined}`}
         >
           <div className="text-2xl font-bold skew-y-[3deg] text-center">
             <text>{card[0]}</text>
@@ -18,13 +18,12 @@ const ExpSlideCards = () => {
           <ul key="detail" className="skew-y-[3deg] list-disc px-8">
             {card[1].map((detail, index) => (
               <div key={`detail-${index}`}>
-                {index === card[1].length - 1 && (
+                {index === card[1].length - 1 ? (
                   <div>
-                    {" "}
                     <strong>TECH STACK</strong>: {detail}{" "}
                   </div>
-                )}
-                {index !== card[1].length - 1 && <li>{detail}</li>}
+                ) : undefined}
+                {index !== card[1].length - 1 ? <li>{detail}</li> : undefined}
               </div>
             ))}
           </ul>
