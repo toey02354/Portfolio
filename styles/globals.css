@@ -52,6 +52,12 @@ hr {
   .GroupCards {
     @apply flex flex-col gap-4;
   }
+  .flexcenter {
+    @apply flex justify-center items-center;
+  }
+  .flexcolcenter {
+    @apply flex flex-col justify-center items-center;
+  }
   /* .Card {
     @apply h-full w-full max-w-[400px] md:max-w-[700px] flex flex-col justify-center gap-4 skew-y-[-3deg] shadow-xl rounded-xl;
   } */

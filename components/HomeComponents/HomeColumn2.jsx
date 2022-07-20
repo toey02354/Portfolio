@@ -1,4 +1,3 @@
-import ExpSlideCards from "../Cards/ExpCards";
 import LogoSkill from "../LogoSkill";
 import Typewriter from "typewriter-effect";
 import { useTheme } from "../../context/ThemeProvider";
@@ -7,7 +6,7 @@ const Column2 = () => {
   const { dark } = useTheme();
 
   return (
-    <div className="flex flex-col justify-center items-center py-[2rem]">
+    <div className="min-h-screen flexcolcenter py-[2rem]">
       <div
         className={`sm:py-0 sm:px-20 text-[2.1rem] sm:text-[3.3rem] ${
           dark ? "text-white" : "HIGHLIGHT-TEXT"
@@ -28,13 +27,9 @@ const Column2 = () => {
           }}
         />
       </div>
-      <div className="min-h-screen flex justify-center items-center">
+      <div className="min-h-screen flexcenter">
         <LogoSkill />
       </div>
-      <div className={`Title ${dark ? "text-white" : "text-highlight"}`}>
-        <p className="skew-y-[-3deg]">Skill {"&"} Experience</p>
-      </div>
-      <ExpSlideCards />
     </div>
   );
 };

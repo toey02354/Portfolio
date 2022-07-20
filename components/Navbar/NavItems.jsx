@@ -1,10 +1,15 @@
-import { HomeIcon, PhoneIcon, LockIcon } from "../Icons";
+import { HomeIcon, PhoneIcon, LockIcon, Code } from "../Icons";
 
 const NavItems = [
   {
     name: "Home",
     path: "/",
     icon: <HomeIcon />,
+  },
+  {
+    name: "Experience",
+    path: "/experience",
+    icon: <Code />,
   },
   {
     name: "Contact",

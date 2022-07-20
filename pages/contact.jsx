@@ -10,7 +10,7 @@ const Contact = () => {
         <title>Contact Toey</title>
       </Head>
 
-      <div className="min-h-[90vh] flex flex-col justify-center items-center">
+      <div className="min-h-[90vh] flexcolcenter">
         <div
           className={"text-[3rem] font-bold tracking-[0.1rem] uppercase ".concat(
             dark ? "text-white" : null

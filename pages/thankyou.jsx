@@ -11,7 +11,7 @@ const Thankyou = () => {
         <title>Thank You!</title>
       </Head>
       <div
-        className={`min-h-[88vh] flex flex-col justify-center items-center ${
+        className={`min-h-[88vh] flexcolcenter ${
           dark ? "text-white" : "text-black"
         }`}
       >

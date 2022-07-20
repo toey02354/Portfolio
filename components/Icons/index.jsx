@@ -6,6 +6,7 @@ import LightMode from "./LightMode";
 import LockIcon from "./LockIcon";
 import PhoneIcon from "./PhoneIcon";
 import PaperAirplane from "./PaperAirplane";
+import Code from "./Code";
 
 export {
   Academic,
@@ -16,4 +17,5 @@ export {
   LockIcon,
   PhoneIcon,
   PaperAirplane,
+  Code,
 };

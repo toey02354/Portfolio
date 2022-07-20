@@ -29,7 +29,7 @@ const Test = () => {
         <title>Experiement - Toey Portfolio</title>
       </Head>
       {!access ? (
-        <div className="h-[90vh] flex justify-center items-center">
+        <div className="h-[90vh] flexcenter">
           <input
             autoComplete="off"
             type="password"
@@ -45,7 +45,7 @@ const Test = () => {
         <div className="h-screen flex flex-col items-center mt-[2rem] gap-8">
           <div>
             <button
-              className="h-[50px] flex justify-center items-center bg-main p-[1rem] text-white uppercase rounded-xl"
+              className="h-[50px] flexcenter bg-main p-[1rem] text-white uppercase rounded-xl"
               onClick={handleClick}
             >
               Click to start typing-effect
