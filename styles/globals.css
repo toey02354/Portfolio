@@ -45,6 +45,13 @@ hr {
   background: #005772;
 }
 
+.hover-shadow:hover {
+  filter: drop-shadow(0 0 0.15em #d97706a1);
+  cursor: pointer;
+  color: white;
+  transition: color 0.22s;
+}
+
 @layer components {
   .HIGHLIGHT-TEXT {
     @apply bg-clip-text text-transparent bg-gradient-to-br from-amber-700 to-highlight;
