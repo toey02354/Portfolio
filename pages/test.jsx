@@ -1,11 +1,14 @@
 import { useState } from "react";
 import Head from "next/head";
 import TypeWriter from "../components/TypingEffect/TypeWriter";
+import { useTheme } from "../context/ThemeProvider";
 
 const Test = () => {
   const typeWriter = new TypeWriter();
   const [access, setAccess] = useState(false);
   const [data, setData] = useState("");
+  const [message, setMessage] = useState();
+  const { dark } = useTheme();
 
   const handleClick = () => {
     typeWriter
@@ -18,8 +21,10 @@ const Test = () => {
   };
 
   const handleEnter = (value) => {
-    if (value === "kaiser") {
+    if (value === process.env.secretKey) {
       setAccess(true);
+    } else {
+      setMessage("Wrong key!");
     }
   };
 
@@ -29,17 +34,30 @@ const Test = () => {
         <title>Experiement - Toey Portfolio</title>
       </Head>
       {!access ? (
-        <div className="h-[90vh] flexcenter">
+        <div className="h-[90vh] flexcolcenter">
           <input
             autoComplete="off"
             type="password"
             key="accessKey"
             placeholder="&rarr; Enter Password to access"
-            className="w-full max-w-[400px] md:max-w-[600px] p-4 rounded-xl bg-main text-white uppercase outline-none placeholder:text-white/50 placeholder:tracking-wider shadow-lg"
+            className={`w-full max-w-[350px] md:max-w-[600px] p-4 rounded-xl uppercase outline-none placeholder:tracking-wider shadow-lg
+                        ${
+                          dark
+                            ? "bg-white text-main placeholder:text-main"
+                            : "bg-main text-white placeholder:text-white/50"
+                        }
+                      `}
             value={data}
             onChange={(event) => setData(event.target.value)}
-            onKeyPress={() => handleEnter(data)}
+            onKeyPress={(event) => {
+              event.key == "Enter" && handleEnter(data);
+            }}
           />
+          {message ? (
+            <div className="p-8 text-red-600 uppercase font-[800]">
+              *** {message} ***
+            </div>
+          ) : undefined}
         </div>
       ) : (
         <div className="h-screen flex flex-col items-center mt-[2rem] gap-8">
