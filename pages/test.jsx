@@ -31,7 +31,7 @@ const Test = () => {
   return (
     <>
       <Head>
-        <title>Experiement - Toey Portfolio</title>
+        <title>Experiement</title>
       </Head>
       {!access ? (
         <div className="h-[90vh] flexcolcenter">

@@ -1,29 +1,42 @@
 export const ExpCards = [
   [
+    "Pali-Thai Dictionary (Web App and Mobile App)",
+    [
+      "Web App project (back-office for admins)",
+      "I created a website from scratch, both front-end and back-end.",
+      "A responsive website for admins to view, edit, create, and delete words.",
+      "Mobile App project (for users)",
+      "I implemented and updated the ui according to the design in Figma",
+      "Setup breakpoint for multiple devices (responsive)",
+      "Tech stack: Typescript, React, MUI, ContextAPI, Axios, NestJS, Prisma, PostgreSQL, Angular, Ionic",
+    ],
+  ],
+  [
     "E-Commerce Project",
     [
       "An E-Commerce Platform for seller",
-      "A website for admins to manage their store, products, orders, and theme",
-      "Dashboard page with Charts",
-      "Authentication, Roles, Protected routes",
-      "Typescript, NextJS, Redux, ChartJS, TailwindCSS, Axios, Ant-Design",
+      "I created a project from scratch, set up the structure of the project, and developed the project.",
+      "A website for admins to manage their store, products, orders, and select a color theme.",
+      "Created custom hooks, form validators, multiple layouts and stores (state management).",
+      "Authentication, Roles, Protected routes.",
+      "Typescript, Typescript, NextJS, ContextAPI, Axios, Ant-Design, TailwindCSS",
     ],
   ],
-  [
-    "Kerry SLM",
-    [
-      "Created a project, designed the project structure and developed services for the website with a dashboard to present data in charts and tables",
-      "Created forms to submit data to Google Sheets via GoogleAPI.",
-      "Created the API endpoints to manipulate the data on Google sheets.",
-      "Typescript, NextJS, ChartJS, Axios, Ant-Design, TailwindCSS, Google API",
-    ],
-  ],
+  // [
+  //   "Kerry SLM",
+  //   [
+  //     "Created a project, designed the project structure and developed services for the website with a dashboard to present data in charts and tables",
+  //     "Created forms to submit data to Google Sheets via GoogleAPI.",
+  //     "Created the API endpoints to manipulate the data on Google sheets.",
+  //     "Typescript, NextJS, ChartJS, Axios, Ant-Design, TailwindCSS, Google API",
+  //   ],
+  // ],
   [
     "Sompo",
     [
-      "Created a project and designed the project structure for the team.",
+      "I created a project from scratch and set the project structure for the team.",
       "Developed, maintained, and managed login and sign-up pages and protected routes for pages with CRUD features.",
-      "Call APIs to manipulate data from the backend via Axios.",
+      "Created custom hooks and form validators.",
       "Typescript, ReactJS, Redux, Axios, Vite, Ant-Design, TailwindCSS, JWT",
     ],
   ],
