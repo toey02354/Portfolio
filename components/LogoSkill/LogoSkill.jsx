@@ -4,7 +4,7 @@ import { logoGroup1, logoGroup2, logoGroup3 } from "./LogoGroup";
 const LogoSkill = () => {
   return (
     <div className="WhiteCard -skew-y-2 p-4 sm:p-10 rounded-xl shadow-lg bg-white/20 backdrop-blur-2xl">
-      <div className="w-full grid grid-cols-3 sm:grid sm:grid-cols-6 gap-[2rem]">
+      <div className="w-full grid grid-cols-3 sm:grid sm:grid-cols-6 gap-[1rem] md:gap-[2rem]">
         {logoGroup1.map((logo, index) => (
           <div className="TW-LOGO-SKILL" key={logo}>
             <Image
