@@ -9,7 +9,9 @@ const ExpSlideCards = () => {
         <div
           key={`expcard-${index}`}
           className={`Card py-[3em] px-8 ${
-            index % 2 == 0 ? "BlackCard" : "WhiteCard"
+            index % 2 == 0
+              ? "BlackCard blur-thig-xl"
+              : "WhiteCard blur-thig-3xl"
           } ${dark ? "text-white" : undefined}`}
         >
           <div className="text-2xl font-bold skew-y-[3deg] text-center">

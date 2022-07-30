@@ -16,7 +16,7 @@ const Column3 = () => {
           dark ? "text-white" : "text-black"
         }`}
       >
-        <div className="WhiteCard justify-start skew-y-0 ">
+        <div className="WhiteCard blur-thig-3xl justify-start skew-y-0 ">
           <Image
             className="contrast-[0.9]"
             src={TeamStudy}
@@ -43,7 +43,7 @@ const Column3 = () => {
             </p>
           </div>
         </div>
-        <div className="WhiteCard justify-start skew-y-0">
+        <div className="WhiteCard blur-thig-3xl justify-start skew-y-0">
           <Image
             className="contrast-[0.9]"
             src={TeamPuzzle}
@@ -67,8 +67,8 @@ const Column3 = () => {
             </p>
           </div>
         </div>
-        {/* <div className="WhiteCard skew-y-0 p-4">Database</div>
-        <div className="WhiteCard skew-y-0 p-4">Tools</div> */}
+        {/* <div className="WhiteCard blur-thig-3xl skew-y-0 p-4">Database</div>
+        <div className="WhiteCard blur-thig-3xl skew-y-0 p-4">Tools</div> */}
       </div>
     </div>
   );

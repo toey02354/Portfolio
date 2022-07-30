@@ -79,14 +79,11 @@ hr {
   .flexcolcenter {
     @apply flex flex-col justify-center items-center;
   }
-  /* .Card {
-    @apply h-full w-full max-w-[400px] md:max-w-[700px] flex flex-col justify-center gap-4 skew-y-[-3deg] shadow-xl rounded-xl;
-  } */
   .BlackCard {
-    @apply h-full w-full max-w-[400px] md:max-w-[700px] flex flex-col justify-center gap-4 skew-y-[-3deg] shadow-xl rounded-xl bg-main/70 text-white blur-thig-xl;
+    @apply h-full w-full max-w-[400px] md:max-w-[700px] flex flex-col justify-center gap-4 skew-y-[-3deg] shadow-xl rounded-xl bg-main/70 text-white;
   }
   .WhiteCard {
-    @apply h-full w-full max-w-[400px] md:max-w-[700px] flex flex-col justify-center gap-4 skew-y-[-3deg] shadow-xl rounded-xl bg-white/20 blur-thig-3xl;
+    @apply h-full w-full max-w-[400px] md:max-w-[700px] flex flex-col justify-center gap-4 skew-y-[-3deg] shadow-xl rounded-xl bg-white/20;
   }
   .TW-CANVAS {
     @apply w-[80vw] h-[50vh] xl:w-[60vw] xl:h-screen;
