@@ -7,7 +7,7 @@ const PostForm = () => {
   return (
     <div
       className={
-        "w-full max-w-[400px] md:max-w-[500px] rounded-xl bg-main/60 shadow-xl backdrop-blur-xl"
+        "w-full max-w-[400px] md:max-w-[500px] rounded-xl bg-main/60 shadow-xl blur-thig-xl"
       }
     >
       <form

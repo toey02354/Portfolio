@@ -47,9 +47,23 @@ hr {
 
 .hover-shadow:hover {
   filter: drop-shadow(0 0 0.15em #d97706a1);
+  -webkit-filter: drop-shadow(0 0 0.15em #d97706a1);
   cursor: pointer;
   color: white;
   transition: color 0.22s;
+}
+
+.blur-thing-3xl {
+  backdrop-filter: blur(64px);
+  -webkit-backdrop-filter: blur(64px);
+}
+.blur-thing-2xl {
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+}
+.blur-thing-xl {
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
 }
 
 @layer components {
@@ -69,10 +83,10 @@ hr {
     @apply h-full w-full max-w-[400px] md:max-w-[700px] flex flex-col justify-center gap-4 skew-y-[-3deg] shadow-xl rounded-xl;
   } */
   .BlackCard {
-    @apply h-full w-full max-w-[400px] md:max-w-[700px] flex flex-col justify-center gap-4 skew-y-[-3deg] shadow-xl rounded-xl bg-main/70 text-white backdrop-blur-xl;
+    @apply h-full w-full max-w-[400px] md:max-w-[700px] flex flex-col justify-center gap-4 skew-y-[-3deg] shadow-xl rounded-xl bg-main/70 text-white blur-thig-xl;
   }
   .WhiteCard {
-    @apply h-full w-full max-w-[400px] md:max-w-[700px] flex flex-col justify-center gap-4 skew-y-[-3deg] shadow-xl rounded-xl bg-white/20 backdrop-blur-3xl;
+    @apply h-full w-full max-w-[400px] md:max-w-[700px] flex flex-col justify-center gap-4 skew-y-[-3deg] shadow-xl rounded-xl bg-white/20 blur-thig-3xl;
   }
   .TW-CANVAS {
     @apply w-[80vw] h-[50vh] xl:w-[60vw] xl:h-screen;
