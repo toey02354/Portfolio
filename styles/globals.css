@@ -1,9 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  overflow-x: hidden;
 }
 
 a {
@@ -11,16 +17,81 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+hr {
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+::-webkit-scrollbar {
+  width: 6px;
+  height: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  /* box-shadow: inset 0 0 1px #001e27; */
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track:hover {
+  box-shadow: inset 0 0 1px #001e27;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #001e27;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #005772;
+}
+
+.hover-shadow:hover {
+  filter: drop-shadow(0 0 0.15em #d97706a1);
+  -webkit-filter: drop-shadow(0 0 0.15em #d97706a1);
+  cursor: pointer;
+  color: white;
+  transition: color 0.22s;
+}
+
+.blur-thing-3xl {
+  backdrop-filter: blur(64px);
+  -webkit-backdrop-filter: blur(64px);
+}
+.blur-thing-2xl {
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+}
+.blur-thing-xl {
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+@layer components {
+  .HIGHLIGHT-TEXT {
+    @apply bg-clip-text text-transparent bg-gradient-to-br from-amber-700 to-highlight;
   }
-  body {
-    color: white;
-    background: black;
+  .GroupCards {
+    @apply flex flex-col gap-4;
+  }
+  .flexcenter {
+    @apply flex justify-center items-center;
+  }
+  .flexcolcenter {
+    @apply flex flex-col justify-center items-center;
+  }
+  .BlackCard {
+    @apply h-full w-full max-w-[400px] md:max-w-[700px] flex flex-col justify-center gap-4 skew-y-[-3deg] shadow-xl rounded-xl bg-main/70 text-white;
+  }
+  .WhiteCard {
+    @apply h-full w-full max-w-[400px] md:max-w-[700px] flex flex-col justify-center gap-4 skew-y-[-3deg] shadow-xl rounded-xl bg-white/20;
+  }
+  .TW-CANVAS {
+    @apply w-[80vw] h-[50vh] xl:w-[60vw] xl:h-screen;
+  }
+  .TW-LOGO-SKILL {
+    @apply p-2 contrast-[0.8];
+  }
+  .Title {
+    @apply flex justify-center items-center mt-[2rem] p-[2rem] text-4xl uppercase font-bold;
   }
 }
