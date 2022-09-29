@@ -1,23 +1,26 @@
+import { GrLinkedin, GrInstagram } from "react-icons/gr";
+import { FaFacebook, FaGithub } from "react-icons/fa";
+
 interface Footer {
-  icon: any;
+  icon: JSX.Element;
   href: string;
 }
 
 const FooterItems: Footer[] = [
   {
-    icon: <div className="bg-slate-700 p-2 rounded-xl">Github</div>,
+    icon: <FaGithub className="text-[1.75em]" />,
     href: "https://github.com/toey02354",
   },
   {
-    icon: <div className="bg-slate-700 p-2 rounded-xl">LinkedIn</div>,
+    icon: <GrLinkedin className="text-[1.75em]" />,
     href: "https://www.linkedin.com/in/natthaphol-uthumphirat",
   },
   {
-    icon: <div className="bg-slate-700 p-2 rounded-xl">Instagram</div>,
+    icon: <GrInstagram className="text-[1.75em]" />,
     href: "https://www.instagram.com",
   },
   {
-    icon: <div className="bg-slate-700 p-2 rounded-xl">Facebook</div>,
+    icon: <FaFacebook className="text-[1.75em]" />,
     href: "https://www.facebook.com",
   },
 ];

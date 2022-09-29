@@ -1,6 +1,6 @@
 import { FC } from "react";
 import usePostForm from "./usePostForm";
-import { PaperAirplane } from "../Icons";
+import { IoMdSend } from "react-icons/io";
 
 const PostForm: FC = () => {
   const { values, setValues, handleSend } = usePostForm();
@@ -40,9 +40,9 @@ const PostForm: FC = () => {
         />
         <button
           onClick={(event) => handleSend(event)}
-          className="flex items-center justify-center py-2 px-8 drop-shadow-sm rounded-xl bg-slate-700/40 text-white hover:bg-slate-700"
+          className="flex items-center justify-center gap-1 py-2 px-8 drop-shadow-sm rounded-xl bg-slate-700/40 text-white hover:bg-slate-700"
         >
-          <p>Send</p> <PaperAirplane styling="rotate-90 h-[1rem]" />
+          <p>Send</p> <IoMdSend />
         </button>
       </form>
     </div>

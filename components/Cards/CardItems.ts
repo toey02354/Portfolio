@@ -1,11 +1,3 @@
-import React from "react";
-
-interface EducationCard {
-  title: string;
-  content1: any;
-  content2: any;
-}
-
 interface ExperienceCard {
   title: string;
   content: string[];

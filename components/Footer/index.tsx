@@ -4,7 +4,7 @@ import FooterItems from "./LogoFooter";
 const Footer: FC = () => {
   return (
     <div className="bg-main flexcolcenter gap-4 px-4 py-[3em]">
-      <div className="flex items-center justify-center gap-2">
+      <div className="flex items-center justify-center gap-4">
         {FooterItems.map((item, index) => (
           <a
             key={`footer-${index}`}

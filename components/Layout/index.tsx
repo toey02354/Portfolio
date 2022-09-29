@@ -2,7 +2,7 @@ import { useState, useEffect, FC, PropsWithChildren } from "react";
 import styles from "./Theme.module.css";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
-import { ArrowCircleUp } from "../Icons";
+import { FaArrowUp } from "react-icons/fa";
 import { useTheme } from "../../context/ThemeProvider";
 
 const Layout: FC<PropsWithChildren> = ({ children }) => {
@@ -52,7 +52,7 @@ const Layout: FC<PropsWithChildren> = ({ children }) => {
         }`}
         onClick={handleTop}
       >
-        <ArrowCircleUp />
+        <FaArrowUp />
       </button>
     </div>
   );

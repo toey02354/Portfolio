@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { LightMode, DarkMode } from "../Icons";
 import NavItems from "./NavItems";
 import { useTheme } from "../../context/ThemeProvider";
+
+import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 const Navbar = () => {
   const router = useRouter();
@@ -32,7 +33,7 @@ const Navbar = () => {
         className="flex p-2 bg-slate-600 rounded-xl cursor-pointer text-highlight"
         onClick={() => setDark((currVal) => !currVal)}
       >
-        {dark ? <DarkMode /> : <LightMode />}
+        {dark ? <MdDarkMode /> : <MdLightMode />}
       </div>
     </div>
   );

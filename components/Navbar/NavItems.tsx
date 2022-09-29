@@ -1,4 +1,4 @@
-import { HomeIcon, PhoneIcon, LockIcon, Code } from "../Icons";
+import { MdOutlineWork, MdHome, MdCall, MdLock } from "react-icons/md";
 
 interface Navbar {
   name: string;
@@ -10,22 +10,22 @@ const NavItems: Navbar[] = [
   {
     name: "Home",
     path: "/",
-    icon: <HomeIcon />,
+    icon: <MdHome />,
   },
   {
     name: "Experience",
     path: "/experience",
-    icon: <Code />,
+    icon: <MdOutlineWork />,
   },
   {
     name: "Contact",
     path: "/contact",
-    icon: <PhoneIcon />,
+    icon: <MdCall />,
   },
   {
     name: "Secret",
     path: "/test",
-    icon: <LockIcon />,
+    icon: <MdLock />,
   },
 ];
 
