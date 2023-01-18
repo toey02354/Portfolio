@@ -2,10 +2,9 @@ import {
   useContext,
   createContext,
   useState,
-  FC,
   Dispatch,
   SetStateAction,
-  PropsWithChildren,
+  ReactNode,
 } from "react";
 
 interface ThemeContext {
@@ -13,16 +12,22 @@ interface ThemeContext {
   setDark: Dispatch<SetStateAction<boolean>>;
 }
 
-const ThemeContext = createContext<ThemeContext>({
-  dark: false,
-  setDark: () => {},
-});
+const ThemeContext = createContext<ThemeContext | null>(null);
 
 export const useTheme = () => {
-  return useContext(ThemeContext);
+  const themeContext = useContext(ThemeContext);
+
+  if (themeContext == null) {
+    throw new Error("ThemeContext is null");
+  }
+  return themeContext;
 };
 
-const ThemeProvider: FC<PropsWithChildren> = ({ children }) => {
+const ThemeProvider = ({
+  children
+}: {
+  children: ReactNode
+}) => {
   const [dark, setDark] = useState<boolean>(false);
   let value = { dark, setDark };
   return (

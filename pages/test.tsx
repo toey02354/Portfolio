@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Head from "next/head";
 import { useTheme } from "../context/ThemeProvider";
+import { pages } from "../utils/Constants";
 
 const Test = () => {
   const [access, setAccess] = useState(false);
@@ -19,7 +20,7 @@ const Test = () => {
   return (
     <>
       <Head>
-        <title>Experiement</title>
+        <title>{ pages.experiment }</title>
       </Head>
       {!access ? (
         <div className="h-[90vh] flexcolcenter">
@@ -28,18 +29,10 @@ const Test = () => {
             type="password"
             key="accessKey"
             placeholder="&rarr; Enter Password to access"
-            className={`w-full max-w-[350px] md:max-w-[600px] p-4 rounded-xl uppercase outline-none placeholder:tracking-wider shadow-lg
-                        ${
-                          dark
-                            ? "bg-white text-main placeholder:text-main"
-                            : "bg-main text-white placeholder:text-white/50"
-                        }
-                      `}
+            className={`w-full max-w-[350px] md:max-w-[600px] p-4 rounded-xl uppercase outline-none placeholder:tracking-wider shadow-lg${dark? "bg-white text-main placeholder:text-main": "bg-main text-white placeholder:text-white/50"}`}
             value={data}
             onChange={(event) => setData(event.target.value)}
-            onKeyPress={(event) => {
-              event.key == "Enter" && handleEnter(data);
-            }}
+            onKeyDown={(event) => {event.key == "Enter" && handleEnter(data);}}
           />
           {message ? (
             <div className="p-8 text-red-600 uppercase font-[800]">

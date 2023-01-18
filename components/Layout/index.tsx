@@ -1,59 +1,34 @@
-import { useState, useEffect, FC, PropsWithChildren } from "react";
+import { useEffect, ReactNode } from "react";
 import styles from "./Theme.module.css";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
-import { FaArrowUp } from "react-icons/fa";
 import { useTheme } from "../../context/ThemeProvider";
+import { themeConstants } from "../../utils/Constants";
+import ScrollToTop from "../ScrollToTop";
 
-const Layout: FC<PropsWithChildren> = ({ children }) => {
+const Layout = ({
+  children
+}: {
+  children: ReactNode
+}) => {
   const { dark, setDark } = useTheme();
-  const [show, setShow] = useState<boolean>(false);
-  const handleTop = () => {
-    scrollTo({ behavior: "smooth", top: 0 });
-  };
 
   useEffect(() => {
-    const darkThemeLS = localStorage.getItem("toey-portfolio-theme");
-    if (darkThemeLS === null) {
-      localStorage.setItem("toey-portfolio-theme", "light");
-    } else {
-      darkThemeLS === "dark" ? setDark(true) : setDark(false);
-    }
-
-    addEventListener("scroll", () => {
-      if (scrollY > 300) {
-        setShow(true);
-      } else {
-        setShow(false);
-      }
-    });
-  }, []);
-
-  useEffect(() => {
-    if (dark === true && dark !== null) {
+    if (dark) {
       setDark(true);
-      localStorage.setItem("toey-portfolio-theme", "dark");
-    } else if (dark === false && dark !== null) {
-      setDark(false);
-      localStorage.setItem("toey-portfolio-theme", "light");
+      localStorage.setItem("toey-portfolio-theme", themeConstants.DARK);
     } else {
+      setDark(false);
+      localStorage.setItem("toey-portfolio-theme", themeConstants.LIGHT);
     }
-  }, [dark]);
+  }, [dark, setDark]);
 
   return (
     <div className={dark ? styles.DarkTheme : styles.LightTheme}>
       <Navbar />
       {children}
       <Footer />
-      <button
-        className={`fixed bottom-0 right-0 m-4 p-2 rounded-full shadow-lg 
-        ${show ? "block" : "hidden"} ${
-          dark ? "bg-white" : "bg-main text-white"
-        }`}
-        onClick={handleTop}
-      >
-        <FaArrowUp />
-      </button>
+      <ScrollToTop />
     </div>
   );
 };

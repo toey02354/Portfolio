@@ -5,16 +5,19 @@ import Column1 from "../components/HomeComponents/HomeColumn1";
 import Column2 from "../components/HomeComponents/HomeColumn2";
 import Column3 from "../components/HomeComponents/HomeColumn3";
 
+import { names, pages } from "../utils/Constants";
+
 const Home: FC = () => {
+
   return (
     <>
       <Head>
-        <title>Toey Portfolio</title>
-        <meta name="description" content="Toey Portfolio" />
-        <meta property="og:title" content="Toey Web Portfolio" />
+        <title>{pages.home}</title>
+        <meta name="description" content={`${names.nickName} Portfolio`} />
+        <meta property="og:title" content={`${names.nickName} Web Portfolio`} />
         <meta
           property="og:description"
-          content="Natthaphol Uthumphirat, web portfolio that contains my experiences"
+          content={`${names.firstName} ${names.lastName}, web portfolio that contains my experiences`}
         />
         <meta property="og:image" content="/Images/profile.jpeg" />
         <meta property="og:type" content="portfolio" />

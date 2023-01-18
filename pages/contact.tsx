@@ -1,28 +1,29 @@
 import Head from "next/head";
 import PostForm from "../components/PostForm";
 import { useTheme } from "../context/ThemeProvider";
+import { pages } from "../utils/Constants";
 
 const Contact = () => {
   const { dark } = useTheme();
   return (
     <>
       <Head>
-        <title>Contact Toey</title>
+        <title>{ pages.contact }</title>
       </Head>
 
       <div className="min-h-[90vh] flexcolcenter">
         <div
-          className={"text-[3rem] font-bold tracking-[0.1rem] uppercase ".concat(
+          className={`text-[3rem] font-bold tracking-[0.1rem] uppercase ${
             dark ? "text-white" : ""
-          )}
+          }`}
         >
           Feedback
         </div>
         <div className="flex flex-col items-center p-4">
           <h4
-            className={"flex flex-wrap items-center justify-center gap-2 ".concat(
+            className={`flex flex-wrap items-center justify-center gap-2 ${
               dark ? "text-white" : ""
-            )}
+            }`}
           >
             Or you can send me an email
             <div className={"text-red-600"}>natthaphol.uth@gmail.com</div>

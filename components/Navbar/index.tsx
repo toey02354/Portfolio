@@ -4,6 +4,7 @@ import NavItems from "./NavItems";
 import { useTheme } from "../../context/ThemeProvider";
 
 import { MdDarkMode, MdLightMode } from "react-icons/md";
+import { names } from "../../utils/Constants";
 
 const Navbar = () => {
   const router = useRouter();
@@ -17,16 +18,12 @@ const Navbar = () => {
     <div className="bg-main flex justify-between items-center py-4 px-6 text-xl text-white">
       <div className="flex items-center gap-8">
         <div className="hidden lg:flex lg:justify-center lg:items-center p-3">
-          <strong>TOEY</strong> <div>Portfolio</div>
+          <strong>{names.nickName.toUpperCase()}</strong> <div>{ names.portfolio}</div>
         </div>
         <div className="flex gap-4">
           {NavItems.map((item) => (
             <Link href={item.path} key={item.name} passHref>
-              <button
-                className={`flex items-center gap-1 hover:text-amber-500 ${
-                  router.pathname == item.path ? "text-highlight" : undefined 
-                }`}
-              >
+              <button className={`flex items-center gap-1 hover:text-amber-500 ${router.pathname == item.path ? "text-highlight" : ""}`}>
                 {item.icon} <div className="hidden xl:block">{item.name}</div>
               </button>
             </Link>

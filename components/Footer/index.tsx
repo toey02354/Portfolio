@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { names } from "../../utils/Constants";
 import FooterItems from "./LogoFooter";
 
 const Footer: FC = () => {
@@ -18,7 +19,7 @@ const Footer: FC = () => {
         ))}
       </div>
       <div className="text-[1.25rem] text-white">
-        Created by Natthaphol Uthumphirat
+        Created by {names.fullName}
       </div>
     </div>
   );

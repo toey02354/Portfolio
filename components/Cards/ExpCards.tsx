@@ -13,7 +13,7 @@ const ExpSlideCards: FC = () => {
           className={`Card py-[3em] px-8 ${
             index % 2 == 0
               ? "BlackCard blur-thig-xl"
-              : "WhiteCard blur-thig-3xl"
+              : "WhiteCard blur-thing-3xl"
           } ${dark ? "text-white" : undefined}`}
         >
           <div className="text-2xl font-bold skew-y-[3deg] text-center">

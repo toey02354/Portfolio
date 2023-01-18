@@ -14,9 +14,7 @@ const PostForm: FC = () => {
       <form
         autoComplete="off"
         className="flex flex-col items-center justify-center gap-4 p-8"
-        onKeyPress={(event) => {
-          if (event.key == "Enter") handleSend(event);
-        }}
+        onKeyDown={(event) => {event.key == "Enter" && handleSend(event);}}
       >
         <input
           placeholder="Enter Title Here"
@@ -24,9 +22,7 @@ const PostForm: FC = () => {
           name="Title"
           className="w-full p-2 rounded-lg bg-slate-700/40 focus:outline-none focus:bg-slate-700 text-white"
           value={values.title}
-          onChange={(event) =>
-            setValues({ ...values, title: event.target.value })
-          }
+          onChange={(event) => setValues({ ...values, title: event.target.value })}
         />
         <textarea
           rows={10}
@@ -34,9 +30,7 @@ const PostForm: FC = () => {
           name="Title"
           className="w-full p-2 rounded-lg resize-none bg-slate-700/40 focus:outline-none focus:bg-slate-700 text-white"
           value={values.content}
-          onChange={(event) =>
-            setValues({ ...values, content: event.target.value })
-          }
+          onChange={(event) => setValues({ ...values, content: event.target.value })}
         />
         <button
           onClick={(event) => handleSend(event)}

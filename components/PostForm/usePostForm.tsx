@@ -7,11 +7,10 @@ const usePostForm = () => {
   const router = useRouter();
   const [values, setValues] = useState(initialValues);
 
-  const handleSend = (event: any) => {
+  const handleSend = (event: FormEvent) => {
     event.preventDefault();
     if (values.title.trim() === "" || values.content.trim() === "") {
-      alert("Please Enter Data");
-      return;
+      return alert("Please Enter Data");
     }
     setValues(initialValues);
     router.replace("/thankyou");

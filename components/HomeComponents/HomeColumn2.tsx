@@ -7,13 +7,8 @@ const Column2 = () => {
 
   return (
     <div className="min-h-screen flexcolcenter py-[2rem]">
-      <div
-        className={`sm:py-0 sm:px-20 text-[2.1rem] sm:text-[3.3rem] ${
-          dark ? "text-white" : "HIGHLIGHT-TEXT"
-        }`}
-      >
+      <div className={`sm:py-0 sm:px-20 text-[2.1rem] sm:text-[3.3rem] ${dark ? "text-white" : "HIGHLIGHT-TEXT"}`}>
         <Typewriter
-          // style={{ textShadow: "5rem" }}
           options={{ loop: true }}
           onInit={(typewriter) => {
             typewriter
