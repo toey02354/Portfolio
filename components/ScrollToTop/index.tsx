@@ -20,13 +20,6 @@ const ScrollToTop = () => {
   };
 
   useEffect(() => {
-    const darkThemeLS = localStorage.getItem("toey-portfolio-theme");
-    if (!darkThemeLS) {
-      localStorage.setItem("toey-portfolio-theme", themeConstants.LIGHT);
-    } else {
-      darkThemeLS === themeConstants.DARK ? setDark(true) : setDark(false);
-    }
-
     addEventListener("scroll", listenScroll);
     return () => removeEventListener("scroll", listenScroll);
   }, []);

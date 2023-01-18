@@ -5,7 +5,9 @@ import {
   Dispatch,
   SetStateAction,
   ReactNode,
+  useEffect,
 } from "react";
+import { themeConstants } from "../utils/Constants";
 
 interface IThemeContext {
   dark: boolean;
@@ -29,7 +31,17 @@ const ThemeProvider = ({
   children: ReactNode
 }) => {
   const [dark, setDark] = useState<boolean>(false);
-  let value = { dark, setDark };
+
+  useEffect(() => {
+    const darkThemeLS = localStorage.getItem(themeConstants.LOCAL_STORAGE_KEY);
+    if (!darkThemeLS) {
+      localStorage.setItem(themeConstants.LOCAL_STORAGE_KEY, themeConstants.LIGHT);
+    } else {
+      darkThemeLS === themeConstants.DARK ? setDark(true) : setDark(false);
+    }
+  }, [])
+
+  const value = { dark, setDark };
   return (
     <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
   );

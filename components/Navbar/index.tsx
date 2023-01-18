@@ -4,14 +4,17 @@ import NavItems from "./NavItems";
 import { useTheme } from "../../context/ThemeProvider";
 
 import { MdDarkMode, MdLightMode } from "react-icons/md";
-import { names } from "../../utils/Constants";
+import { names, themeConstants } from "../../utils/Constants";
 
 const Navbar = () => {
   const router = useRouter();
   const { dark, setDark } = useTheme();
   
   const changeTheme = () => {
-    setDark(currTheme => !currTheme)
+    setDark(currDark => {
+      localStorage.setItem(themeConstants.LOCAL_STORAGE_KEY, !currDark? themeConstants.DARK : themeConstants.LIGHT)
+      return !currDark
+    })
   }
 
   return (

@@ -11,17 +11,7 @@ const Layout = ({
 }: {
   children: ReactNode
 }) => {
-  const { dark, setDark } = useTheme();
-
-  useEffect(() => {
-    if (dark) {
-      setDark(true);
-      localStorage.setItem("toey-portfolio-theme", themeConstants.DARK);
-    } else {
-      setDark(false);
-      localStorage.setItem("toey-portfolio-theme", themeConstants.LIGHT);
-    }
-  }, [dark, setDark]);
+  const { dark } = useTheme();
 
   return (
     <div className={dark ? styles.DarkTheme : styles.LightTheme}>

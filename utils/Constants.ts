@@ -1,4 +1,5 @@
 export enum themeConstants {
+  LOCAL_STORAGE_KEY = 'toey-portfolio-theme',
   LIGHT = "light",
   DARK = "dark",
 }
