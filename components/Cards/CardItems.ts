@@ -1,16 +1,16 @@
-interface ExperienceCard {
+interface IExperienceCard {
   title: string;
   content: string[];
 }
 
-interface GitHubCard {
+interface IGitHubCard {
   title: string;
   content1: string;
   content2: string;
   link: string;
 }
 
-export const ExpCards: ExperienceCard[] = [
+export const ExpCards: IExperienceCard[] = [
   {
     title: "Pali-Thai Dictionary (Web App and Mobile App)",
     content: [
@@ -61,7 +61,7 @@ export const ExpCards: ExperienceCard[] = [
   },
 ];
 
-export const GithubCards: GitHubCard[] = [
+export const GithubCards: IGitHubCard[] = [
   {
     title: "Pokemon Cards",
     content1: "TypeScript, React, Tailwind",

@@ -7,12 +7,12 @@ import {
   ReactNode,
 } from "react";
 
-interface ThemeContext {
+interface IThemeContext {
   dark: boolean;
   setDark: Dispatch<SetStateAction<boolean>>;
 }
 
-const ThemeContext = createContext<ThemeContext | null>(null);
+const ThemeContext = createContext<IThemeContext | null>(null);
 
 export const useTheme = () => {
   const themeContext = useContext(ThemeContext);

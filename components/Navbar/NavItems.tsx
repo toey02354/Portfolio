@@ -1,12 +1,12 @@
 import { MdOutlineWork, MdHome, MdCall, MdLock } from "react-icons/md";
 
-interface Navbar {
+interface INavbar {
   name: string;
   path: string;
   icon: JSX.Element;
 }
 
-const NavItems: Navbar[] = [
+const NavItems: INavbar[] = [
   {
     name: "Home",
     path: "/",
