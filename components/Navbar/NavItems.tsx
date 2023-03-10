@@ -23,7 +23,7 @@ const NavItems: INavbar[] = [
     icon: <MdCall />,
   },
   {
-    name: "Secret",
+    name: "Secrets",
     path: "/test",
     icon: <MdLock />,
   },
