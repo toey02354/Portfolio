@@ -1,7 +1,7 @@
 import { useEffect, ReactNode } from "react";
 import styles from "./Theme.module.css";
-import Navbar from "./navbar/Navbar";
-import Footer from "./footer/Footer";
+import Navbar from "./navbar";
+import Footer from "./footer";
 import { useTheme } from "../../context/ThemeProvider";
 import ScrollToTop from "./scrollToTop/ScrollToTopButton";
 
