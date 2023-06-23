@@ -1,6 +1,6 @@
 import { FC } from "react";
-import { names } from "../../../assets/Constants";
-import FooterItems from "./LogoFooter";
+import { names } from "../assets/Constants";
+import FooterItems from "./footerLogos";
 
 const Footer: FC = () => {
   return (
