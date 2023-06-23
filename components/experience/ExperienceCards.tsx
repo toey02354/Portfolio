@@ -1,6 +1,6 @@
 import React, { FC } from "react";
-import { ExpCards } from "../../../assets/Constants";
-import { useTheme } from "../../../context/ThemeProvider";
+import { ExpCards } from "../../assets/Constants";
+import { useTheme } from "../../context/ThemeProvider";
 
 const ExpSlideCards: FC = () => {
   const { darkTheme } = useTheme();

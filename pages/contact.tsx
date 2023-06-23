@@ -1,5 +1,5 @@
 import Head from "next/head";
-import PostForm from "../components/contact";
+import PostForm from "../components/contact/PostForm";
 import { useTheme } from "../context/ThemeProvider";
 import { pages } from "../assets/Constants";
 

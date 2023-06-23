@@ -3,7 +3,7 @@ import styles from "./Theme.module.css";
 import Navbar from "./navbar";
 import Footer from "./footer";
 import { useTheme } from "../context/ThemeProvider";
-import ScrollToTop from "./ScrollToTopButton";
+import ScrollToTop from "./shared/ScrollToTopButton";
 
 const Layout = ({
   children

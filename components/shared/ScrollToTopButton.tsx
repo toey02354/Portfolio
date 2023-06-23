@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { themeConstants } from "../assets/Constants";
-import { useTheme } from "../context/ThemeProvider";
+import { themeConstants } from "../../assets/Constants";
+import { useTheme } from "../../context/ThemeProvider";
 import { FaArrowUp } from "react-icons/fa";
 
 const ScrollToTop = () => {

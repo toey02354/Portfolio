@@ -1,7 +1,7 @@
 import Head from "next/head";
 
-import ExpSlideCards from "../components/experience/Cards/ExpCards";
-import GithubProjectCards from "../components/experience/Cards/GithubProjectCards";
+import ExpSlideCards from "../components/experience/ExperienceCards";
+import GithubProjectCards from "../components/experience/GithubProjectCards";
 import { useTheme } from "../context/ThemeProvider";
 import { pages } from "../assets/Constants";
 

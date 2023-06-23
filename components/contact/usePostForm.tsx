@@ -1,4 +1,4 @@
-import { EventHandler, FormEvent, KeyboardEventHandler, useState } from "react";
+import { FormEvent, useState } from "react";
 import { useRouter } from "next/router";
 
 const initialValues = { title: "", content: "" };

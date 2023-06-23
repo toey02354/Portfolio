@@ -1,6 +1,6 @@
 import { FC } from "react";
-import { GithubCards } from "../../../assets/Constants";
-import { useTheme } from "../../../context/ThemeProvider";
+import { GithubCards } from "../../assets/Constants";
+import { useTheme } from "../../context/ThemeProvider";
 
 const GithubProjectCards: FC = () => {
   const { darkTheme } = useTheme();
