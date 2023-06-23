@@ -1,26 +1,26 @@
 import Head from "next/head";
 
-import ExpSlideCards from "../components/Cards/ExpCards";
-import GithubProjectCards from "../components/Cards/GithubProjectCards";
+import ExpSlideCards from "../components/experience/Cards/ExpCards";
+import GithubProjectCards from "../components/experience/Cards/GithubProjectCards";
 import { useTheme } from "../context/ThemeProvider";
-import { pages } from "../utils/Constants";
+import { pages } from "../assets/Constants";
 
 const Experience = () => {
-  const { dark } = useTheme();
+  const { darkTheme } = useTheme();
   return (
     <>
       <Head>
         <title>{ pages.experience }</title>
       </Head>
       <div className="flexcolcenter mb-[10em]">
-        <div className={`Title ${dark ? "text-white" : "text-highlight"}`}>
-          <p className="skew-y-[-3deg]">Skill {"&"} Experience</p>
+        <div className={`Title ${darkTheme ? "text-white" : "text-highlight"}`}>
+          <p className="">Skill {"&"} Experience</p>
         </div>
         <ExpSlideCards />
-        <div className={`Title ${dark ? "text-white" : "text-highlight"}`}>
-          <p className="skew-y-[-3deg]">Github Project</p>
+        {/* <div className={`Title ${darkTheme ? "text-white" : "text-highlight"}`}>
+          <p className="">Github Project</p>
         </div>
-        <GithubProjectCards />
+        <GithubProjectCards /> */}
       </div>
     </>
   );

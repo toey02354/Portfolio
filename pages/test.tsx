@@ -1,13 +1,13 @@
 import { useState } from "react";
 import Head from "next/head";
 import { useTheme } from "../context/ThemeProvider";
-import { pages } from "../utils/Constants";
+import { pages } from "../assets/Constants";
 
 const Test = () => {
   const [access, setAccess] = useState(false);
   const [data, setData] = useState("");
   const [message, setMessage] = useState<string>("");
-  const { dark } = useTheme();
+  const { darkTheme } = useTheme();
 
   const handleEnter = (value: string) => {
     if (value === process.env.secretKey) {
@@ -29,7 +29,7 @@ const Test = () => {
             type="password"
             key="accessKey"
             placeholder="&rarr; Enter Password to access"
-            className={`w-full max-w-[350px] md:max-w-[600px] p-4 rounded-xl uppercase outline-none placeholder:tracking-wider shadow-lg${dark? "bg-white text-main placeholder:text-main": "bg-main text-white placeholder:text-white/50"}`}
+            className={`w-full max-w-[350px] md:max-w-[600px] p-4 rounded-xl uppercase outline-none placeholder:tracking-wider shadow-lg${darkTheme? "bg-white text-main placeholder:text-main": "bg-main text-white placeholder:text-white/50"}`}
             value={data}
             onChange={(event) => setData(event.target.value)}
             onKeyDown={(event) => {event.key == "Enter" && handleEnter(data);}}

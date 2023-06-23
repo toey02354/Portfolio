@@ -1,17 +1,17 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import NavItems from "./NavItems";
-import { useTheme } from "../../context/ThemeProvider";
+import { useTheme } from "../../../context/ThemeProvider";
 
 import { MdDarkMode, MdLightMode } from "react-icons/md";
-import { names, themeConstants } from "../../utils/Constants";
+import { names, themeConstants } from "../../../assets/Constants";
 
 const Navbar = () => {
   const router = useRouter();
-  const { dark, setDark } = useTheme();
+  const { darkTheme, setDarkTheme } = useTheme();
   
   const changeTheme = () => {
-    setDark(currDark => {
+    setDarkTheme(currDark => {
       localStorage.setItem(themeConstants.LOCAL_STORAGE_KEY, !currDark? themeConstants.DARK : themeConstants.LIGHT)
       return !currDark
     })
@@ -37,7 +37,7 @@ const Navbar = () => {
         className="flex p-2 bg-slate-600 rounded-xl cursor-pointer text-highlight"
         onClick={changeTheme}
       >
-        {dark ? <MdDarkMode /> : <MdLightMode />}
+        {darkTheme ? <MdDarkMode /> : <MdLightMode />}
       </div>
     </div>
   );

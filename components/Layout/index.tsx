@@ -1,20 +1,20 @@
 import { useEffect, ReactNode } from "react";
 import styles from "./Theme.module.css";
-import Navbar from "../Navbar";
-import Footer from "../Footer";
+import Navbar from "./navbar";
+import Footer from "./footer";
 import { useTheme } from "../../context/ThemeProvider";
-import { themeConstants } from "../../utils/Constants";
-import ScrollToTop from "../ScrollToTop";
+import { themeConstants } from "../../assets/Constants";
+import ScrollToTop from "./scrollToTop";
 
 const Layout = ({
   children
 }: {
   children: ReactNode
 }) => {
-  const { dark } = useTheme();
+  const { darkTheme } = useTheme();
 
   return (
-    <div className={dark ? styles.DarkTheme : styles.LightTheme}>
+    <div className={darkTheme ? styles.DarkTheme : styles.LightTheme}>
       <Navbar />
       {children}
       <Footer />

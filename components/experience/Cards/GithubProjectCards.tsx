@@ -1,9 +1,9 @@
 import { FC } from "react";
-import { GithubCards } from "./CardItems";
-import { useTheme } from "../../context/ThemeProvider";
+import { GithubCards } from "../../../assets/Constants";
+import { useTheme } from "../../../context/ThemeProvider";
 
 const GithubProjectCards: FC = () => {
-  const { dark } = useTheme();
+  const { darkTheme } = useTheme();
   return (
     <div className="GroupCards">
       {GithubCards.map((card, index) => (
@@ -13,12 +13,12 @@ const GithubProjectCards: FC = () => {
             index % 2 == 0
               ? "BlackCard blur-thig-xl"
               : "WhiteCard blur-thing-3xl"
-          } ${dark ? "text-white" : undefined}`}
+          } ${darkTheme ? "text-white" : undefined}`}
         >
-          <div className="text-2xl font-bold skew-y-[3deg] text-center">
+          <div className="text-2xl font-bold text-center">
             <text>{card.title}</text>
           </div>
-          <div className="skew-y-[3deg]">
+          <div className="">
             <div className="py-4">
               <strong>Tech Stack</strong>: {card.content1}
             </div>

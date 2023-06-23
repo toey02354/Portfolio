@@ -1,10 +1,10 @@
 import { FC } from "react";
 import Image from "next/image";
-import { logoGroup1, logoGroup2, logoGroup3 } from "./LogoGroup";
+import { logoGroup1, logoGroup2, logoGroup3 } from "../../assets/LogoGroup";
 
 const LogoSkill: FC = () => {
   return (
-    <div className="WhiteCard blur-thing-3xl -skew-y-2 p-4 sm:p-10 rounded-xl shadow-lg bg-white/20 blur-thing-2xl">
+    <div className="WhiteCard blur-thing-3xl p-4 sm:p-10 rounded-xl shadow-lg bg-white/20 blur-thing-2xl">
       <div className="w-full grid grid-cols-3 sm:grid sm:grid-cols-6 gap-[1rem] md:gap-[2rem]">
         {logoGroup1.map((logo, index) => (
           <div className="TW-LOGO-SKILL" key={`1-${logo}-${index}`}>

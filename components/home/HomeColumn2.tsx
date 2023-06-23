@@ -1,13 +1,13 @@
-import LogoSkill from "../LogoSkill";
+import LogoSkill from "./LogoSkill";
 import Typewriter from "typewriter-effect";
 import { useTheme } from "../../context/ThemeProvider";
 
 const Column2 = () => {
-  const { dark } = useTheme();
+  const { darkTheme } = useTheme();
 
   return (
     <div className="min-h-screen flexcolcenter py-[2rem]">
-      <div className={`sm:py-0 sm:px-20 text-[2.1rem] sm:text-[3.3rem] ${dark ? "text-white" : "HIGHLIGHT-TEXT"}`}>
+      <div className={`sm:py-0 sm:px-20 text-[2.1rem] sm:text-[3.3rem] ${darkTheme ? "text-white" : "HIGHLIGHT-TEXT"}`}>
         <Typewriter
           options={{ loop: true }}
           onInit={(typewriter) => {

@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { names } from "../../utils/Constants";
+import { names } from "../../../assets/Constants";
 import FooterItems from "./LogoFooter";
 
 const Footer: FC = () => {

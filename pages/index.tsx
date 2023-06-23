@@ -1,11 +1,11 @@
 import Head from "next/head";
 import { FC } from "react";
 // components
-import Column1 from "../components/HomeComponents/HomeColumn1";
-import Column2 from "../components/HomeComponents/HomeColumn2";
-import Column3 from "../components/HomeComponents/HomeColumn3";
+import Column1 from "../components/home/HomeColumn1";
+import Column2 from "../components/home/HomeColumn2";
+import Column3 from "../components/home/HomeColumn3";
 
-import { names, pages } from "../utils/Constants";
+import { names, pages } from "../assets/Constants";
 
 const Home: FC = () => {
 
