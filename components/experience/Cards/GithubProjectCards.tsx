@@ -16,7 +16,7 @@ const GithubProjectCards: FC = () => {
           } ${darkTheme ? "text-white" : undefined}`}
         >
           <div className="text-2xl font-bold text-center">
-            <text>{card.title}</text>
+            <div>{card.title}</div>
           </div>
           <div className="">
             <div className="py-4">

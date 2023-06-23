@@ -45,41 +45,54 @@ export const firstPageParagraph = {
 
 interface IExperienceCard {
   title: string;
-  content: string[];
-  subTitle?: string
+  contents: string[];
+  durationProject: string;
+  subTitle?: string;
 }
 
 export const ExpCards: IExperienceCard[] = [
   {
     title: "CloudPlus - TwentyIdeas",
     subTitle: "(Microservices Project)",
-    content: [
-      "Web App project (back-office for admins)",
-      "I created a website from scratch, both front-end and back-end.",
-      "A responsive website for admins to view, edit, create, and delete words.",
-      "Mobile App project (for users)",
-      "I implemented and updated the ui according to the design in Figma",
-      "Setup breakpoint for multiple devices (responsive)",
-      "Tech stack: Typescript, React, MUI, ContextAPI, Axios, NestJS, Prisma, PostgreSQL, Angular, Ionic",
+    durationProject: "Main Business Project",
+    contents: [
+      "A platform that provide tools for software product licenses management for organizations",
+      "softwares that are available in the platform Microsoft365, Azure, BitTitan, Acronis, WebTitan, and etc.",
+      "I have implemented 4 features, there are BitTitan, Acronis, Microsoft365, and CloudPlus Notification",
+      "Each feature is a separated service and handle tons of requests via MassTransit (message broker), means that they are working independently, so Notification will tell users of the platform after activities in queue are being done",
+      "Team of Americans and Thais, worked in different time zone, sync up meeting once a week, agile work style via Jira, separated features into Kanban boards",
+      "C#, Dotnet6, MAssTransit, Entity, ReactJS, VueJS, SQL Server, AWS"
+    ],
+  },
+  {
+    title: "Kerry Expense API",
+    durationProject: "Freelance Project",
+    contents: [
+      "API for back-office platform, report and expense management",
+      "I've deployed an app to a new linux server and mostly fixed bugs that hasn't been fixed from the last version",
+      "Improved performance and created error handlers to avoid server down",
+      "C#, Dotnet5, SQL Server"
     ],
   },
   {
     title: "Pali-Thai Dictionary",
     subTitle: "(Web App and Mobile App)",
-    content: [
+    durationProject: "Short project",
+    contents: [
       "Web App project (back-office for admins)",
       "I created a website from scratch, both front-end and back-end.",
       "A responsive website for admins to view, edit, create, and delete words.",
       "Mobile App project (for users)",
       "I implemented and updated the ui according to the design in Figma",
       "Setup breakpoint for multiple devices (responsive)",
-      "Tech stack: Typescript, React, MUI, ContextAPI, Axios, NestJS, Prisma, PostgreSQL, Angular, Ionic",
+      "Typescript, React, MUI, ContextAPI, Axios, NestJS, Prisma, PostgreSQL, Angular, Ionic",
     ],
   },
   {
     title: "Sompo Insurance",
     subTitle: "(Admin back-office web)",
-    content: [
+    durationProject: "Short project",
+    contents: [
       "I created a project from scratch and set the project structure for the team.",
       "Developed, maintained, and managed login and sign-up pages and protected routes for pages with CRUD features.",
       "Created custom hooks and form validators.",
@@ -88,7 +101,8 @@ export const ExpCards: IExperienceCard[] = [
   },
   {
     title: "Payment Gateway",
-    content: [
+    durationProject: "Big project",
+    contents: [
       "Created, maintained, and managed applications(services) of the system with a team.",
       "Integrated, and managed the new payment method of the system.",
       "Created, and managed API and Webhook for the game with tons of requests per second.",

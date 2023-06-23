@@ -1,4 +1,4 @@
-import { FC } from "react";
+import React, { FC } from "react";
 import { ExpCards } from "../../../assets/Constants";
 import { useTheme } from "../../../context/ThemeProvider";
 
@@ -14,22 +14,27 @@ const ExpSlideCards: FC = () => {
         >
 
           <div className="text-2xl font-bold text-center">
-            <text>{card.title}</text>
+            <div>{card.title}</div>
           </div>
 
           <div className="text-xl text-center">
-            <text>{card.subTitle}</text>
+            {card.subTitle ? <div>{card.subTitle}</div> : undefined}
+            <div>{card.durationProject}</div>
           </div>
 
           <ul key="detail" className="list-disc px-8">
-            {card.content.map((detail, index) => (
-              <div key={`detail-${index}`}>
-                {index === detail.length - 1 ? (
-                  <div>
-                    <strong>TECH STACK</strong>: {detail} &nbsp;
-                  </div>
-                ) : undefined}
-                {index !== detail.length - 1 ? <li>{detail}</li> : undefined}
+            {card.contents.map((content, index) => (
+              <div key={`content-${card.title}-${index}`}>
+                  { index === (card.contents.length - 1) ? (
+                    <div>
+                      <br /><strong>TECH STACK</strong> &nbsp;
+                      <div>{content}</div>
+                    </div>
+                  ) : (
+                    <li>
+                      {content}
+                    </li>
+                  )}
               </div>
             ))}
           </ul>
