@@ -1,10 +1,9 @@
 import { useEffect, ReactNode } from "react";
 import styles from "./Theme.module.css";
-import Navbar from "./navbar";
-import Footer from "./footer";
+import Navbar from "./navbar/Navbar";
+import Footer from "./footer/Footer";
 import { useTheme } from "../../context/ThemeProvider";
-import { themeConstants } from "../../assets/Constants";
-import ScrollToTop from "./scrollToTop";
+import ScrollToTop from "./scrollToTop/ScrollToTopButton";
 
 const Layout = ({
   children
