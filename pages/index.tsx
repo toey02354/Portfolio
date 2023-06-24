@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { FC } from "react";
-// components
+
 import Column1 from "../components/home/HomeColumn1";
 import Column2 from "../components/home/HomeColumn2";
 import Column3 from "../components/home/HomeColumn3";

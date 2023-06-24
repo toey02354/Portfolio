@@ -1,7 +1,8 @@
 import Head from "next/head";
+
+import { pages } from "../assets/Constants";
 import PostForm from "../components/contact/PostForm";
 import { useTheme } from "../context/ThemeProvider";
-import { pages } from "../assets/Constants";
 
 const Contact = () => {
   const { darkTheme } = useTheme();
