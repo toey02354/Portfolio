@@ -1,6 +1,8 @@
-import LogoSkill from "./LogoSkill";
-import Typewriter from "typewriter-effect";
+import { cardTypes } from "../../assets/Constants";
+import { logoGroup1, logoGroup2, logoGroup3 } from "../../assets/LogoGroup";
 import { useTheme } from "../../context/ThemeProvider";
+import Card from "../shared/Card";
+import Typewriter from "typewriter-effect";
 
 const Column2 = () => {
   const { darkTheme } = useTheme();
@@ -23,7 +25,7 @@ const Column2 = () => {
         />
       </div>
       <div className="min-h-screen flexcenter">
-        <LogoSkill />
+        <Card cardType={cardTypes.LogoCard} contents={[...logoGroup1, ...logoGroup2, ...logoGroup3]} />
       </div>
     </div>
   );

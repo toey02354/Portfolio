@@ -21,6 +21,12 @@ export const pages = {
   thanks: `Thank You!`
 }
 
+export enum cardTypes {
+  LogoCard,
+  BulletPointsCard,
+  ImageTitleCard
+}
+
 export const firstPageParagraph = {
   frontEnd: [
     `<p>I love developing Front-end in <strong>Typescript </strong></p>`,
