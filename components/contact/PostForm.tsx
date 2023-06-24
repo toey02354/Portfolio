@@ -1,6 +1,7 @@
 import { FC } from "react";
-import usePostForm from "./usePostForm";
 import { IoMdSend } from "react-icons/io";
+
+import usePostForm from "./usePostForm";
 
 const PostForm: FC = () => {
   const { values, setValues, handleSend } = usePostForm();

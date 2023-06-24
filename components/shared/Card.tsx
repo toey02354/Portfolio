@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import Image, { StaticImageData } from "next/image";
 import { cardTypes } from "../../assets/Constants";
 import { useTheme } from "../../context/ThemeProvider";
@@ -59,7 +59,7 @@ function Card({ cardType, contents, titleImage, titleMessage, subTitleMessage, e
 
     if (cardType === cardTypes.BulletPointsCard) {
         return (
-            <div className={`Card py-[3em] px-8 ${index! % 2 == 0 ? "BlackCard blur-thig-xl" : "WhiteCard blur-thing-3xl"} ${darkTheme ? "text-white" : undefined}`}>
+            <div className={`py-[3em] px-8 ${index! % 2 == 0 ? "BlackCard blur-thig-xl" : "WhiteCard blur-thing-3xl"} ${darkTheme ? "text-white" : undefined}`}>
                 <div className="text-2xl font-bold text-center">
                     <div>{titleMessage}</div>
                 </div>

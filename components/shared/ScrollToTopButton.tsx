@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import { themeConstants } from "../../assets/Constants";
-import { useTheme } from "../../context/ThemeProvider";
 import { FaArrowUp } from "react-icons/fa";
+
+import { useTheme } from "../../context/ThemeProvider";
 
 const ScrollToTop = () => {
   const [show, setShow] = useState<boolean>(false);
-  const { darkTheme, setDarkTheme } = useTheme();
+  const { darkTheme } = useTheme();
 
   const handleTop = () => {
     scrollTo({ behavior: "smooth", top: 0 });

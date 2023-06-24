@@ -1,8 +1,9 @@
-import { useEffect, ReactNode } from "react";
+import { ReactNode } from "react";
+
+import { useTheme } from "../context/ThemeProvider";
 import styles from "./Theme.module.css";
 import Navbar from "./navbar";
 import Footer from "./footer";
-import { useTheme } from "../context/ThemeProvider";
 import ScrollToTop from "./shared/ScrollToTopButton";
 
 const Layout = ({

@@ -1,4 +1,5 @@
 import React from "react";
+
 import { cardTypes, firstPageParagraph } from "../../assets/Constants";
 import { useTheme } from "../../context/ThemeProvider";
 import TeamStudy from "../../public/Images/team-study.jpg";
