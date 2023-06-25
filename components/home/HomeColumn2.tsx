@@ -1,6 +1,6 @@
 import Typewriter from "typewriter-effect";
 
-import { cardTypes } from "@/assets/Constants";
+import { cardTypes } from "@/assets/data/Constants";
 import { logoGroup1, logoGroup2, logoGroup3 } from "@/assets/LogoGroup";
 import { useTheme } from "@/context/ThemeProvider";
 import Card from "@/components/shared/Card";

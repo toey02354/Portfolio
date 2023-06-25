@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import { ExpCards, cardTypes, pages } from "@/assets/Constants";
+import { ExpCards, cardTypes, pages } from "@/assets/data/Constants";
 import Card from "@/components/shared/Card";
 import { useTheme } from "@/context/ThemeProvider";
 

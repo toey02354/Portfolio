@@ -1,6 +1,6 @@
 import React from "react";
 import Image, { StaticImageData } from "next/image";
-import { cardTypes } from "@/assets/Constants";
+import { cardTypes } from "@/assets/data/Constants";
 import { useTheme } from "@/context/ThemeProvider";
 
 function Card({ cardType, contents, titleImage, titleMessage, subTitleMessage, extraMessage, lastLineTitle, index }: {

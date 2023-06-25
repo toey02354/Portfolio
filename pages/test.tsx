@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Head from "next/head";
 
-import { pages } from "@/assets/Constants";
+import { pages } from "@/assets/data/Constants";
 import { useTheme } from "@/context/ThemeProvider";
 
 const Test = () => {

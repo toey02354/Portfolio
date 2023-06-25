@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import { pages } from "@/assets/Constants";
+import { pages } from "@/assets/data/Constants";
 import PostForm from "@/components/contact/PostForm";
 import { useTheme } from "@/context/ThemeProvider";
 

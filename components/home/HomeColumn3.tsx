@@ -1,6 +1,6 @@
 import React from "react";
 
-import { cardTypes, firstPageParagraph } from "@/assets/Constants";
+import { cardTypes, firstPageParagraph } from "@/assets/data/Constants";
 import { useTheme } from "@/context/ThemeProvider";
 import TeamStudy from "@/public/Images/team-study.jpg";
 import TeamPuzzle from "@/public/Images/team-puzzle.jpg";

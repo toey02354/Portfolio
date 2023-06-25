@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 
-import { pages } from "@/assets/Constants";
+import { pages } from "@/assets/data/Constants";
 import { useTheme } from "@/context/ThemeProvider";
 
 const Thankyou = () => {

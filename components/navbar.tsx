@@ -2,9 +2,9 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 
-import { names, themeConstants } from "@/assets/Constants";
+import { names, themeConstants } from "@/assets/data/Constants";
 import { useTheme } from "@/context/ThemeProvider";
-import { NavItems } from "@/assets/NavbarItems";
+import { NavItems } from "@/assets/data/NavbarItems";
 
 const Icon = ({ index }: { index: number }) => {
   const Icon = NavItems[index].icon
