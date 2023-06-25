@@ -29,3 +29,22 @@ pnpm build
 - TailwindCSS
 - ReactIcons
 - TypeWriter
+
+## To make import easier
+we can use @/ instead of using a bunch of `../` to get back to the root directory   
+in tsconfig.json
+```
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./*"],
+      "@/assets": ["./assets/*"],
+      "@/components": ["./components/*"],
+      "@/context": ["./context/*"],
+      "@/pages": ["./pages/*"],
+      "@/public": ["./public/*"]
+    }
+  },
+}
+
+```
