@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { FaArrowUp } from "react-icons/fa";
 
-import { useTheme } from "../../context/ThemeProvider";
+import { useTheme } from "@/context/ThemeProvider";
 
 const ScrollToTop = () => {
   const [show, setShow] = useState<boolean>(false);

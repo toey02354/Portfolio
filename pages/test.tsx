@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Head from "next/head";
 
-import { pages } from "../assets/Constants";
-import { useTheme } from "../context/ThemeProvider";
+import { pages } from "@/assets/Constants";
+import { useTheme } from "@/context/ThemeProvider";
 
 const Test = () => {
   const [access, setAccess] = useState(false);

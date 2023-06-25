@@ -1,5 +1,5 @@
-import { useTheme } from "../../context/ThemeProvider";
-import { names } from "../../assets/Constants";
+import { useTheme } from "@/context/ThemeProvider";
+import { names } from "@/assets/Constants";
 
 const Column1 = () => {
   const { darkTheme } = useTheme();

@@ -1,10 +1,10 @@
 import React from "react";
 
-import { cardTypes, firstPageParagraph } from "../../assets/Constants";
-import { useTheme } from "../../context/ThemeProvider";
-import TeamStudy from "../../public/Images/team-study.jpg";
-import TeamPuzzle from "../../public/Images/team-puzzle.jpg";
-import Card from "../shared/Card";
+import { cardTypes, firstPageParagraph } from "@/assets/Constants";
+import { useTheme } from "@/context/ThemeProvider";
+import TeamStudy from "@/public/Images/team-study.jpg";
+import TeamPuzzle from "@/public/Images/team-puzzle.jpg";
+import Card from "@/components/shared/Card";
 
 const Column3 = () => {
   const { darkTheme } = useTheme();

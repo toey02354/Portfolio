@@ -7,7 +7,7 @@ import {
   ReactNode,
   useEffect,
 } from "react";
-import { themeConstants } from "../assets/Constants";
+import { themeConstants } from "@/assets/Constants";
 
 interface IThemeContext {
   darkTheme: boolean;

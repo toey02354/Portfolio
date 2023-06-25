@@ -1,8 +1,8 @@
 import Head from "next/head";
 import Link from "next/link";
 
-import { pages } from "../assets/Constants";
-import { useTheme } from "../context/ThemeProvider";
+import { pages } from "@/assets/Constants";
+import { useTheme } from "@/context/ThemeProvider";
 
 const Thankyou = () => {
   const { darkTheme } = useTheme();

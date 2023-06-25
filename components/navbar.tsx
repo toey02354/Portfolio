@@ -2,8 +2,8 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 
-import { names, themeConstants } from "../assets/Constants";
-import { useTheme } from "../context/ThemeProvider";
+import { names, themeConstants } from "@/assets/Constants";
+import { useTheme } from "@/context/ThemeProvider";
 import NavItems from "./navbarItems";
 
 const Navbar = () => {

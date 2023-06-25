@@ -1,8 +1,8 @@
 import Head from "next/head";
 
-import { ExpCards, cardTypes, pages } from "../assets/Constants";
-import Card from "../components/shared/Card";
-import { useTheme } from "../context/ThemeProvider";
+import { ExpCards, cardTypes, pages } from "@/assets/Constants";
+import Card from "@/components/shared/Card";
+import { useTheme } from "@/context/ThemeProvider";
 
 const Experience = () => {
   const { darkTheme } = useTheme();

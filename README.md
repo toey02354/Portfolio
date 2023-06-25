@@ -1,6 +1,31 @@
-# Tech stack
+## To run App
+```
+pnpm i
+pnpm dev
+```
 
-- NextJS (TypeScript)
+## To build App
+```
+pnpm build
+```
+
+## File Structure (Important files)
+-- assets  
+-- components  
+&emsp;- shared  
+&emsp;- layout.tsx  
+-- context  
+&emsp; - ThemeProvider.tsx  
+-- pages  
+-- public  
+-- styles  
+&emsp; - globals.css  
+-- utils  
+
+## Tech stack
+
+- NextJS 12
+- TypeScript
 - TailwindCSS
 - ReactIcons
 - TypeWriter

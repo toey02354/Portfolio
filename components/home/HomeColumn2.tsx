@@ -1,9 +1,9 @@
 import Typewriter from "typewriter-effect";
 
-import { cardTypes } from "../../assets/Constants";
-import { logoGroup1, logoGroup2, logoGroup3 } from "../../assets/LogoGroup";
-import { useTheme } from "../../context/ThemeProvider";
-import Card from "../shared/Card";
+import { cardTypes } from "@/assets/Constants";
+import { logoGroup1, logoGroup2, logoGroup3 } from "@/assets/LogoGroup";
+import { useTheme } from "@/context/ThemeProvider";
+import Card from "@/components/shared/Card";
 
 const Column2 = () => {
   const { darkTheme } = useTheme();
