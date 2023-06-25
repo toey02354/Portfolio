@@ -7,7 +7,7 @@ interface INavbar {
   icon: IconType;
 }
 
-const NavItems: INavbar[] = [
+export const NavItems: INavbar[] = [
   {
     name: "Home",
     path: "/",
@@ -29,5 +29,3 @@ const NavItems: INavbar[] = [
     icon: MdLock,
   },
 ];
-
-export default NavItems;

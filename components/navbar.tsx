@@ -4,7 +4,7 @@ import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 import { names, themeConstants } from "@/assets/Constants";
 import { useTheme } from "@/context/ThemeProvider";
-import NavItems from "@/assets/NavbarItems";
+import { NavItems } from "@/assets/NavbarItems";
 
 const Icon = ({ index }: { index: number }) => {
   const Icon = NavItems[index].icon
