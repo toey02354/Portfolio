@@ -1,7 +1,12 @@
 import { FC } from "react";
 
 import { names } from "@/assets/Constants";
-import FooterItems from "./footerLogos";
+import FooterItems from "@/assets/FooterItems";
+
+const Icon = ({ index }: { index: number }) => {
+  const Icon = FooterItems[index].icon
+  return <Icon className="text-[1.75em]" />
+}
 
 const Footer: FC = () => {
   return (
@@ -15,7 +20,7 @@ const Footer: FC = () => {
             rel="noopender noreferrer"
             className="text-white hover:text-stone-500"
           >
-            {item.icon}
+            <Icon index={index}/>
           </a>
         ))}
       </div>
