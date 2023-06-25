@@ -37,12 +37,7 @@ in tsconfig.json
 {
   "compilerOptions": {
     "paths": {
-      "@/*": ["./*"],
-      "@/assets": ["./assets/*"],
-      "@/components": ["./components/*"],
-      "@/context": ["./context/*"],
-      "@/pages": ["./pages/*"],
-      "@/public": ["./public/*"]
+      "@/*": ["./*"]
     }
   },
 }
