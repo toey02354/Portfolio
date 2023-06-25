@@ -1,7 +1,7 @@
 import { FC } from "react";
 
 import { names } from "@/assets/data/Constants";
-import FooterItems from "@/assets/FooterItems";
+import FooterItems from "@/assets/data/FooterItems";
 
 const Icon = ({ index }: { index: number }) => {
   const Icon = FooterItems[index].icon
