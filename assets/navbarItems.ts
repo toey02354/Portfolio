@@ -1,31 +1,32 @@
+import { IconType } from "react-icons";
 import { MdOutlineWork, MdHome, MdCall, MdLock } from "react-icons/md";
 
 interface INavbar {
   name: string;
   path: string;
-  icon: JSX.Element;
+  icon: IconType;
 }
 
 const NavItems: INavbar[] = [
   {
     name: "Home",
     path: "/",
-    icon: <MdHome />,
+    icon: MdHome,
   },
   {
     name: "Experience",
     path: "/experience",
-    icon: <MdOutlineWork />,
+    icon: MdOutlineWork,
   },
   {
     name: "Contact",
     path: "/contact",
-    icon: <MdCall />,
+    icon: MdCall,
   },
   {
     name: "Secrets",
     path: "/test",
-    icon: <MdLock />,
+    icon: MdLock,
   },
 ];
 
