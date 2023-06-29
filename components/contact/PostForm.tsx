@@ -18,9 +18,9 @@ const PostForm: FC = () => {
         onKeyDown={(event) => {event.key == "Enter" && handleSend(event);}}
       >
         <input
-          placeholder="Enter Title Here"
+          placeholder="Enter TYPO-TITLE Here"
           type="text"
-          name="Title"
+          name="TYPO-TITLE"
           className="w-full p-2 rounded-lg bg-slate-700/40 focus:outline-none focus:bg-slate-700 text-white"
           value={values.title}
           onChange={(event) => setValues({ ...values, title: event.target.value })}
@@ -28,7 +28,7 @@ const PostForm: FC = () => {
         <textarea
           rows={10}
           placeholder="Enter Content Here"
-          name="Title"
+          name="TYPO-TITLE"
           className="w-full p-2 rounded-lg resize-none bg-slate-700/40 focus:outline-none focus:bg-slate-700 text-white"
           value={values.content}
           onChange={(event) => setValues({ ...values, content: event.target.value })}

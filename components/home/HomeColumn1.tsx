@@ -4,7 +4,7 @@ import { names } from "@/assets/data/Constants";
 const Column1 = () => {
   const { darkTheme } = useTheme();
   return (
-    <div className="h-[100vh] flexcolcenter gap-8">
+    <div className="h-[100vh] FLEX-COL-CENTER gap-8">
       <div className={`text-[3rem] leading-none tracking-normal sm:tracking-widest sm:text-[5.2rem] font-bold ${darkTheme ? "text-white" : "HIGHLIGHT-TEXT"}`}>
         {names.firstName.toUpperCase()}
         <br />

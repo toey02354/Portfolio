@@ -17,12 +17,12 @@ function Card({ cardType, contents, titleImage, titleMessage, subTitleMessage, e
 
     if (cardType === cardTypes.LogoCard) {
         return (
-            <div className="WhiteCard blur-thing-3xl p-4 sm:p-10 rounded-xl shadow-lg bg-white/20 blur-thing-2xl">
+            <div className="WHITE-CARD blur-thing-3xl p-4 sm:p-10 rounded-xl shadow-lg bg-white/20 blur-thing-2xl">
                 <div className="w-full grid grid-cols-3 sm:grid sm:grid-cols-6 gap-[1rem] md:gap-[2rem]">
                     {contents.map((content, index) => (
                         <div
                             key={`logo-${titleMessage}-${index}`}
-                            className="TW-LOGO-SKILL"
+                            className="DIM-DOWN"
                         >
                             <Image
                                 src={content}
@@ -40,9 +40,8 @@ function Card({ cardType, contents, titleImage, titleMessage, subTitleMessage, e
 
     if (cardType === cardTypes.ImageTitleCard) {
         return (
-            <div className="WhiteCard blur-thing-3xl justify-start">
+            <div className="WHITE-CARD blur-thing-3xl">
                 <Image
-                    className="contrast-[0.9]"
                     src={titleImage!}
                     style={{ borderRadius: "12px 12px 0 0" }}
                     alt="front-end"
@@ -59,7 +58,10 @@ function Card({ cardType, contents, titleImage, titleMessage, subTitleMessage, e
 
     if (cardType === cardTypes.BulletPointsCard) {
         return (
-            <div className={`py-[3em] px-8 ${index! % 2 == 0 ? "BlackCard blur-thig-xl" : "WhiteCard blur-thing-3xl"} ${darkTheme ? "text-white" : undefined}`}>
+            <div className={`py-[3em] px-8 
+                ${index! % 2 === 0 ? "BLACK-CARD blur-thing-xl" : "WHITE-CARD blur-thing-3xl"} 
+                ${darkTheme ? "text-white" : undefined}`}
+            >
                 <div className="text-2xl font-bold text-center">
                     <div>{titleMessage}</div>
                 </div>

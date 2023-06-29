@@ -11,11 +11,11 @@ const Experience = () => {
       <Head>
         <title>{ pages.experience }</title>
       </Head>
-      <div className="flexcolcenter mb-[10em]">
-        <div className={`Title ${darkTheme ? "text-white" : "text-highlight"}`}>
+      <div className="FLEX-COL-CENTER mb-[10em]">
+        <div className={`TYPO-TITLE ${darkTheme ? "text-white" : "text-highlight"}`}>
           <p className="">Skill {"&"} Experience</p>
         </div>
-        <div className="GroupCards">
+        <div className="FLEX-COL-G4">
 
         {ExpCards.map((card, index) => (
           <Card

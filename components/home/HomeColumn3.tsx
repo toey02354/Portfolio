@@ -10,11 +10,11 @@ const Column3 = () => {
   const { darkTheme } = useTheme();
 
   return (
-    <div className="min-h-screen flexcolcenter">
-      <div className={`Title ${darkTheme ? "text-white" : "text-highlight"}`}>
+    <div className="min-h-screen FLEX-COL-CENTER">
+      <div className={`TYPO-TITLE ${darkTheme ? "text-white" : "text-highlight"}`}>
         <p>My Skills</p>
       </div>
-      <div className={`max-w-[800px] flex flex-col justify-center items-center md:grid md:grid-cols-2 w-full gap-8 ${darkTheme ? "text-white" : "text-black"}`}>
+      <div className={`max-w-[800px] FLEX-COL-CENTER md:flex md:flex-row md:items-stretch w-full gap-8 ${darkTheme ? "text-white" : "text-black"}`}>
         <Card
           cardType={cardTypes.ImageTitleCard}
           contents={firstPageParagraph.frontEnd}

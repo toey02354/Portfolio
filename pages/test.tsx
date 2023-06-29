@@ -24,7 +24,7 @@ const Test = () => {
         <title>{ pages.experiment }</title>
       </Head>
       {!access ? (
-        <div className="h-[90vh] flexcolcenter">
+        <div className="h-[90vh] FLEX-COL-CENTER">
           <input
             autoComplete="off"
             type="password"

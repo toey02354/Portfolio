@@ -10,7 +10,7 @@ const Icon = ({ index }: { index: number }) => {
 
 const Footer: FC = () => {
   return (
-    <div className="bg-main flexcolcenter gap-4 px-4 py-[3em]">
+    <div className="bg-main FLEX-COL-CENTER gap-4 px-4 py-[3em]">
       <div className="flex items-center justify-center gap-4">
         {FooterItems.map((item, index) => (
           <a

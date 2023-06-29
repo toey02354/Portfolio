@@ -13,7 +13,7 @@ const Thankyou = () => {
         <title>{ pages.thanks }</title>
       </Head>
       <div
-        className={`min-h-[88vh] flexcolcenter ${darkTheme ? "text-white" : "text-black"}`}
+        className={`min-h-[88vh] FLEX-COL-CENTER ${darkTheme ? "text-white" : "text-black"}`}
       >
         <div className="uppercase">Thank you for your kind feedback</div>
         <Link href="/" passHref>

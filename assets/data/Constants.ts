@@ -67,7 +67,7 @@ export const ExpCards: IExperienceCard[] = [
       "I have implemented 4 features, there are BitTitan, Acronis, Microsoft365, and CloudPlus Notification",
       "Each feature is a separated service and handle tons of requests via MassTransit (message broker), means that they are working independently, so Notification will tell users of the platform after activities in queue are being done",
       "Team of Americans and Thais, worked in different time zone, sync up meeting once a week, agile work style via Jira, separated features into Kanban boards",
-      "C#, Dotnet6, MAssTransit, Entity, ReactJS, VueJS, SQL Server, AWS"
+      "C#, Dotnet6, MassTransit, Entity, ReactJS, VueJS, SQL Server, AWS"
     ],
   },
   {

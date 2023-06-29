@@ -70,28 +70,28 @@ hr {
   .HIGHLIGHT-TEXT {
     @apply bg-clip-text text-transparent bg-gradient-to-br from-amber-700 to-highlight;
   }
-  .GroupCards {
+  .FLEX-COL-G4 {
     @apply flex flex-col gap-4;
   }
-  .flexcenter {
+  .FLEX-CENTER {
     @apply flex justify-center items-center;
   }
-  .flexcolcenter {
+  .FLEX-COL-CENTER {
     @apply flex flex-col justify-center items-center;
   }
-  .BlackCard {
-    @apply h-full w-full max-w-[400px] md:max-w-[700px] flex flex-col justify-center gap-4 shadow-xl rounded-xl bg-main/70 text-white;
+  .CARD {
+    @apply FLEX-COL-G4 max-w-[400px] md:max-w-[700px] shadow-xl rounded-xl;
   }
-  .WhiteCard {
-    @apply h-full w-full max-w-[400px] md:max-w-[700px] flex flex-col justify-center gap-4 shadow-xl rounded-xl bg-white/20;
+  .BLACK-CARD {
+    @apply CARD bg-main/70 text-white;
   }
-  .TW-CANVAS {
-    @apply w-[80vw] h-[50vh] xl:w-[60vw] xl:h-screen;
+  .WHITE-CARD {
+    @apply CARD bg-white/20;
   }
-  .TW-LOGO-SKILL {
+  .DIM-DOWN {
     @apply p-2 contrast-[0.8];
   }
-  .Title {
-    @apply flex justify-center items-center mt-[2rem] p-[2rem] text-4xl uppercase font-bold;
+  .TYPO-TITLE {
+    @apply FLEX-CENTER mt-[2rem] p-[2rem] text-4xl uppercase font-bold;
   }
 }
