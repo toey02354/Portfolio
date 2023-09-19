@@ -1,13 +1,13 @@
-import { useState } from "react";
+import React from "react";
 import Head from "next/head";
 
 import { pages } from "@/assets/data/Constants";
 import { useTheme } from "@/context/ThemeProvider";
 
 const Test = () => {
-  const [access, setAccess] = useState(false);
-  const [data, setData] = useState("");
-  const [message, setMessage] = useState<string>("");
+  const [access, setAccess] = React.useState(false);
+  const [data, setData] = React.useState("");
+  const [message, setMessage] = React.useState<string>("");
   const { darkTheme } = useTheme();
 
   const handleEnter = (value: string) => {
@@ -19,9 +19,9 @@ const Test = () => {
   };
 
   return (
-    <>
+    <React.Fragment>
       <Head>
-        <title>{ pages.experiment }</title>
+        <title>{pages.experiment}</title>
       </Head>
       {!access ? (
         <div className="h-[90vh] FLEX-COL-CENTER">
@@ -30,10 +30,16 @@ const Test = () => {
             type="password"
             key="accessKey"
             placeholder="&rarr; Enter Password to access"
-            className={`w-full max-w-[350px] md:max-w-[600px] p-4 rounded-xl uppercase outline-none placeholder:tracking-wider shadow-lg${darkTheme? "bg-white text-main placeholder:text-main": "bg-main text-white placeholder:text-white/50"}`}
+            className={`w-full max-w-[350px] md:max-w-[600px] p-4 rounded-xl uppercase outline-none placeholder:tracking-wider shadow-lg${
+              darkTheme
+                ? "bg-white text-main placeholder:text-main"
+                : "bg-main text-white placeholder:text-white/50"
+            }`}
             value={data}
             onChange={(event) => setData(event.target.value)}
-            onKeyDown={(event) => {event.key == "Enter" && handleEnter(data);}}
+            onKeyDown={(event) => {
+              event.key == "Enter" && handleEnter(data);
+            }}
           />
           {message ? (
             <div className="p-8 text-red-600 uppercase font-[800]">
@@ -50,7 +56,7 @@ const Test = () => {
           </div>
         </div>
       )}
-    </>
+    </React.Fragment>
   );
 };
 

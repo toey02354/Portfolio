@@ -6,11 +6,7 @@ import Navbar from "./navbar";
 import Footer from "./footer";
 import ScrollToTop from "./shared/ScrollToTopButton";
 
-const Layout = ({
-  children
-}: {
-  children: ReactNode
-}) => {
+const Layout = ({ children }: { children: ReactNode }) => {
   const { darkTheme } = useTheme();
 
   return (

@@ -7,32 +7,41 @@ import { useTheme } from "@/context/ThemeProvider";
 import { NavItems } from "@/assets/data/NavbarItems";
 
 const Icon = ({ index }: { index: number }) => {
-  const Icon = NavItems[index].icon
-  return <Icon />
-}
+  const Icon = NavItems[index].icon;
+  return <Icon />;
+};
 
 const Navbar = () => {
   const router = useRouter();
   const { darkTheme, setDarkTheme } = useTheme();
-  
+
   const changeTheme = () => {
-    setDarkTheme(currDark => {
-      localStorage.setItem(themeConstants.LOCAL_STORAGE_KEY, !currDark? themeConstants.DARK : themeConstants.LIGHT)
-      return !currDark
-    })
-  }
+    setDarkTheme((currDark) => {
+      localStorage.setItem(
+        themeConstants.LOCAL_STORAGE_KEY,
+        !currDark ? themeConstants.DARK : themeConstants.LIGHT
+      );
+      return !currDark;
+    });
+  };
 
   return (
     <div className="bg-main flex justify-between items-center py-4 px-6 text-xl text-white">
       <div className="flex items-center gap-8">
         <div className="hidden lg:flex lg:justify-center lg:items-center p-3">
-          <strong>{names.nickName.toUpperCase()}</strong> <div>{ names.portfolio}</div>
+          <strong>{names.nickName.toUpperCase()}</strong>{" "}
+          <div>{names.portfolio}</div>
         </div>
         <div className="flex gap-4">
           {NavItems.map((item, index) => (
             <Link href={item.path} key={item.name} passHref>
-              <button className={`flex items-center gap-1 hover:text-amber-500 ${router.pathname == item.path ? "text-highlight" : ""}`}>
-                <Icon index={index} /> <div className="hidden xl:block">{item.name}</div>
+              <button
+                className={`flex items-center gap-1 hover:text-amber-500 ${
+                  router.pathname == item.path ? "text-highlight" : ""
+                }`}
+              >
+                <Icon index={index} />{" "}
+                <div className="hidden xl:block">{item.name}</div>
               </button>
             </Link>
           ))}

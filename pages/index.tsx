@@ -1,15 +1,15 @@
 import Head from "next/head";
-import { FC } from "react";
+import React from "react";
 
 import { names, pages } from "@/assets/data/Constants";
 import Column1 from "@/components/home/HomeColumn1";
 import Column2 from "@/components/home/HomeColumn2";
 import Column3 from "@/components/home/HomeColumn3";
+import Experience from "../components/experience/Experience";
 
-const Home: FC = () => {
-
+export default function Home(): React.ReactElement {
   return (
-    <>
+    <React.Fragment>
       <Head>
         <title>{pages.home}</title>
         <meta name="description" content={`${names.nickName} Portfolio`} />
@@ -25,11 +25,10 @@ const Home: FC = () => {
 
       <main className="flex flex-col pb-[8rem]">
         <Column1 />
+        <Experience />
         <Column2 />
         <Column3 />
       </main>
-    </>
+    </React.Fragment>
   );
-};
-
-export default Home;
+}
